@@ -1,0 +1,21 @@
+
+-Install git and add to the PATH to use git on command line
+
+-Basic commands command line git:
+
+git clone <repo> 					# Clone repository
+git add . 							# Add work to commit
+git commit -m <text>				# Add message to the commit
+git pull origin <branch>			# Pull commit to branch. Ex: master
+git checkout -b <new_branch_name>	# Create and go to new branch 
+git checkout <branch_name>			# Go to branch. Ex: ., master 
+git push <branch_name>				# Push content from branch
+
+
+-Tips: 
+(1) Plan your project and split your work in small use-cases, 
+(2) Create a branch for each use-case, 
+(3) pull the last version of master before start work in a branch, 
+(4)Merge with master when its done, (5) Abuse of commits to have your work saved
+
+Goal: Have always a functional version in master and allow parallell work among team mates

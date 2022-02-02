@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;NewHaven_Display/display.h&apos; to &apos;display_pinout.h&apos;" description="Rename resource &apos;display.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="display.h" name="display_pinout.h" stamp="1643414328226" updateReferences="true"/>
+</session>

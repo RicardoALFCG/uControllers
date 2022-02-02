@@ -1,0 +1,11 @@
+bar
+dscp
+dsld
+foo
+gpp
+gradle
+groovy
+grunit
+java
+manifest
+tmpl

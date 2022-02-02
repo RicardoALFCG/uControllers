@@ -1,0 +1,8 @@
+//org.eclipse.ui.commands/state/com.ifx.davex.pin.allocator.packageview.showpinpadinfo/org.eclipse.ui.commands.radioState=pinpad
+//org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
+//org.eclipse.ui.commands/state/org.eclipse.ui.tests.radioStateCommand1/org.eclipse.ui.commands.radioState=value2
+UIActivities.org.eclipse.activity5=true
+UIActivities.org.eclipse.activity6=true
+UIActivities.org.eclipse.activity7=true
+UIActivities.org.eclipse.cdt.debug.dsfgdbActivity=true
+eclipse.preferences.version=1
