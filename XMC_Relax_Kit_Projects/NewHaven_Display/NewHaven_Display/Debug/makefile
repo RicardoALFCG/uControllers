@@ -47,8 +47,8 @@ NewHaven_Display.siz \
 LIST_FILES = $(addsuffix .o.lst, $(basename $(OBJS))) 
 MAP_FILE = "NewHaven_Display.map"
 
-TOOLCHAIN_ROOT=C:/Users/Ricardo/Downloads/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49
-PROJECT_LOC=C:/Users/Ricardo/Desktop/ISEP/XMC_Relax_Kit_Projects/NewHaven_Display/NewHaven_Display
+TOOLCHAIN_ROOT=C:/DAVE_4-4-2_64bit_2018-02-23/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49
+PROJECT_LOC=C:/Users/RGoncalves/Documents/GitHub/uControllers/XMC_Relax_Kit_Projects/NewHaven_Display/NewHaven_Display
 
 # All Target
 all: NewHaven_Display.elf secondary-outputs

@@ -129,7 +129,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="#10" description="HW1 control path can override the software configuration."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P3.10 / #11" URI="http://resources/48.0.0/port/p/3/pad/10">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_16/DIGITAL_IO_3.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_MASTER/v4_3_26/SPI_MASTER_0.app#//@hwResources.6"/>
     <resourcesList name="hwsel_hw" requiredResourceUri="http://resources/48.0.0/port/p/3/hwsel/hw10"/>
     <resourcesList name="in_p" requiredResourceUri="http://resources/48.0.0/port/p/3/in/p10"/>
     <resourcesList name="iocr_oe" requiredResourceUri="http://resources/48.0.0/port/p/3/iocr8/pc10_4"/>

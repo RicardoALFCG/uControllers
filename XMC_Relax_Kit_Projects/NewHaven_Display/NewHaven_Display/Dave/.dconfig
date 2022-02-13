@@ -27,21 +27,21 @@
             <BindMap MUri="peripheral/cpu/0/exception/hardfault" Proxy="app/CPU_CTRL_XMC4/0/hwres_exception_hardfault"/>
             <BindMap MUri="peripheral/scu/0/clkctrl/0/wdt" Proxy="app/CLOCK_XMC4/0/hwres_wdt"/>
             <BindMap MUri="port/p/1/pad/10" Proxy="app/DIGITAL_IO/2/hwres_port_pin"/>
-            <BindMap MUri="port/p/5/pad/6" Proxy="app/SPI_MASTER/0/hwres_port_pad_spi_ss_0"/>
+            <BindMap MUri="port/p/3/pad/10" Proxy="app/SPI_MASTER/0/hwres_port_pad_spi_ss_0"/>
             <BindMap MUri="port/p/3/pad/8" Proxy="app/SPI_MASTER/0/hwres_port_pad_spi_mosi_0"/>
             <BindMap MUri="peripheral/scu/0/trap/0/ulpwdg" Proxy="app/CLOCK_XMC4/0/hwres_ulpwdg_trap"/>
             <BindMap MUri="peripheral/scu/0/clkctrl/0/usb" Proxy="app/CLOCK_XMC4/0/hwres_usb"/>
             <BindMap MUri="peripheral/scu/0/clkctrl/0/sdmmc" Proxy="app/CLOCK_XMC4/0/hwres_mmc"/>
             <BindMap MUri="peripheral/scu/0/pwrctrl/0/hibernate" Proxy="app/CLOCK_XMC4/0/hwres_hibernate"/>
             <BindMap MUri="peripheral/scu/0/trap/0/sysvcolock" Proxy="app/CLOCK_XMC4/0/hwres_sysvcolock_trap"/>
-            <BindMap MUri="devicepackage/0/78" Proxy="app/SPI_MASTER/0/__pin_hwres_port_pad_spi_ss_0"/>
-            <BindMap MUri="devicepackage/0/11" Proxy="app/DIGITAL_IO/3/__pin_hwres_port_pin"/>
+            <BindMap MUri="devicepackage/0/11" Proxy="app/SPI_MASTER/0/__pin_hwres_port_pad_spi_ss_0"/>
+            <BindMap MUri="devicepackage/0/77" Proxy="app/DIGITAL_IO/3/__pin_hwres_port_pin"/>
             <BindMap MUri="port/p/3/pad/9" Proxy="app/SPI_MASTER/0/hwres_port_pad_spi_sclkout"/>
             <BindMap MUri="devicepackage/0/113" Proxy="app/DIGITAL_IO/1/__pin_hwres_port_pin"/>
             <BindMap MUri="peripheral/cpu/0/exception/usagefault" Proxy="app/CPU_CTRL_XMC4/0/hwres_exception_usagefault"/>
             <BindMap MUri="peripheral/scu/0/clkctrl/0/ebu" Proxy="app/CLOCK_XMC4/0/hwres_ebu"/>
             <BindMap MUri="peripheral/scu/0/trap/0/usbvcolock" Proxy="app/CLOCK_XMC4/0/hwres_usbvcolock_trap"/>
-            <BindMap MUri="port/p/3/pad/10" Proxy="app/DIGITAL_IO/3/hwres_port_pin"/>
+            <BindMap MUri="port/p/5/pad/7" Proxy="app/DIGITAL_IO/3/hwres_port_pin"/>
             <BindMap MUri="peripheral/scu/0/clkctrl/0/perbridge" Proxy="app/CLOCK_XMC4/0/hwres_perbridge"/>
         </SolverBndMap>
     </Solver>

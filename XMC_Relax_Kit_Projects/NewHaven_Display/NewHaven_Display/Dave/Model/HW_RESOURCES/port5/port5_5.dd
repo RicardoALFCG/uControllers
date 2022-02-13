@@ -130,6 +130,7 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="PC8_4" URI="http://resources/48.0.0/port/p/5/iocr8/pc8_4" value="0x00000000" toolTipHelpDescription="Port Control for Port n Pin 8 to 11" defaultValue="0x00000000" startPos="7" stopPos="7" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P5.7 / #77" URI="http://resources/48.0.0/port/p/5/pad/7">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_16/DIGITAL_IO_3.app#//@hwResources.0"/>
     <resourcesList name="hwsel_hw" requiredResourceUri="http://resources/48.0.0/port/p/5/hwsel/hw7"/>
     <resourcesList name="in_p" requiredResourceUri="http://resources/48.0.0/port/p/5/in/p7"/>
     <resourcesList name="iocr_oe" requiredResourceUri="http://resources/48.0.0/port/p/5/iocr4/pc7_4"/>
@@ -177,7 +178,6 @@
   <provided xsi:type="ResourceModel:BitField" name="PC7_2_0" URI="http://resources/48.0.0/port/p/5/iocr4/pc7_2_0" value="0x00000000" toolTipHelpDescription="Port Control for Port n Pin 4 to 7" defaultValue="0x00000000" startPos="27" stopPos="29" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:BitField" name="PC7_4" URI="http://resources/48.0.0/port/p/5/iocr4/pc7_4" value="0x00000000" toolTipHelpDescription="Port Control for Port n Pin 4 to 7" defaultValue="0x00000000" startPos="31" stopPos="31" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P5.6 / #78" URI="http://resources/48.0.0/port/p/5/pad/6">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_MASTER/v4_3_26/SPI_MASTER_0.app#//@hwResources.6"/>
     <resourcesList name="hwsel_hw" requiredResourceUri="http://resources/48.0.0/port/p/5/hwsel/hw6"/>
     <resourcesList name="in_p" requiredResourceUri="http://resources/48.0.0/port/p/5/in/p6"/>
     <resourcesList name="iocr_oe" requiredResourceUri="http://resources/48.0.0/port/p/5/iocr4/pc6_4"/>
