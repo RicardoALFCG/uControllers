@@ -1,0 +1,348 @@
+!SESSION 2022-02-21 23:04:49.256 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY SOLVER 1 0 2022-02-21 23:07:28.296
+!MESSAGE USER_ACTION : Default solver exe path is: C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2022-02-21 23:07:28.437
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2022-02-21 23:07:28.438
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2022-02-21 23:07:28.692
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:07:28.937
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2022-02-21 23:07:29.131
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2022-02-21 23:07:30.420
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.4//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2022-02-21 23:07:31.801
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.4//daveSite.xml
+
+!ENTRY SOLVER 1 0 2022-02-21 23:07:40.637
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2022-02-21 23:07:40.893
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2022-02-21 23:08:34.063 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY SOLVER 1 0 2022-02-21 23:09:16.345
+!MESSAGE USER_ACTION : Default solver exe path is: C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2022-02-21 23:09:16.429
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2022-02-21 23:09:16.430
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2022-02-21 23:09:16.567
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:09:16.862
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2022-02-21 23:09:16.960
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2022-02-21 23:09:17.468
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.4//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2022-02-21 23:09:18.145
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.4//daveSite.xml
+
+!ENTRY APPSTORE 1 0 2022-02-21 23:37:08.174
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.2.00.F64.ALL] is: 1249 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2022-02-21 23:37:10.298
+!MESSAGE assertion failed: 
+
+!ENTRY com.dave.mbs.common 1 0 2022-02-21 23:37:10.304
+!MESSAGE File 'C:\Users\RGoncalves\Documents\GitHub\uControllers\XMC_Relax_Kit_Projects\APPs_Implementation_Examples\xmc4200_platform2go\CAN_example\linker_script.ld' does not exist
+
+!ENTRY com.dave.mbs.common 1 0 2022-02-21 23:37:10.577
+!MESSAGE assertion failed: 
+
+!ENTRY com.dave.mbs.common 1 0 2022-02-21 23:37:10.577
+!MESSAGE File 'C:\Users\RGoncalves\Documents\GitHub\uControllers\XMC_Relax_Kit_Projects\APPs_Implementation_Examples\xmc4200_platform2go\CAN_example\linker_script.ld' does not exist
+
+!ENTRY com.dave.mbs.common 1 0 2022-02-21 23:37:12.441
+!MESSAGE Time taken for project creation before wizard close: 5536
+
+!ENTRY com.dave.mbs.common 1 0 2022-02-21 23:37:12.463
+!MESSAGE Time taken for postProjectCreation: 20
+
+!ENTRY com.dave.mbs.common 1 0 2022-02-21 23:37:13.203
+!MESSAGE Resource '/CAN_example' is not open.
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2022-02-21 23:37:13.340
+!MESSAGE Error deleting markers.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/CAN_example' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:144)
+	at org.eclipse.core.internal.resources.Resource.findMarkers(Resource.java:1008)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$SDMarkerGenerator.deleteMarkers(AbstractBuiltinSpecsDetector.java:214)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:552)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2022-02-21 23:37:13.341
+!MESSAGE Resource '/CAN_example' is not open.
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2022-02-21 23:37:13.343
+!MESSAGE Error running Builtin Specs Detector
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error running Builtin Specs Detector
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:696)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource '/CAN_example' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:144)
+	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:215)
+	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1207)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:157)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:683)
+	... 4 more
+!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 0 2022-02-21 23:37:13.343
+!MESSAGE Error running Builtin Specs Detector
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/CAN_example' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:144)
+	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:215)
+	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1207)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:157)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:683)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 org.eclipse.core.resources 4 372 2022-02-21 23:37:13.343
+!MESSAGE Resource '/CAN_example' is not open.
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2022-02-21 23:37:13.344
+!MESSAGE Error running Builtin Specs Detector
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error running Builtin Specs Detector
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:696)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource '/CAN_example' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:144)
+	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:215)
+	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1207)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:157)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:683)
+	... 4 more
+!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 0 2022-02-21 23:37:13.344
+!MESSAGE Error running Builtin Specs Detector
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/CAN_example' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:144)
+	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:215)
+	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1207)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:157)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:683)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 org.eclipse.core.resources 4 372 2022-02-21 23:37:13.344
+!MESSAGE Resource '/CAN_example' is not open.
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:37:13.447
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 5 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:37:13.782
+!MESSAGE USER_ACTION : Active project:CAN_example[ Software ID:XMC4.2.00.F64.ALL]
+
+!ENTRY com.dave.mbs.common 1 0 2022-02-21 23:37:14.364
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:37:14.364
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 582 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:37:14.368
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:37:15.131
+!MESSAGE USER_ACTION : Time taken for rendering views is: 762 msec 
+
+!ENTRY DAVE CE 4 0 2022-02-21 23:37:15.607
+!MESSAGE 
+
+***START of Exception Info***
+C:\Users\RGoncalves\Documents\GitHub\uControllers\XMC_Relax_Kit_Projects\APPs_Implementation_Examples\xmc4200_platform2go\CAN_example\Dave\Model\Common\..\projectData.bin
+sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+sun.nio.fs.WindowsFileCopy.copy(Unknown Source)
+sun.nio.fs.WindowsFileSystemProvider.copy(Unknown Source)
+java.nio.file.Files.copy(Unknown Source)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+java.lang.reflect.Method.invoke(Unknown Source)
+org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.invoke(StaticMetaMethodSite.java:43)
+org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.call(StaticMetaMethodSite.java:88)
+org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+Model.Common.DAVEc.run(DAVEc.tmpl:139)
+com.ifx.davex.ce.core.codegeneration.GroovyTemplateEngine$Mywritable.writeTo(GroovyTemplateEngine.java:104)
+com.ifx.davex.ce.core.codegeneration.GroovyTemplateEngine$Mywritable.toString(GroovyTemplateEngine.java:112)
+com.ifx.davex.ce.core.codegeneration.CodeGenerationEngine.generateContents(CodeGenerationEngine.java:97)
+com.ifx.davex.ce.core.codegeneration.CodeGenerationManager.generateDaveFileContents(CodeGenerationManager.java:481)
+com.ifx.davex.ce.core.codegeneration.CodeGenerationManager.generateDaveCFile(CodeGenerationManager.java:422)
+com.ifx.davex.ce.core.codegeneration.CodeGenerationManager.generateDaveFiles(CodeGenerationManager.java:348)
+com.ifx.davex.ce.core.template.debugging.CustomizeCEproject.initialProjectConvertAndCodeGen(CustomizeCEproject.java:473)
+com.ifx.davex.ce.core.notifiers.DaveEventInitializer.update(DaveEventInitializer.java:588)
+com.ifx.davex.ce.core.notifiers.ActiveProjectNotifer.fireEvent(ActiveProjectNotifer.java:93)
+com.ifx.davex.ce.core.notifiers.ActiveProjectNotifer.activeProjectChanged(ActiveProjectNotifer.java:115)
+com.dave.activeproject.core.ActiveProjectManager.fireActiveProjectChanged(ActiveProjectManager.java:681)
+com.dave.activeproject.core.ActiveProjectManager.storeAndFireActiveProjectEvent(ActiveProjectManager.java:415)
+com.dave.activeproject.core.ActiveProjectManager.setActiveProject(ActiveProjectManager.java:329)
+com.ifx.dave.project.creator.ProjectCreationWizard$1.run(ProjectCreationWizard.java:310)
+org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4211)
+org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3827)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+com.ifx.davex.product.DaveApplication.start(DaveApplication.java:140)
+org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+java.lang.reflect.Method.invoke(Unknown Source)
+org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+***END of Exception Info***
+
+
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:37:15.663
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 2221 msec 
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-02-21 23:37:16.105
+!MESSAGE Indexed 'CAN_example' (40 sources, 89 headers) in 2.68 sec: 12,523 declarations; 30,640 references; 2 unresolved inclusions; 0 syntax errors; 4 unresolved names (0.0093%)
+
+!ENTRY org.eclipse.equinox.ds 1 0 2022-02-21 23:40:56.649
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-02-21 23:40:58.156
+!MESSAGE Indexed 'SPI_example' (39 sources, 78 headers) in 1.19 sec: 12,342 declarations; 23,480 references; 8 unresolved inclusions; 672 syntax errors; 5,982 unresolved names (14%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-02-21 23:41:30.583
+!MESSAGE Indexed 'UART_example' (39 sources, 78 headers) in 0.976 sec: 12,342 declarations; 23,480 references; 8 unresolved inclusions; 672 syntax errors; 5,982 unresolved names (14%)
+
+!ENTRY com.dave.mbs.common 1 0 2022-02-21 23:48:06.576
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2022-02-21 23:48:06.578
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2022-02-21 23:48:06.616
+!MESSAGE Time Taken By Serialization  : 36 ms :: C:\Users\RGoncalves\Documents\GitHub\uControllers\XMC_Relax_Kit_Projects\APPs_Implementation_Examples\xmc4200_platform2go\CAN_example\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2022-02-21 23:48:06.708
+!MESSAGE ****************Cleaning project data:CAN_example*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:48:06.862
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 236 msec 
+
+!ENTRY SOLVER 1 0 2022-02-21 23:48:06.862
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2022-02-21 23:48:07.125
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2022-02-21 23:50:57.451 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY SOLVER 1 0 2022-02-21 23:51:04.675
+!MESSAGE USER_ACTION : Default solver exe path is: C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2022-02-21 23:51:04.743
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2022-02-21 23:51:04.743
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2022-02-21 23:51:04.870
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2022-02-21 23:51:05.254
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.2.00.F64.ALL] is: 380 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:51:05.415
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 4 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:51:05.568
+!MESSAGE USER_ACTION : Active project:CAN_example[ Software ID:XMC4.2.00.F64.ALL]
+
+!ENTRY COMMON 1 0 2022-02-21 23:51:05.914
+!MESSAGE Time Taken By De-Serialization  : 59 ms :: C:\Users\RGoncalves\Documents\GitHub\uControllers\XMC_Relax_Kit_Projects\APPs_Implementation_Examples\xmc4200_platform2go\CAN_example\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2022-02-21 23:51:05.915
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:51:05.917
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 348 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:51:05.920
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:51:06.506
+!MESSAGE USER_ACTION : Time taken for rendering views is: 586 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:51:06.629
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 1218 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-21 23:51:06.874
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2022-02-21 23:51:06.926
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2022-02-21 23:51:07.397
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.4//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2022-02-21 23:51:07.868
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.4//daveSite.xml
