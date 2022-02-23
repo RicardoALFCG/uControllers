@@ -1,0 +1,271 @@
+package Model.APPS.SPI_CONFIG.v4_0_14;
+
+// Import statements
+import ifx.davex.app.manifest.*
+
+abstract class SPI_CONFIG_GUI extends AppManifest {
+	/* Begin : UI variable section */
+	 public GTab gtab_general;
+	 public GTab gtab_shift_clock;
+	 public GTab gtab_slave_select;
+	 public GTab gtab_events;
+	 public GTab gtab_fifo;
+	 public GTab gtab_dummy;
+	 public GImage gimage_baud_rate;
+	 public GInteger ginteger_word_length;
+	 public GInteger ginteger_frame_length;
+	 public GInteger ginteger_divider_factor_internal_clk;
+	 public GInteger ginteger_divider_factor_external_clk;
+	 public GInteger ginteger_desired_ld_td_value;
+	 public GInteger ginteger_ld_td_pctq;
+	 public GInteger ginteger_ld_td_dctq;
+	 public GInteger gint_slave_select_lines;
+	 public GInteger ginteger_desired_iw_nf_value;
+	 public GInteger ginteger_iw_nf_pctq1;
+	 public GInteger ginteger_iw_nf_dctq1;
+	 public GInteger ginteger_tx_fifo_data_pointer;
+	 public GInteger ginteger_rx_fifo_data_pointer;
+	 public GInteger ginteger_limit_for_transmit_events;
+	 public GInteger ginteger_limit_for_receive_events;
+	 public GCombo gcombo_device_type;
+	 public GCombo gcombo_operation_mode;
+	 public GCombo gcombo_dx2_input_stage_slave;
+	 public GCombo gcombo_dx1_input_stage_slave;
+	 public GCombo gcombo_dx1_input_stage_master;
+	 public GCombo gcombo_dx2_input_stage_master;
+	 public GCombo gcombo_type_transmit_data_validation;
+	 public GCombo gcombo_transmit_data_validation_trigger_edge;
+	 public GCombo gcombo_mclkout_output_slave;
+	 public GCombo gcombo_sclkout_output_slave;
+	 public GCombo gcombo_sclkout_output_master;
+	 public GCombo gcombo_mclkout_output_master;
+	 public GCombo gcombo_parity;
+	 public GCombo gcombo_data_shift_dir;
+	 public GCombo gcombo_clock_selection;
+	 public GCombo gcombo_external_clock_edge;
+	 public GCombo gcombo_shift_clock_setting;
+	 public GCombo gcombo_ld_td_input_frequency;
+	 public GCombo gcombo_slave_select_control;
+	 public GCombo gcombo_iw_nf_input_frequency;
+	 public GCombo gcombo_transmit_data_validation_trigger_edge_slave;
+	 public GCombo gcombo_number_tx_fifo_entries;
+	 public GCombo gcombo_number_rx_fifo_entries;
+	 public GFloat gfloat_actual_baud_rate;
+	 public GFloat gfloat_desired_baud_rate;
+	 public GFloat gfloat_actual_ld_td_value;
+	 public GFloat gfloat_actual_iw_nf_value;
+	 public GCheck gcheck_enable_invert_dx1_input_stage;
+	 public GCheck gcheck_enable_invert_dx2_input_stage;
+	 public GCheck gcheck_enable_invert_outputs;
+	 public GCheck gcheck_enable_frame_end_mode;
+	 public GCheck gcheck_enable_delay_compensation_master;
+	 public GCheck gcheck_enable_delay_compensation_slave;
+	 public GCheck gcheck_enable_capture_mode_timer;
+	 public GCheck gcheck_enable_invert_slave_select_signals;
+	 public GCheck gcheck_msls_event;
+	 public GCheck gcheck_dx2_event;
+	 public GCheck gcheck_parity_error_event;
+	 public GCheck gcheck_baud_rate_event;
+	 public GCheck gcheck_datalost;
+	 public GLabel glabel_device_type;
+	 public GLabel glabel_operation_mode;
+	 public GLabel glabel_dx1_input_stage;
+	 public GLabel glabel_dx2_input_stage;
+	 public GLabel glabel_type_transmit_data_validation;
+	 public GLabel glabel_transmit_data_validation_trigger_edge;
+	 public GLabel glabel_sclkout_output;
+	 public GLabel glabel_mclkout_output;
+	 public GLabel glabel_parity;
+	 public GLabel glabel_word_length;
+	 public GLabel glabel_data_shift_dir;
+	 public GLabel glabel_frame_length;
+	 public GLabel glabel_desired_baud_rate;
+	 public GLabel glabel_divider_factor;
+	 public GLabel glabel_actual_baud_rate;
+	 public GLabel glabel_clock_selection;
+	 public GLabel glabel_external_clock_edge;
+	 public GLabel glabel_shift_clock_setting;
+	 public GLabel glabel_desired_ld_td_value;
+	 public GLabel glabel_actual_ld_td_value;
+	 public GLabel glabel_ld_td_pctq;
+	 public GLabel glabel_ld_td_dctq;
+	 public GLabel glabel_ld_td_input_frequency;
+	 public GLabel glabel_slave_select_control;
+	 public GLabel glabel_desired_iw_nf_value;
+	 public GLabel glabel_actual_iw_nf_value;
+	 public GLabel glabel_iw_nf_pctq1;
+	 public GLabel glabel_iw_nf_dctq1;
+	 public GLabel glabel_iw_nf_input_frequency;
+	 public GLabel glabel_transmit_data_validation_trigger_edge_slave;
+	 public GLabel glabel_tx_fifo_data_pointer;
+	 public GLabel glabel_number_tx_fifo_entries;
+	 public GLabel glabel_rx_fifo_data_pointer;
+	 public GLabel glabel_number_rx_fifo_entries;
+	 public GLabel glabel_limit_for_transmit_events;
+	 public GLabel glabel_transmit_limit_for_event;
+	 public GLabel glabel_limit_for_receive_events;
+	 public GLabel glabel_receive_limit_for_event;
+	 public GLabel glabel_dx1_input_stage_slave;
+	 public GLabel glabel_dx1_input_stage_master;
+	 public GLabel glabel_dx2_input_stage_slave;
+	 public GLabel glabel_dx2_input_stage_master;
+	 public GLabel glabel_sclkout_output_slave;
+	 public GLabel glabel_sclkout_output_master;
+	 public GLabel glabel_mclkout_output_slave;
+	 public GLabel glabel_mclkout_output_master;
+	 public GLabel glabel_delay_compensation_method_master;
+	 public GLabel glabel_delay_compensation_method_slave;
+	 public GLabel glabel_divider_factor_external_clk;
+	 public GLabel glabel_divider_factor_internal_clk;
+	 public GGroup ggroup_operation_mode;
+	 public GGroup ggroup_input_stages;
+	 public GGroup ggroup_outputs_signals;
+	 public GGroup ggroup_frame_format;
+	 public GGroup ggroup_baud_rate;
+	 public GGroup ggroup_slave_select_ld_td_generation;
+	 public GGroup ggroup_slave_select_config;
+	 public GGroup ggroup_slave_select_iw_nf_generation;
+	 public GGroup ggroup_protocol_events;
+	 public GGroup ggroup_tx_fifo_buffer_conf;
+	 public GGroup ggroup_rx_fifo_buffer_conf;
+	 public GGroup ggroup_tx_fifo_interrupts_conf;
+	 public GGroup ggroup_rx_fifo_events_conf;
+	 public GMessage gmessage_delay_compensation_method_master;
+	 public GMessage gmessage_invert_dx1_input_stage;
+	 public GMessage gmessage_frame_length;
+
+	 public SPI_CONFIG_GUI(DaveEnv daveEnv){
+
+	 gtab_general = GTab(widgetName:"gtab_general", text:"General", enabled:true, visible:true)
+	 gtab_shift_clock = GTab(widgetName:"gtab_shift_clock", text:"Shift Clock", enabled:true, visible:true)
+	 gtab_slave_select = GTab(widgetName:"gtab_slave_select", text:"Slave Select", enabled:true, visible:true)
+	 gtab_events = GTab(widgetName:"gtab_events", text:"Events", enabled:true, visible:true)
+	 gtab_fifo = GTab(widgetName:"gtab_fifo", text:"FIFO", enabled:true, visible:true)
+	 gtab_dummy = GTab(widgetName:"gtab_dummy", text:"Dummy", enabled:true, visible:true)
+	 gimage_baud_rate = GImage(widgetName:"gimage_baud_rate", path: "doc/SPI_CONFIG_BRG_internal_clk.jpg", enabled:true, visible:true)
+	 ginteger_word_length = GInteger(widgetName:"ginteger_word_length", value:8, minValue:1, maxValue:16, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_frame_length = GInteger(widgetName:"ginteger_frame_length", value:64, minValue:1, maxValue:64, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_divider_factor_internal_clk = GInteger(widgetName:"ginteger_divider_factor_internal_clk", value:1, minValue:1, maxValue:1024, enabled:false, visible:true, isMandatoryValue:false)
+	 ginteger_divider_factor_external_clk = GInteger(widgetName:"ginteger_divider_factor_external_clk", value:1, minValue:1, maxValue:1024, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_desired_ld_td_value = GInteger(widgetName:"ginteger_desired_ld_td_value", value:2, minValue:1, maxValue:32, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_ld_td_pctq = GInteger(widgetName:"ginteger_ld_td_pctq", value:1, minValue:1, maxValue:3, enabled:false, visible:true, isMandatoryValue:false)
+	 ginteger_ld_td_dctq = GInteger(widgetName:"ginteger_ld_td_dctq", value:0, minValue:0, maxValue:31, enabled:false, visible:true, isMandatoryValue:false)
+	 gint_slave_select_lines = GInteger(widgetName:"gint_slave_select_lines", value:1, minValue:0, maxValue:8, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_desired_iw_nf_value = GInteger(widgetName:"ginteger_desired_iw_nf_value", value:0, minValue:0, maxValue:32, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_iw_nf_pctq1 = GInteger(widgetName:"ginteger_iw_nf_pctq1", value:0, minValue:0, maxValue:3, enabled:false, visible:true, isMandatoryValue:false)
+	 ginteger_iw_nf_dctq1 = GInteger(widgetName:"ginteger_iw_nf_dctq1", value:0, minValue:0, maxValue:31, enabled:false, visible:true, isMandatoryValue:false)
+	 ginteger_tx_fifo_data_pointer = GInteger(widgetName:"ginteger_tx_fifo_data_pointer", value:0, minValue:0, maxValue:64, enabled:false, visible:true, isMandatoryValue:false)
+	 ginteger_rx_fifo_data_pointer = GInteger(widgetName:"ginteger_rx_fifo_data_pointer", value:0, minValue:0, maxValue:64, enabled:false, visible:true, isMandatoryValue:false)
+	 ginteger_limit_for_transmit_events = GInteger(widgetName:"ginteger_limit_for_transmit_events", value:0, minValue:0, maxValue:63, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_limit_for_receive_events = GInteger(widgetName:"ginteger_limit_for_receive_events", value:0, minValue:0, maxValue:63, enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_device_type = GCombo(widgetName:"gcombo_device_type", options:["Master","Slave"], value:"Master", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_operation_mode = GCombo(widgetName:"gcombo_operation_mode", options:["Half Duplex","Full Duplex","Dual SPI","Quad SPI","Loop Back"], value:"Full Duplex", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_dx2_input_stage_slave = GCombo(widgetName:"gcombo_dx2_input_stage_slave", options:["SELIN"], value:"SELIN", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_dx1_input_stage_slave = GCombo(widgetName:"gcombo_dx1_input_stage_slave", options:["SCLKIN"], value:"SCLKIN", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_dx1_input_stage_master = GCombo(widgetName:"gcombo_dx1_input_stage_master", options:["None","External Frequency Input","Delay Compensation"], value:"None", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_dx2_input_stage_master = GCombo(widgetName:"gcombo_dx2_input_stage_master", options:["None","Transmit Data Validation","Delay Compensation"], value:"None", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_type_transmit_data_validation = GCombo(widgetName:"gcombo_type_transmit_data_validation", options:["Transfer On Low (DX2S = 0)","Transfer On High (DX2S = 1)","Transfer On Event (DX2T)"], value:"Transfer On Low (DX2S = 0)", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_transmit_data_validation_trigger_edge = GCombo(widgetName:"gcombo_transmit_data_validation_trigger_edge", options:["Rising Edge","Falling Edge","Both Edges"], value:"Rising Edge", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_mclkout_output_slave = GCombo(widgetName:"gcombo_mclkout_output_slave", options:["None","Independent Clock Output"], value:"None", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_sclkout_output_slave = GCombo(widgetName:"gcombo_sclkout_output_slave", options:["None","Independent Clock Output"], value:"None", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_sclkout_output_master = GCombo(widgetName:"gcombo_sclkout_output_master", options:["Master Shift Clock"], value:"Master Shift Clock", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_mclkout_output_master = GCombo(widgetName:"gcombo_mclkout_output_master", options:["None","Master Time Base"], value:"None", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_parity = GCombo(widgetName:"gcombo_parity", options:["No Parity","Even Parity","Odd Parity"], value:"No Parity", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_data_shift_dir = GCombo(widgetName:"gcombo_data_shift_dir", options:["LSB","MSB"], value:"MSB", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_clock_selection = GCombo(widgetName:"gcombo_clock_selection", options:["Internal Source (FD)","External Source (DX1T)"], value:"Internal Source (FD)", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_external_clock_edge = GCombo(widgetName:"gcombo_external_clock_edge", options:["Rising Edge","Falling Edge","Both Edges"], value:"Rising Edge", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_shift_clock_setting = GCombo(widgetName:"gcombo_shift_clock_setting", options:["No Delay, No Polarity Inversion","No Delay, Polarity Inversion","Delayed By 1/2 Shift Clock Period, No Polarity Inversion","Delayed By 1/2 Shift Clock Period, Polarity Inversion"], value:"No Delay, No Polarity Inversion", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_ld_td_input_frequency = GCombo(widgetName:"gcombo_ld_td_input_frequency", options:["fPDIV","fPPP","fSCLK","fMCLK"], value:"fSCLK", enabled:false, visible:true, isMandatoryValue:false)
+	 gcombo_slave_select_control = GCombo(widgetName:"gcombo_slave_select_control", options:["Coded","Direct"], value:"Direct", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_iw_nf_input_frequency = GCombo(widgetName:"gcombo_iw_nf_input_frequency", options:["fPDIV","fPPP","fSCLK","fMCLK"], value:"fSCLK", enabled:false, visible:true, isMandatoryValue:false)
+	 gcombo_transmit_data_validation_trigger_edge_slave = GCombo(widgetName:"gcombo_transmit_data_validation_trigger_edge_slave", options:["Rising Edge","Falling Edge","Both Edges"], value:"Rising Edge", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_number_tx_fifo_entries = GCombo(widgetName:"gcombo_number_tx_fifo_entries", options:["0","2","4","8","16","32","64"], value:"0", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_number_rx_fifo_entries = GCombo(widgetName:"gcombo_number_rx_fifo_entries", options:["0","2","4","8","16","32","64"], value:"0", enabled:true, visible:true, isMandatoryValue:false)
+	 gfloat_actual_baud_rate = GFloat(widgetName:"gfloat_actual_baud_rate", value:19.2, minValue:Double.NEGATIVE_INFINITY, maxValue:Double.POSITIVE_INFINITY, enabled:false, visible:true, isMandatoryValue:false)
+	 gfloat_desired_baud_rate = GFloat(widgetName:"gfloat_desired_baud_rate", value:19.2, minValue:0.1, maxValue:60000, enabled:true, visible:true, isMandatoryValue:false)
+	 gfloat_actual_ld_td_value = GFloat(widgetName:"gfloat_actual_ld_td_value", value:104.17, minValue:Double.NEGATIVE_INFINITY, maxValue:Double.POSITIVE_INFINITY, enabled:false, visible:true, isMandatoryValue:false)
+	 gfloat_actual_iw_nf_value = GFloat(widgetName:"gfloat_actual_iw_nf_value", value:0.0, minValue:Double.NEGATIVE_INFINITY, maxValue:Double.POSITIVE_INFINITY, enabled:false, visible:true, isMandatoryValue:false)
+	 gcheck_enable_invert_dx1_input_stage = GCheck(widgetName:"gcheck_enable_invert_dx1_input_stage", value:false, enabled:true, visible:true)
+	 gcheck_enable_invert_dx2_input_stage = GCheck(widgetName:"gcheck_enable_invert_dx2_input_stage", value:false, enabled:true, visible:true)
+	 gcheck_enable_invert_outputs = GCheck(widgetName:"gcheck_enable_invert_outputs", value:false, enabled:true, visible:true)
+	 gcheck_enable_frame_end_mode = GCheck(widgetName:"gcheck_enable_frame_end_mode", value:false, enabled:true, visible:true)
+	 gcheck_enable_delay_compensation_master = GCheck(widgetName:"gcheck_enable_delay_compensation_master", value:false, enabled:true, visible:true)
+	 gcheck_enable_delay_compensation_slave = GCheck(widgetName:"gcheck_enable_delay_compensation_slave", value:false, enabled:true, visible:true)
+	 gcheck_enable_capture_mode_timer = GCheck(widgetName:"gcheck_enable_capture_mode_timer", value:false, enabled:true, visible:true)
+	 gcheck_enable_invert_slave_select_signals = GCheck(widgetName:"gcheck_enable_invert_slave_select_signals", value:false, enabled:true, visible:true)
+	 gcheck_msls_event = GCheck(widgetName:"gcheck_msls_event", value:false, enabled:true, visible:true)
+	 gcheck_dx2_event = GCheck(widgetName:"gcheck_dx2_event", value:false, enabled:true, visible:true)
+	 gcheck_parity_error_event = GCheck(widgetName:"gcheck_parity_error_event", value:false, enabled:true, visible:true)
+	 gcheck_baud_rate_event = GCheck(widgetName:"gcheck_baud_rate_event", value:false, enabled:true, visible:true)
+	 gcheck_datalost = GCheck(widgetName:"gcheck_datalost", value:false, enabled:true, visible:true)
+	 glabel_device_type = GLabel(widgetName:"glabel_device_type", text:"Device type:", enabled:true, visible:true)
+	 glabel_operation_mode = GLabel(widgetName:"glabel_operation_mode", text:"Operation mode:", enabled:true, visible:true)
+	 glabel_dx1_input_stage = GLabel(widgetName:"glabel_dx1_input_stage", text:"DX1 input stage:", enabled:true, visible:true)
+	 glabel_dx2_input_stage = GLabel(widgetName:"glabel_dx2_input_stage", text:"DX2 input stage:", enabled:true, visible:true)
+	 glabel_type_transmit_data_validation = GLabel(widgetName:"glabel_type_transmit_data_validation", text:"Type of data validation:", enabled:true, visible:true)
+	 glabel_transmit_data_validation_trigger_edge = GLabel(widgetName:"glabel_transmit_data_validation_trigger_edge", text:"Triggering edge for data validation on event:", enabled:true, visible:true)
+	 glabel_sclkout_output = GLabel(widgetName:"glabel_sclkout_output", text:"SCLKOUT output:", enabled:true, visible:true)
+	 glabel_mclkout_output = GLabel(widgetName:"glabel_mclkout_output", text:"MCLKOUT output:", enabled:true, visible:true)
+	 glabel_parity = GLabel(widgetName:"glabel_parity", text:"Type of parity:", enabled:true, visible:true)
+	 glabel_word_length = GLabel(widgetName:"glabel_word_length", text:"Word length:", enabled:true, visible:true)
+	 glabel_data_shift_dir = GLabel(widgetName:"glabel_data_shift_dir", text:"Data shift direction:", enabled:true, visible:true)
+	 glabel_frame_length = GLabel(widgetName:"glabel_frame_length", text:"Frame length:", enabled:true, visible:true)
+	 glabel_desired_baud_rate = GLabel(widgetName:"glabel_desired_baud_rate", text:"Desired bus speed [kHz]:", enabled:true, visible:true)
+	 glabel_divider_factor = GLabel(widgetName:"glabel_divider_factor", text:"Divider factor:", enabled:true, visible:true)
+	 glabel_actual_baud_rate = GLabel(widgetName:"glabel_actual_baud_rate", text:"Actual bus speed [kHz]:", enabled:true, visible:true)
+	 glabel_clock_selection = GLabel(widgetName:"glabel_clock_selection", text:"Clock:", enabled:true, visible:true)
+	 glabel_external_clock_edge = GLabel(widgetName:"glabel_external_clock_edge", text:"Edge selection:", enabled:true, visible:true)
+	 glabel_shift_clock_setting = GLabel(widgetName:"glabel_shift_clock_setting", text:"Shift clock signal (SCLKOUT) setting with respect to the shift clock (SCLK) signal from the\r\nBaud Rate Generator: ", enabled:true, visible:true)
+	 glabel_desired_ld_td_value = GLabel(widgetName:"glabel_desired_ld_td_value", text:"Desired delay [clock cycles]:", enabled:true, visible:true)
+	 glabel_actual_ld_td_value = GLabel(widgetName:"glabel_actual_ld_td_value", text:"Actual delay [us]:", enabled:true, visible:true)
+	 glabel_ld_td_pctq = GLabel(widgetName:"glabel_ld_td_pctq", text:"Time quantum length:", enabled:true, visible:true)
+	 glabel_ld_td_dctq = GLabel(widgetName:"glabel_ld_td_dctq", text:"Number of time quanta:", enabled:true, visible:true)
+	 glabel_ld_td_input_frequency = GLabel(widgetName:"glabel_ld_td_input_frequency", text:"Input frequency:", enabled:true, visible:true)
+	 glabel_slave_select_control = GLabel(widgetName:"glabel_slave_select_control", text:"Select control:", enabled:true, visible:true)
+	 glabel_desired_iw_nf_value = GLabel(widgetName:"glabel_desired_iw_nf_value", text:"Desired delay [cycles]:", enabled:true, visible:true)
+	 glabel_actual_iw_nf_value = GLabel(widgetName:"glabel_actual_iw_nf_value", text:"Actual delay [us]:", enabled:true, visible:true)
+	 glabel_iw_nf_pctq1 = GLabel(widgetName:"glabel_iw_nf_pctq1", text:"Time quantum length:", enabled:true, visible:true)
+	 glabel_iw_nf_dctq1 = GLabel(widgetName:"glabel_iw_nf_dctq1", text:"Number of time quanta:", enabled:true, visible:true)
+	 glabel_iw_nf_input_frequency = GLabel(widgetName:"glabel_iw_nf_input_frequency", text:"Input frequency:", enabled:true, visible:true)
+	 glabel_transmit_data_validation_trigger_edge_slave = GLabel(widgetName:"glabel_transmit_data_validation_trigger_edge_slave", text:"Triggering edge for data validation on event:", enabled:true, visible:true)
+	 glabel_tx_fifo_data_pointer = GLabel(widgetName:"glabel_tx_fifo_data_pointer", text:"Tx FIFO data pointer:", enabled:true, visible:true)
+	 glabel_number_tx_fifo_entries = GLabel(widgetName:"glabel_number_tx_fifo_entries", text:"No. of FIFO buffer entries:", enabled:true, visible:true)
+	 glabel_rx_fifo_data_pointer = GLabel(widgetName:"glabel_rx_fifo_data_pointer", text:"Rx FIFO data pointer:", enabled:true, visible:true)
+	 glabel_number_rx_fifo_entries = GLabel(widgetName:"glabel_number_rx_fifo_entries", text:"No. of FIFO buffer entries:", enabled:true, visible:true)
+	 glabel_limit_for_transmit_events = GLabel(widgetName:"glabel_limit_for_transmit_events", text:"Limit for the transmit buffer event generation:", enabled:true, visible:true)
+	 glabel_transmit_limit_for_event = GLabel(widgetName:"glabel_transmit_limit_for_event", text:"Note: the transmit buffer event is triggered when the filling level is falling\r\nbelow the limit (TBCTR.LOF = 0).", enabled:true, visible:true)
+	 glabel_limit_for_receive_events = GLabel(widgetName:"glabel_limit_for_receive_events", text:"Filling level for the receive buffer event detection:", enabled:true, visible:true)
+	 glabel_receive_limit_for_event = GLabel(widgetName:"glabel_receive_limit_for_event", text:"Note: the receive buffer event triggered when the filling level exceeds the \r\nlimit (RBCTR.LOF = 1).", enabled:true, visible:true)
+	 glabel_dx1_input_stage_slave = GLabel(widgetName:"glabel_dx1_input_stage_slave", text:"DX1 input stage:", enabled:true, visible:true)
+	 glabel_dx1_input_stage_master = GLabel(widgetName:"glabel_dx1_input_stage_master", text:"DX1 input stage:", enabled:true, visible:true)
+	 glabel_dx2_input_stage_slave = GLabel(widgetName:"glabel_dx2_input_stage_slave", text:"DX2 input stage:", enabled:true, visible:true)
+	 glabel_dx2_input_stage_master = GLabel(widgetName:"glabel_dx2_input_stage_master", text:"DX2 input stage:", enabled:true, visible:true)
+	 glabel_sclkout_output_slave = GLabel(widgetName:"glabel_sclkout_output_slave", text:"SCLKOUT output:", enabled:true, visible:true)
+	 glabel_sclkout_output_master = GLabel(widgetName:"glabel_sclkout_output_master", text:"SCLKOUT output:", enabled:true, visible:true)
+	 glabel_mclkout_output_slave = GLabel(widgetName:"glabel_mclkout_output_slave", text:"MCLKOUT output:", enabled:true, visible:true)
+	 glabel_mclkout_output_master = GLabel(widgetName:"glabel_mclkout_output_master", text:"MCLKOUT output:", enabled:true, visible:true)
+	 glabel_delay_compensation_method_master = GLabel(widgetName:"glabel_delay_compensation_method_master", text:"Compensation method:", enabled:true, visible:true)
+	 glabel_delay_compensation_method_slave = GLabel(widgetName:"glabel_delay_compensation_method_slave", text:"Compensation method:", enabled:true, visible:true)
+	 glabel_divider_factor_external_clk = GLabel(widgetName:"glabel_divider_factor_external_clk", text:"Divider factor:", enabled:true, visible:true)
+	 glabel_divider_factor_internal_clk = GLabel(widgetName:"glabel_divider_factor_internal_clk", text:"Divider factor:", enabled:true, visible:true)
+	 ggroup_operation_mode = GGroup(widgetName:"ggroup_operation_mode", text:"Operation Mode", enabled:true, visible:true)
+	 ggroup_input_stages = GGroup(widgetName:"ggroup_input_stages", text:"Input Stages", enabled:true, visible:true)
+	 ggroup_outputs_signals = GGroup(widgetName:"ggroup_outputs_signals", text:"Output Signals", enabled:true, visible:true)
+	 ggroup_frame_format = GGroup(widgetName:"ggroup_frame_format", text:"Frame Format", enabled:true, visible:true)
+	 ggroup_baud_rate = GGroup(widgetName:"ggroup_baud_rate", text:"Baud Rate Generator", enabled:true, visible:true)
+	 ggroup_slave_select_ld_td_generation = GGroup(widgetName:"ggroup_slave_select_ld_td_generation", text:"Leading/Trailing Delay Generation", enabled:true, visible:true)
+	 ggroup_slave_select_config = GGroup(widgetName:"ggroup_slave_select_config", text:"Signals", enabled:true, visible:true)
+	 ggroup_slave_select_iw_nf_generation = GGroup(widgetName:"ggroup_slave_select_iw_nf_generation", text:"Inter-Word/Next-Frame Delay Generation", enabled:true, visible:true)
+	 ggroup_protocol_events = GGroup(widgetName:"ggroup_protocol_events", text:"Protocol-Specific Events", enabled:true, visible:true)
+	 ggroup_tx_fifo_buffer_conf = GGroup(widgetName:"ggroup_tx_fifo_buffer_conf", text:"Transmit FIFO Buffer Configuration", enabled:true, visible:true)
+	 ggroup_rx_fifo_buffer_conf = GGroup(widgetName:"ggroup_rx_fifo_buffer_conf", text:"Receive FIFO Buffer Configuration", enabled:true, visible:true)
+	 ggroup_tx_fifo_interrupts_conf = GGroup(widgetName:"ggroup_tx_fifo_interrupts_conf", text:"Transmit FIFO Events Configuration", enabled:true, visible:true)
+	 ggroup_rx_fifo_events_conf = GGroup(widgetName:"ggroup_rx_fifo_events_conf", text:"Receive FIFO Events Configuration", enabled:true, visible:true)
+	 gmessage_delay_compensation_method_master = GMessage(widgetName:"gmessage_delay_compensation_method_master", text:"For the delay compensation in master mode to work, the \"Delay Compensation\" input has to be selected in the DX1 Input Stage.", isError:false, visible:true)
+	 gmessage_invert_dx1_input_stage = GMessage(widgetName:"gmessage_invert_dx1_input_stage", text:"Using the \"No delay, polarity inversion\" setting for the Shift Clock, the polarity inversion needs to be inverted for the DX1 input stage.", isError:false, visible:true)
+	 gmessage_frame_length = GMessage(widgetName:"gmessage_frame_length", text:"If the frame length is 64 data bits or greater, parity bit generation is not supported.", isError:false, visible:true)
+
+
+	 }
+	/* End : UI variable section */
+}

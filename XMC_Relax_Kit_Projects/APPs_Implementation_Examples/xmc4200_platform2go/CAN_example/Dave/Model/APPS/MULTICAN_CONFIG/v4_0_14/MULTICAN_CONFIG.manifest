@@ -1,0 +1,1463 @@
+package Model.APPS.MULTICAN_CONFIG.v4_0_14;
+
+/*
+ Copyright (c) 2016-2020, Infineon Technologies AG
+ All rights reserved.
+											
+ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+ following conditions are met:
+																			 
+ Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+ disclaimer.
+  
+ Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following
+ disclaimer in the documentation and/or other materials provided with the distribution.
+  
+ Neither the name of the copyright holders nor the names of its contributors may be used to endorse or promote
+ products derived from this software without specific prior written permission.
+																			 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+																			 
+ To improve the quality of the software, users are encouraged to share modifications, enhancements or bug fixes with
+ Infineon Technologies AG: dave@infineon.com. */
+
+/*************** Revision History ***********************************************************************************
+Version        Date          Description 
+
+  4.0.0       26-10-2015   	 Initial version for DAVEv4
+  4.0.2       31-03-2016     Modified UI for nodes and message object settings
+  4.0.4       22-07-2016     Defect fix:Transmit request is set only for message object which is not gateway destination
+  4.0.6       10-07-2016     Code for mapping events is always generated for the visible signals.
+  4.0.8       21-10-2016     1. Fixed code generation issue in multican_config_confc.tmpl, with respect to XMC_CAN_MO_Config() API.<br>
+                             2. Help doc updated with new usage.
+  4.0.10      26-10-2016     1. Added XMC1403_Q040.<br>
+                             2. Fixed minimum value of message object identifier value    
+  4.0.12      11-01-2018     1. Fixed GUI issues when using XMC4100 devices.<br>
+  4.0.14      09-01-2021     Modified check for minimum XMCLib version. <BR>
+*********************************************************************************************************************/
+import ifx.davex.app.manifest.*
+
+class  MULTICAN_CONFIG extends MULTICAN_CONFIG_GUI {
+
+	/* Note  : Following App properties are mandatory and important */
+
+	/* Begin : APP property section */
+
+	/**
+	 * App version
+	 * Format: a string with three digit separated by a dot.
+	 */
+	def version            = '4.0.14'
+
+	/**
+	 * App categories declaration. 
+	 * It is list of strings. Subcategories are separated by slash.
+	 * No limits on number of categories and subcategories depth.
+	 */
+	def categoriesDescription = [
+		'Peripheral Configuration'
+	]
+
+	/** 
+	 * Minimum DAVE version required for this app.
+	 * 
+	 * It is string with three digit separated by a dot.
+	 */
+	def minDaveVersion           = '4.1.2'
+
+	/** 
+	 * Keywords used by search feature in Apps selection view
+	 * 
+	 * It is a list of string.
+	 */
+	def keywords      = [
+		'Config',
+		'CAN',
+		'MultiCAN',
+		'Communication',
+		'Peripheral Configuration',
+		'MULTICAN_CONFIG'
+	]
+
+	/** 
+	 * softwareIDs is used to declare which devices are compatible with this APP.
+	 * It is a map with key a string containing a pattern that shall match the SW id of
+	 * the device and as value the minimal version of the APP.
+	 */
+
+		def softwareIDs = [
+    "XMC4.8.*.*.*":"1.0.0",
+    "XMC4.7.*.*.*":"1.0.0",
+  
+    "XMC4.5.00.*.*":"1.0.0",
+    "XMC4.5.02.*.*":"1.0.0",
+  
+    "XMC4.4.*.*.*":"1.0.0",
+  
+    "XMC4.3.*.*.*":"1.0.0",
+  
+    "XMC4.2.*.*.*":"1.0.0",
+    
+    "XMC4.1.00.*.*":"1.0.0",
+    "XMC4.1.08.*.*":"1.0.0",
+  
+    "XMC1.4.03.*.*":"1.0.0",
+  
+    "XMC1.4.04.*.*":"1.0.0"
+	]
+	/**
+	 * Singleton property:
+	 * When it is true the app can be instantiated only once. 
+	 */
+	def singleton     = true
+
+
+	/**
+	 * initProvider property
+	 * It shall be true to add a call to <AppName>_Init() 
+	 */
+	def initProvider  = true
+
+	/**
+	 * Deprecated app
+	 * Set it to true to indicate that the app shall be not used for new projects.
+	 */
+	def deprecated    = false
+
+	/**
+	 * Sharable property.
+	 * It shall be true to allows multiple apps to require the same instance of this app.
+	 */
+	def sharable      = false
+
+	/**
+	 *  App function description.
+	 */
+	def description = "Configures MultiCAN peripheral"
+
+	/* End   : App property section */
+
+	/* Begin : User app property section */
+
+	/* End   : User app property section */
+
+	/* App Constructor */
+
+	/* Required APP consumption for CAN_NODE */
+	MRequiredApp  app_global_can /* can global APP consumption for XMC4xxx device  */
+	MVirtualResourceGroup hwres_can
+
+	/* Variable to hold actual system clock frequency value */
+	GFloat gactualclock = GFloat(widgetName:"gclock" )
+
+	MVirtualResourceGroup hwres_can_node0
+	MVirtualResourceGroup hwres_can_node1
+	MVirtualResourceGroup hwres_can_node2
+	MVirtualResourceGroup hwres_can_node3
+	MVirtualResourceGroup hwres_can_node4
+	MVirtualResourceGroup hwres_can_node5
+
+	/*MO Configuration */
+	MVirtualResourceGroup hwres_can_mobj0 = null;
+	MVirtualResourceGroup hwres_can_mobj1 = null;
+	MVirtualResourceGroup hwres_can_mobj2 = null;
+	MVirtualResourceGroup hwres_can_mobj3 = null;
+	MVirtualResourceGroup hwres_can_mobj4 = null;
+	MVirtualResourceGroup hwres_can_mobj5 = null;
+	MVirtualResourceGroup hwres_can_mobj6 = null;
+	MVirtualResourceGroup hwres_can_mobj7 = null;
+	MVirtualResourceGroup hwres_can_mobj8 = null;
+	MVirtualResourceGroup hwres_can_mobj9 = null;
+	MVirtualResourceGroup hwres_can_mobj10 = null;
+	MVirtualResourceGroup hwres_can_mobj11 = null;
+	MVirtualResourceGroup hwres_can_mobj12 = null;
+	MVirtualResourceGroup hwres_can_mobj13 = null;
+	MVirtualResourceGroup hwres_can_mobj14 = null;
+	MVirtualResourceGroup hwres_can_mobj15 = null;
+	MVirtualResourceGroup hwres_can_mobj16 = null;
+	MVirtualResourceGroup hwres_can_mobj17 = null;
+	MVirtualResourceGroup hwres_can_mobj18 = null;
+	MVirtualResourceGroup hwres_can_mobj19 = null;
+	MVirtualResourceGroup hwres_can_mobj20 = null;
+	MVirtualResourceGroup hwres_can_mobj21 = null;
+	MVirtualResourceGroup hwres_can_mobj22 = null;
+	MVirtualResourceGroup hwres_can_mobj23 = null;
+	MVirtualResourceGroup hwres_can_mobj24 = null;
+	MVirtualResourceGroup hwres_can_mobj25 = null;
+	MVirtualResourceGroup hwres_can_mobj26 = null;
+	MVirtualResourceGroup hwres_can_mobj27 = null;
+	MVirtualResourceGroup hwres_can_mobj28 = null;
+	MVirtualResourceGroup hwres_can_mobj29 = null;
+	MVirtualResourceGroup hwres_can_mobj30 = null;
+	MVirtualResourceGroup hwres_can_mobj31 = null;
+	MVirtualResourceGroup hwres_can_mobj32 = null;
+	MVirtualResourceGroup hwres_can_mobj33 = null;
+	MVirtualResourceGroup hwres_can_mobj34 = null;
+	MVirtualResourceGroup hwres_can_mobj35 = null;
+	MVirtualResourceGroup hwres_can_mobj36 = null;
+	MVirtualResourceGroup hwres_can_mobj37 = null;
+	MVirtualResourceGroup hwres_can_mobj38 = null;
+	MVirtualResourceGroup hwres_can_mobj39 = null;
+	MVirtualResourceGroup hwres_can_mobj40 = null;
+	MVirtualResourceGroup hwres_can_mobj41 = null;
+	MVirtualResourceGroup hwres_can_mobj42 = null;
+	MVirtualResourceGroup hwres_can_mobj43 = null;
+	MVirtualResourceGroup hwres_can_mobj44 = null;
+	MVirtualResourceGroup hwres_can_mobj45 = null;
+	MVirtualResourceGroup hwres_can_mobj46 = null;
+	MVirtualResourceGroup hwres_can_mobj47 = null;
+	MVirtualResourceGroup hwres_can_mobj48 = null;
+	MVirtualResourceGroup hwres_can_mobj49 = null;
+	MVirtualResourceGroup hwres_can_mobj50 = null;
+	MVirtualResourceGroup hwres_can_mobj51 = null;
+	MVirtualResourceGroup hwres_can_mobj52 = null;
+	MVirtualResourceGroup hwres_can_mobj53 = null;
+	MVirtualResourceGroup hwres_can_mobj54 = null;
+	MVirtualResourceGroup hwres_can_mobj55 = null;
+	MVirtualResourceGroup hwres_can_mobj56 = null;
+	MVirtualResourceGroup hwres_can_mobj57 = null;
+	MVirtualResourceGroup hwres_can_mobj58 = null;
+	MVirtualResourceGroup hwres_can_mobj59 = null;
+	MVirtualResourceGroup hwres_can_mobj60 = null;
+	MVirtualResourceGroup hwres_can_mobj61 = null;
+	MVirtualResourceGroup hwres_can_mobj62 = null;
+	MVirtualResourceGroup hwres_can_mobj63 = null;
+
+	MVirtualResourceGroup hwres_can_mobj64 = null;
+	MVirtualResourceGroup hwres_can_mobj65 = null;
+	MVirtualResourceGroup hwres_can_mobj66 = null;
+	MVirtualResourceGroup hwres_can_mobj67 = null;
+	MVirtualResourceGroup hwres_can_mobj68 = null;
+	MVirtualResourceGroup hwres_can_mobj69 = null;
+	MVirtualResourceGroup hwres_can_mobj70 = null;
+	MVirtualResourceGroup hwres_can_mobj71 = null;
+	MVirtualResourceGroup hwres_can_mobj72 = null;
+	MVirtualResourceGroup hwres_can_mobj73 = null;
+	MVirtualResourceGroup hwres_can_mobj74 = null;
+	MVirtualResourceGroup hwres_can_mobj75 = null;
+	MVirtualResourceGroup hwres_can_mobj76 = null;
+	MVirtualResourceGroup hwres_can_mobj77 = null;
+	MVirtualResourceGroup hwres_can_mobj78 = null;
+	MVirtualResourceGroup hwres_can_mobj79 = null;
+	MVirtualResourceGroup hwres_can_mobj80 = null;
+	MVirtualResourceGroup hwres_can_mobj81 = null;
+	MVirtualResourceGroup hwres_can_mobj82 = null;
+	MVirtualResourceGroup hwres_can_mobj83 = null;
+	MVirtualResourceGroup hwres_can_mobj84 = null;
+	MVirtualResourceGroup hwres_can_mobj85 = null;
+	MVirtualResourceGroup hwres_can_mobj86 = null;
+	MVirtualResourceGroup hwres_can_mobj87 = null;
+	MVirtualResourceGroup hwres_can_mobj88 = null;
+	MVirtualResourceGroup hwres_can_mobj89 = null;
+	MVirtualResourceGroup hwres_can_mobj90 = null;
+	MVirtualResourceGroup hwres_can_mobj91 = null;
+	MVirtualResourceGroup hwres_can_mobj92 = null;
+	MVirtualResourceGroup hwres_can_mobj93 = null;
+	MVirtualResourceGroup hwres_can_mobj94 = null;
+	MVirtualResourceGroup hwres_can_mobj95 = null;
+	MVirtualResourceGroup hwres_can_mobj96 = null;
+	MVirtualResourceGroup hwres_can_mobj97 = null;
+	MVirtualResourceGroup hwres_can_mobj98 = null;
+	MVirtualResourceGroup hwres_can_mobj99 = null;
+	MVirtualResourceGroup hwres_can_mobj100 = null;
+	MVirtualResourceGroup hwres_can_mobj101 = null;
+	MVirtualResourceGroup hwres_can_mobj102 = null;
+	MVirtualResourceGroup hwres_can_mobj103 = null;
+	MVirtualResourceGroup hwres_can_mobj104 = null;
+	MVirtualResourceGroup hwres_can_mobj105 = null;
+	MVirtualResourceGroup hwres_can_mobj106 = null;
+	MVirtualResourceGroup hwres_can_mobj107 = null;
+	MVirtualResourceGroup hwres_can_mobj108 = null;
+	MVirtualResourceGroup hwres_can_mobj109 = null;
+	MVirtualResourceGroup hwres_can_mobj110 = null;
+	MVirtualResourceGroup hwres_can_mobj111 = null;
+	MVirtualResourceGroup hwres_can_mobj112 = null;
+	MVirtualResourceGroup hwres_can_mobj113 = null;
+	MVirtualResourceGroup hwres_can_mobj114 = null;
+	MVirtualResourceGroup hwres_can_mobj115 = null;
+	MVirtualResourceGroup hwres_can_mobj116 = null;
+	MVirtualResourceGroup hwres_can_mobj117 = null;
+	MVirtualResourceGroup hwres_can_mobj118 = null;
+	MVirtualResourceGroup hwres_can_mobj119 = null;
+	MVirtualResourceGroup hwres_can_mobj120 = null;
+	MVirtualResourceGroup hwres_can_mobj121 = null;
+	MVirtualResourceGroup hwres_can_mobj122 = null;
+	MVirtualResourceGroup hwres_can_mobj123 = null;
+	MVirtualResourceGroup hwres_can_mobj124 = null;
+	MVirtualResourceGroup hwres_can_mobj125 = null;
+	MVirtualResourceGroup hwres_can_mobj126 = null;
+	MVirtualResourceGroup hwres_can_mobj127 = null;
+	MVirtualResourceGroup hwres_can_mobj128 = null;
+
+	MVirtualResourceGroup hwres_can_mobj129 = null;
+	MVirtualResourceGroup hwres_can_mobj130 = null;
+	MVirtualResourceGroup hwres_can_mobj131 = null;
+	MVirtualResourceGroup hwres_can_mobj132 = null;
+	MVirtualResourceGroup hwres_can_mobj133 = null;
+	MVirtualResourceGroup hwres_can_mobj134 = null;
+	MVirtualResourceGroup hwres_can_mobj135 = null;
+	MVirtualResourceGroup hwres_can_mobj136 = null;
+	MVirtualResourceGroup hwres_can_mobj137 = null;
+	MVirtualResourceGroup hwres_can_mobj138 = null;
+	MVirtualResourceGroup hwres_can_mobj139 = null;
+	MVirtualResourceGroup hwres_can_mobj140 = null;
+	MVirtualResourceGroup hwres_can_mobj141 = null;
+	MVirtualResourceGroup hwres_can_mobj142 = null;
+	MVirtualResourceGroup hwres_can_mobj143 = null;
+	MVirtualResourceGroup hwres_can_mobj144 = null;
+	MVirtualResourceGroup hwres_can_mobj145 = null;
+	MVirtualResourceGroup hwres_can_mobj146 = null;
+	MVirtualResourceGroup hwres_can_mobj147 = null;
+	MVirtualResourceGroup hwres_can_mobj148 = null;
+	MVirtualResourceGroup hwres_can_mobj149 = null;
+	MVirtualResourceGroup hwres_can_mobj150 = null;
+	MVirtualResourceGroup hwres_can_mobj151 = null;
+	MVirtualResourceGroup hwres_can_mobj152 = null;
+	MVirtualResourceGroup hwres_can_mobj153 = null;
+	MVirtualResourceGroup hwres_can_mobj154 = null;
+	MVirtualResourceGroup hwres_can_mobj155 = null;
+	MVirtualResourceGroup hwres_can_mobj156 = null;
+	MVirtualResourceGroup hwres_can_mobj157 = null;
+	MVirtualResourceGroup hwres_can_mobj158 = null;
+	MVirtualResourceGroup hwres_can_mobj159 = null;
+	MVirtualResourceGroup hwres_can_mobj160 = null;
+	MVirtualResourceGroup hwres_can_mobj161 = null;
+	MVirtualResourceGroup hwres_can_mobj162 = null;
+	MVirtualResourceGroup hwres_can_mobj163 = null;
+	MVirtualResourceGroup hwres_can_mobj164 = null;
+	MVirtualResourceGroup hwres_can_mobj165 = null;
+	MVirtualResourceGroup hwres_can_mobj166 = null;
+	MVirtualResourceGroup hwres_can_mobj167 = null;
+	MVirtualResourceGroup hwres_can_mobj168 = null;
+	MVirtualResourceGroup hwres_can_mobj169 = null;
+	MVirtualResourceGroup hwres_can_mobj170 = null;
+	MVirtualResourceGroup hwres_can_mobj171 = null;
+	MVirtualResourceGroup hwres_can_mobj172 = null;
+	MVirtualResourceGroup hwres_can_mobj173 = null;
+	MVirtualResourceGroup hwres_can_mobj174 = null;
+	MVirtualResourceGroup hwres_can_mobj175 = null;
+	MVirtualResourceGroup hwres_can_mobj176 = null;
+	MVirtualResourceGroup hwres_can_mobj177 = null;
+	MVirtualResourceGroup hwres_can_mobj178 = null;
+	MVirtualResourceGroup hwres_can_mobj179 = null;
+	MVirtualResourceGroup hwres_can_mobj180 = null;
+	MVirtualResourceGroup hwres_can_mobj181 = null;
+	MVirtualResourceGroup hwres_can_mobj182 = null;
+	MVirtualResourceGroup hwres_can_mobj183 = null;
+	MVirtualResourceGroup hwres_can_mobj184 = null;
+	MVirtualResourceGroup hwres_can_mobj185 = null;
+	MVirtualResourceGroup hwres_can_mobj186 = null;
+	MVirtualResourceGroup hwres_can_mobj187 = null;
+	MVirtualResourceGroup hwres_can_mobj188 = null;
+	MVirtualResourceGroup hwres_can_mobj189 = null;
+	MVirtualResourceGroup hwres_can_mobj190 = null;
+	MVirtualResourceGroup hwres_can_mobj191 = null;
+	MVirtualResourceGroup hwres_can_mobj192 = null;
+
+	MVirtualResourceGroup hwres_can_mobj193 = null;
+	MVirtualResourceGroup hwres_can_mobj194 = null;
+	MVirtualResourceGroup hwres_can_mobj195 = null;
+	MVirtualResourceGroup hwres_can_mobj196 = null;
+	MVirtualResourceGroup hwres_can_mobj197 = null;
+	MVirtualResourceGroup hwres_can_mobj198 = null;
+	MVirtualResourceGroup hwres_can_mobj199 = null;
+	MVirtualResourceGroup hwres_can_mobj200 = null;
+	MVirtualResourceGroup hwres_can_mobj201 = null;
+	MVirtualResourceGroup hwres_can_mobj202 = null;
+	MVirtualResourceGroup hwres_can_mobj203 = null;
+	MVirtualResourceGroup hwres_can_mobj204 = null;
+	MVirtualResourceGroup hwres_can_mobj205 = null;
+	MVirtualResourceGroup hwres_can_mobj206 = null;
+	MVirtualResourceGroup hwres_can_mobj207 = null;
+	MVirtualResourceGroup hwres_can_mobj208 = null;
+	MVirtualResourceGroup hwres_can_mobj209 = null;
+	MVirtualResourceGroup hwres_can_mobj210 = null;
+	MVirtualResourceGroup hwres_can_mobj211 = null;
+	MVirtualResourceGroup hwres_can_mobj212 = null;
+	MVirtualResourceGroup hwres_can_mobj213 = null;
+	MVirtualResourceGroup hwres_can_mobj214 = null;
+	MVirtualResourceGroup hwres_can_mobj215 = null;
+	MVirtualResourceGroup hwres_can_mobj216 = null;
+	MVirtualResourceGroup hwres_can_mobj217 = null;
+	MVirtualResourceGroup hwres_can_mobj218 = null;
+	MVirtualResourceGroup hwres_can_mobj219 = null;
+	MVirtualResourceGroup hwres_can_mobj220 = null;
+	MVirtualResourceGroup hwres_can_mobj221 = null;
+	MVirtualResourceGroup hwres_can_mobj222 = null;
+	MVirtualResourceGroup hwres_can_mobj223 = null;
+	MVirtualResourceGroup hwres_can_mobj224 = null;
+	MVirtualResourceGroup hwres_can_mobj225 = null;
+	MVirtualResourceGroup hwres_can_mobj226 = null;
+	MVirtualResourceGroup hwres_can_mobj227 = null;
+	MVirtualResourceGroup hwres_can_mobj228 = null;
+	MVirtualResourceGroup hwres_can_mobj229 = null;
+	MVirtualResourceGroup hwres_can_mobj230 = null;
+	MVirtualResourceGroup hwres_can_mobj231 = null;
+	MVirtualResourceGroup hwres_can_mobj232 = null;
+	MVirtualResourceGroup hwres_can_mobj233 = null;
+	MVirtualResourceGroup hwres_can_mobj234 = null;
+	MVirtualResourceGroup hwres_can_mobj235 = null;
+	MVirtualResourceGroup hwres_can_mobj236 = null;
+	MVirtualResourceGroup hwres_can_mobj237 = null;
+	MVirtualResourceGroup hwres_can_mobj238 = null;
+	MVirtualResourceGroup hwres_can_mobj239 = null;
+	MVirtualResourceGroup hwres_can_mobj240 = null;
+	MVirtualResourceGroup hwres_can_mobj241 = null;
+	MVirtualResourceGroup hwres_can_mobj242 = null;
+	MVirtualResourceGroup hwres_can_mobj243 = null;
+	MVirtualResourceGroup hwres_can_mobj244 = null;
+	MVirtualResourceGroup hwres_can_mobj245 = null;
+	MVirtualResourceGroup hwres_can_mobj246 = null;
+	MVirtualResourceGroup hwres_can_mobj247 = null;
+	MVirtualResourceGroup hwres_can_mobj248 = null;
+	MVirtualResourceGroup hwres_can_mobj249 = null;
+	MVirtualResourceGroup hwres_can_mobj250 = null;
+	MVirtualResourceGroup hwres_can_mobj251 = null;
+	MVirtualResourceGroup hwres_can_mobj252 = null;
+	MVirtualResourceGroup hwres_can_mobj253 = null;
+	MVirtualResourceGroup hwres_can_mobj254 = null;
+	MVirtualResourceGroup hwres_can_mobj255 = null;
+	MVirtualResourceGroup hwres_can_mobj256 = null;
+
+	/* virtual resource for CAN node0 tx and rx */
+	MVirtualSignal vs_can_rxd0
+	MVirtualSignal vs_can_txd0
+
+	/* virtual resource for CAN node1 tx and rx */
+	MVirtualSignal vs_can_rxd1
+	MVirtualSignal vs_can_txd1
+
+	/* virtual resource for CAN node2 tx and rx */
+	MVirtualSignal vs_can_rxd2
+	MVirtualSignal vs_can_txd2
+
+	/* virtual resource for CAN node3 tx and rx */
+	MVirtualSignal vs_can_rxd3
+	MVirtualSignal vs_can_txd3
+	
+	/* virtual resource for CAN node4 tx and rx */
+	MVirtualSignal vs_can_rxd4
+	MVirtualSignal vs_can_txd4
+	
+	/* virtual resource for CAN node5 tx and rx */
+	MVirtualSignal vs_can_rxd5
+	MVirtualSignal vs_can_txd5
+	
+	/* virtual resource for CAN node0 events */
+	MVirtualSignal vs_can_alinp0
+	MVirtualSignal vs_can_lecinp0
+	MVirtualSignal vs_can_trinp0
+	MVirtualSignal vs_can_cfcinp0
+
+	/* virtual resource for CAN node1 events */
+	MVirtualSignal vs_can_alinp1
+	MVirtualSignal vs_can_lecinp1
+	MVirtualSignal vs_can_trinp1
+	MVirtualSignal vs_can_cfcinp1
+
+	/* virtual resource for CAN node2 events */
+	MVirtualSignal vs_can_alinp2
+	MVirtualSignal vs_can_lecinp2
+	MVirtualSignal vs_can_trinp2
+	MVirtualSignal vs_can_cfcinp2
+
+	/* virtual resource for CAN node3 events */
+	MVirtualSignal vs_can_alinp3
+	MVirtualSignal vs_can_lecinp3
+	MVirtualSignal vs_can_trinp3
+	MVirtualSignal vs_can_cfcinp3
+	
+	/* virtual resource for CAN node4 events */
+	MVirtualSignal vs_can_alinp4
+	MVirtualSignal vs_can_lecinp4
+	MVirtualSignal vs_can_trinp4
+	MVirtualSignal vs_can_cfcinp4
+	
+	/* virtual resource for CAN node5 events */
+	MVirtualSignal vs_can_alinp5
+	MVirtualSignal vs_can_lecinp5
+	MVirtualSignal vs_can_trinp5
+	MVirtualSignal vs_can_cfcinp5
+	
+	/* virtual resource for CAN MO tx and MO rx events*/
+	MVirtualSignal vs_message0_txinp
+	MVirtualSignal vs_message0_rxinp
+	MVirtualSignal vs_message1_txinp
+	MVirtualSignal vs_message1_rxinp
+	MVirtualSignal vs_message2_txinp
+	MVirtualSignal vs_message2_rxinp
+	MVirtualSignal vs_message3_txinp
+	MVirtualSignal vs_message3_rxinp
+	MVirtualSignal vs_message4_txinp
+	MVirtualSignal vs_message4_rxinp
+	MVirtualSignal vs_message5_txinp
+	MVirtualSignal vs_message5_rxinp
+	MVirtualSignal vs_message6_txinp
+	MVirtualSignal vs_message6_rxinp
+	MVirtualSignal vs_message7_txinp
+	MVirtualSignal vs_message7_rxinp
+	MVirtualSignal vs_message8_txinp
+	MVirtualSignal vs_message8_rxinp
+	MVirtualSignal vs_message9_txinp
+	MVirtualSignal vs_message9_rxinp
+	MVirtualSignal vs_message10_txinp
+	MVirtualSignal vs_message10_rxinp
+	MVirtualSignal vs_message11_txinp
+	MVirtualSignal vs_message11_rxinp
+	MVirtualSignal vs_message12_txinp
+	MVirtualSignal vs_message12_rxinp
+	MVirtualSignal vs_message13_txinp
+	MVirtualSignal vs_message13_rxinp
+	MVirtualSignal vs_message14_txinp
+	MVirtualSignal vs_message14_rxinp
+	MVirtualSignal vs_message15_txinp
+	MVirtualSignal vs_message15_rxinp
+	MVirtualSignal vs_message16_txinp
+	MVirtualSignal vs_message16_rxinp
+	MVirtualSignal vs_message17_txinp
+	MVirtualSignal vs_message17_rxinp
+	MVirtualSignal vs_message18_txinp
+	MVirtualSignal vs_message18_rxinp
+	MVirtualSignal vs_message19_txinp
+	MVirtualSignal vs_message19_rxinp
+	MVirtualSignal vs_message20_txinp
+	MVirtualSignal vs_message20_rxinp
+	MVirtualSignal vs_message21_txinp
+	MVirtualSignal vs_message21_rxinp
+	MVirtualSignal vs_message22_txinp
+	MVirtualSignal vs_message22_rxinp
+	MVirtualSignal vs_message23_txinp
+	MVirtualSignal vs_message23_rxinp
+	MVirtualSignal vs_message24_txinp
+	MVirtualSignal vs_message24_rxinp
+	MVirtualSignal vs_message25_txinp
+	MVirtualSignal vs_message25_rxinp
+	MVirtualSignal vs_message26_txinp
+	MVirtualSignal vs_message26_rxinp
+	MVirtualSignal vs_message27_txinp
+	MVirtualSignal vs_message27_rxinp
+	MVirtualSignal vs_message28_txinp
+	MVirtualSignal vs_message28_rxinp
+	MVirtualSignal vs_message29_txinp
+	MVirtualSignal vs_message29_rxinp
+	MVirtualSignal vs_message30_txinp
+	MVirtualSignal vs_message30_rxinp
+	MVirtualSignal vs_message31_txinp
+	MVirtualSignal vs_message31_rxinp
+	MVirtualSignal vs_message32_txinp
+	MVirtualSignal vs_message32_rxinp
+	MVirtualSignal vs_message33_txinp
+	MVirtualSignal vs_message33_rxinp
+	MVirtualSignal vs_message34_txinp
+	MVirtualSignal vs_message34_rxinp
+	MVirtualSignal vs_message35_txinp
+	MVirtualSignal vs_message35_rxinp
+	MVirtualSignal vs_message36_txinp
+	MVirtualSignal vs_message36_rxinp
+	MVirtualSignal vs_message37_txinp
+	MVirtualSignal vs_message37_rxinp
+	MVirtualSignal vs_message38_txinp
+	MVirtualSignal vs_message38_rxinp
+	MVirtualSignal vs_message39_txinp
+	MVirtualSignal vs_message39_rxinp
+	MVirtualSignal vs_message40_txinp
+	MVirtualSignal vs_message40_rxinp
+	MVirtualSignal vs_message41_txinp
+	MVirtualSignal vs_message41_rxinp
+	MVirtualSignal vs_message42_txinp
+	MVirtualSignal vs_message42_rxinp
+	MVirtualSignal vs_message43_txinp
+	MVirtualSignal vs_message43_rxinp
+	MVirtualSignal vs_message44_txinp
+	MVirtualSignal vs_message44_rxinp
+	MVirtualSignal vs_message45_txinp
+	MVirtualSignal vs_message45_rxinp
+	MVirtualSignal vs_message46_txinp
+	MVirtualSignal vs_message46_rxinp
+	MVirtualSignal vs_message47_txinp
+	MVirtualSignal vs_message47_rxinp
+	MVirtualSignal vs_message48_txinp
+	MVirtualSignal vs_message48_rxinp
+	MVirtualSignal vs_message49_txinp
+	MVirtualSignal vs_message49_rxinp
+	MVirtualSignal vs_message50_txinp
+	MVirtualSignal vs_message50_rxinp
+	MVirtualSignal vs_message51_txinp
+	MVirtualSignal vs_message51_rxinp
+	MVirtualSignal vs_message52_txinp
+	MVirtualSignal vs_message52_rxinp
+	MVirtualSignal vs_message53_txinp
+	MVirtualSignal vs_message53_rxinp
+	MVirtualSignal vs_message54_txinp
+	MVirtualSignal vs_message54_rxinp
+	MVirtualSignal vs_message55_txinp
+	MVirtualSignal vs_message55_rxinp
+	MVirtualSignal vs_message56_txinp
+	MVirtualSignal vs_message56_rxinp
+	MVirtualSignal vs_message57_txinp
+	MVirtualSignal vs_message57_rxinp
+	MVirtualSignal vs_message58_txinp
+	MVirtualSignal vs_message58_rxinp
+	MVirtualSignal vs_message59_txinp
+	MVirtualSignal vs_message59_rxinp
+	MVirtualSignal vs_message60_txinp
+	MVirtualSignal vs_message60_rxinp
+	MVirtualSignal vs_message61_txinp
+	MVirtualSignal vs_message61_rxinp
+	MVirtualSignal vs_message62_txinp
+	MVirtualSignal vs_message62_rxinp
+	MVirtualSignal vs_message63_txinp
+	MVirtualSignal vs_message63_rxinp
+	
+	MVirtualSignal vs_message64_txinp
+	MVirtualSignal vs_message64_rxinp
+	MVirtualSignal vs_message65_txinp
+	MVirtualSignal vs_message65_rxinp
+	MVirtualSignal vs_message66_txinp
+	MVirtualSignal vs_message66_rxinp
+	MVirtualSignal vs_message67_txinp
+	MVirtualSignal vs_message67_rxinp
+	MVirtualSignal vs_message68_txinp
+	MVirtualSignal vs_message68_rxinp
+	MVirtualSignal vs_message69_txinp
+	MVirtualSignal vs_message69_rxinp
+	MVirtualSignal vs_message70_txinp
+	MVirtualSignal vs_message70_rxinp
+	MVirtualSignal vs_message71_txinp
+	MVirtualSignal vs_message71_rxinp
+	MVirtualSignal vs_message72_txinp
+	MVirtualSignal vs_message72_rxinp
+	MVirtualSignal vs_message73_txinp
+	MVirtualSignal vs_message73_rxinp
+	MVirtualSignal vs_message74_txinp
+	MVirtualSignal vs_message74_rxinp
+	MVirtualSignal vs_message75_txinp
+	MVirtualSignal vs_message75_rxinp
+	MVirtualSignal vs_message76_txinp
+	MVirtualSignal vs_message76_rxinp
+	MVirtualSignal vs_message77_txinp
+	MVirtualSignal vs_message77_rxinp
+	MVirtualSignal vs_message78_txinp
+	MVirtualSignal vs_message78_rxinp
+	MVirtualSignal vs_message79_txinp
+	MVirtualSignal vs_message79_rxinp
+	MVirtualSignal vs_message80_txinp
+	MVirtualSignal vs_message80_rxinp
+	MVirtualSignal vs_message81_txinp
+	MVirtualSignal vs_message81_rxinp
+	MVirtualSignal vs_message82_txinp
+	MVirtualSignal vs_message82_rxinp
+	MVirtualSignal vs_message83_txinp
+	MVirtualSignal vs_message83_rxinp
+	MVirtualSignal vs_message84_txinp
+	MVirtualSignal vs_message84_rxinp
+	MVirtualSignal vs_message85_txinp
+	MVirtualSignal vs_message85_rxinp
+	MVirtualSignal vs_message86_txinp
+	MVirtualSignal vs_message86_rxinp
+	MVirtualSignal vs_message87_txinp
+	MVirtualSignal vs_message87_rxinp
+	MVirtualSignal vs_message88_txinp
+	MVirtualSignal vs_message88_rxinp
+	MVirtualSignal vs_message89_txinp
+	MVirtualSignal vs_message89_rxinp
+	MVirtualSignal vs_message90_txinp
+	MVirtualSignal vs_message90_rxinp
+	MVirtualSignal vs_message91_txinp
+	MVirtualSignal vs_message91_rxinp
+	MVirtualSignal vs_message92_txinp
+	MVirtualSignal vs_message92_rxinp
+	MVirtualSignal vs_message93_txinp
+	MVirtualSignal vs_message93_rxinp
+	MVirtualSignal vs_message94_txinp
+	MVirtualSignal vs_message94_rxinp
+	MVirtualSignal vs_message95_txinp
+	MVirtualSignal vs_message95_rxinp
+	MVirtualSignal vs_message96_txinp
+	MVirtualSignal vs_message96_rxinp
+	MVirtualSignal vs_message97_txinp
+	MVirtualSignal vs_message97_rxinp
+	MVirtualSignal vs_message98_txinp
+	MVirtualSignal vs_message98_rxinp
+	MVirtualSignal vs_message99_txinp
+	MVirtualSignal vs_message99_rxinp
+	MVirtualSignal vs_message100_txinp
+	MVirtualSignal vs_message100_rxinp
+	MVirtualSignal vs_message101_txinp
+	MVirtualSignal vs_message101_rxinp
+	MVirtualSignal vs_message102_txinp
+	MVirtualSignal vs_message102_rxinp
+	MVirtualSignal vs_message103_txinp
+	MVirtualSignal vs_message103_rxinp
+	MVirtualSignal vs_message104_txinp
+	MVirtualSignal vs_message104_rxinp
+	MVirtualSignal vs_message105_txinp
+	MVirtualSignal vs_message105_rxinp
+	MVirtualSignal vs_message106_txinp
+	MVirtualSignal vs_message106_rxinp
+	MVirtualSignal vs_message107_txinp
+	MVirtualSignal vs_message107_rxinp
+	MVirtualSignal vs_message108_txinp
+	MVirtualSignal vs_message108_rxinp
+	MVirtualSignal vs_message109_txinp
+	MVirtualSignal vs_message109_rxinp
+	MVirtualSignal vs_message110_txinp
+	MVirtualSignal vs_message110_rxinp
+	MVirtualSignal vs_message111_txinp
+	MVirtualSignal vs_message111_rxinp
+	MVirtualSignal vs_message112_txinp
+	MVirtualSignal vs_message112_rxinp
+	MVirtualSignal vs_message113_txinp
+	MVirtualSignal vs_message113_rxinp
+	MVirtualSignal vs_message114_txinp
+	MVirtualSignal vs_message114_rxinp
+	MVirtualSignal vs_message115_txinp
+	MVirtualSignal vs_message115_rxinp
+	MVirtualSignal vs_message116_txinp
+	MVirtualSignal vs_message116_rxinp
+	MVirtualSignal vs_message117_txinp
+	MVirtualSignal vs_message117_rxinp
+	MVirtualSignal vs_message118_txinp
+	MVirtualSignal vs_message118_rxinp
+	MVirtualSignal vs_message119_txinp
+	MVirtualSignal vs_message119_rxinp
+	MVirtualSignal vs_message120_txinp
+	MVirtualSignal vs_message120_rxinp
+	MVirtualSignal vs_message121_txinp
+	MVirtualSignal vs_message121_rxinp
+	MVirtualSignal vs_message122_txinp
+	MVirtualSignal vs_message122_rxinp
+	MVirtualSignal vs_message123_txinp
+	MVirtualSignal vs_message123_rxinp
+	MVirtualSignal vs_message124_txinp
+	MVirtualSignal vs_message124_rxinp
+	MVirtualSignal vs_message125_txinp
+	MVirtualSignal vs_message125_rxinp
+	MVirtualSignal vs_message126_txinp
+	MVirtualSignal vs_message126_rxinp
+	MVirtualSignal vs_message127_txinp
+	MVirtualSignal vs_message127_rxinp
+
+	MVirtualSignal vs_message128_txinp
+	MVirtualSignal vs_message128_rxinp
+	MVirtualSignal vs_message129_txinp
+	MVirtualSignal vs_message129_rxinp
+	MVirtualSignal vs_message130_txinp
+	MVirtualSignal vs_message130_rxinp
+	MVirtualSignal vs_message131_txinp
+	MVirtualSignal vs_message131_rxinp
+	MVirtualSignal vs_message132_txinp
+	MVirtualSignal vs_message132_rxinp
+	MVirtualSignal vs_message133_txinp
+	MVirtualSignal vs_message133_rxinp
+	MVirtualSignal vs_message134_txinp
+	MVirtualSignal vs_message134_rxinp
+	MVirtualSignal vs_message135_txinp
+	MVirtualSignal vs_message135_rxinp
+	MVirtualSignal vs_message136_txinp
+	MVirtualSignal vs_message136_rxinp
+	MVirtualSignal vs_message137_txinp
+	MVirtualSignal vs_message137_rxinp
+	MVirtualSignal vs_message138_txinp
+	MVirtualSignal vs_message138_rxinp
+	MVirtualSignal vs_message139_txinp
+	MVirtualSignal vs_message139_rxinp
+	MVirtualSignal vs_message140_txinp
+	MVirtualSignal vs_message140_rxinp
+	MVirtualSignal vs_message141_txinp
+	MVirtualSignal vs_message141_rxinp
+	MVirtualSignal vs_message142_txinp
+	MVirtualSignal vs_message142_rxinp
+	MVirtualSignal vs_message143_txinp
+	MVirtualSignal vs_message143_rxinp
+	MVirtualSignal vs_message144_txinp
+	MVirtualSignal vs_message144_rxinp
+	MVirtualSignal vs_message145_txinp
+	MVirtualSignal vs_message145_rxinp
+	MVirtualSignal vs_message146_txinp
+	MVirtualSignal vs_message146_rxinp
+	MVirtualSignal vs_message147_txinp
+	MVirtualSignal vs_message147_rxinp
+	MVirtualSignal vs_message148_txinp
+	MVirtualSignal vs_message148_rxinp
+	MVirtualSignal vs_message149_txinp
+	MVirtualSignal vs_message149_rxinp
+	MVirtualSignal vs_message150_txinp
+	MVirtualSignal vs_message150_rxinp
+	MVirtualSignal vs_message151_txinp
+	MVirtualSignal vs_message151_rxinp
+	MVirtualSignal vs_message152_txinp
+	MVirtualSignal vs_message152_rxinp
+	MVirtualSignal vs_message153_txinp
+	MVirtualSignal vs_message153_rxinp
+	MVirtualSignal vs_message154_txinp
+	MVirtualSignal vs_message154_rxinp
+	MVirtualSignal vs_message155_txinp
+	MVirtualSignal vs_message155_rxinp
+	MVirtualSignal vs_message156_txinp
+	MVirtualSignal vs_message156_rxinp
+	MVirtualSignal vs_message157_txinp
+	MVirtualSignal vs_message157_rxinp
+	MVirtualSignal vs_message158_txinp
+	MVirtualSignal vs_message158_rxinp
+	MVirtualSignal vs_message159_txinp
+	MVirtualSignal vs_message159_rxinp
+	MVirtualSignal vs_message160_txinp
+	MVirtualSignal vs_message160_rxinp
+	MVirtualSignal vs_message161_txinp
+	MVirtualSignal vs_message161_rxinp
+	MVirtualSignal vs_message162_txinp
+	MVirtualSignal vs_message162_rxinp
+	MVirtualSignal vs_message163_txinp
+	MVirtualSignal vs_message163_rxinp
+	MVirtualSignal vs_message164_txinp
+	MVirtualSignal vs_message164_rxinp
+	MVirtualSignal vs_message165_txinp
+	MVirtualSignal vs_message165_rxinp
+	MVirtualSignal vs_message166_txinp
+	MVirtualSignal vs_message166_rxinp
+	MVirtualSignal vs_message167_txinp
+	MVirtualSignal vs_message167_rxinp
+	MVirtualSignal vs_message168_txinp
+	MVirtualSignal vs_message168_rxinp
+	MVirtualSignal vs_message169_txinp
+	MVirtualSignal vs_message169_rxinp
+	MVirtualSignal vs_message170_txinp
+	MVirtualSignal vs_message170_rxinp
+	MVirtualSignal vs_message171_txinp
+	MVirtualSignal vs_message171_rxinp
+	MVirtualSignal vs_message172_txinp
+	MVirtualSignal vs_message172_rxinp
+	MVirtualSignal vs_message173_txinp
+	MVirtualSignal vs_message173_rxinp
+	MVirtualSignal vs_message174_txinp
+	MVirtualSignal vs_message174_rxinp
+	MVirtualSignal vs_message175_txinp
+	MVirtualSignal vs_message175_rxinp
+	MVirtualSignal vs_message176_txinp
+	MVirtualSignal vs_message176_rxinp
+	MVirtualSignal vs_message177_txinp
+	MVirtualSignal vs_message177_rxinp
+	MVirtualSignal vs_message178_txinp
+	MVirtualSignal vs_message178_rxinp
+	MVirtualSignal vs_message179_txinp
+	MVirtualSignal vs_message179_rxinp
+	MVirtualSignal vs_message180_txinp
+	MVirtualSignal vs_message180_rxinp
+	MVirtualSignal vs_message181_txinp
+	MVirtualSignal vs_message181_rxinp
+	MVirtualSignal vs_message182_txinp
+	MVirtualSignal vs_message182_rxinp
+	MVirtualSignal vs_message183_txinp
+	MVirtualSignal vs_message183_rxinp
+	MVirtualSignal vs_message184_txinp
+	MVirtualSignal vs_message184_rxinp
+	MVirtualSignal vs_message185_txinp
+	MVirtualSignal vs_message185_rxinp
+	MVirtualSignal vs_message186_txinp
+	MVirtualSignal vs_message186_rxinp
+	MVirtualSignal vs_message187_txinp
+	MVirtualSignal vs_message187_rxinp
+	MVirtualSignal vs_message188_txinp
+	MVirtualSignal vs_message188_rxinp
+	MVirtualSignal vs_message189_txinp
+	MVirtualSignal vs_message189_rxinp
+	MVirtualSignal vs_message190_txinp
+	MVirtualSignal vs_message190_rxinp
+	MVirtualSignal vs_message191_txinp
+	MVirtualSignal vs_message191_rxinp
+	MVirtualSignal vs_message192_txinp
+	MVirtualSignal vs_message192_rxinp
+	
+	MVirtualSignal vs_message193_txinp
+	MVirtualSignal vs_message193_rxinp
+	MVirtualSignal vs_message194_txinp
+	MVirtualSignal vs_message194_rxinp
+	MVirtualSignal vs_message195_txinp
+	MVirtualSignal vs_message195_rxinp
+	MVirtualSignal vs_message196_txinp
+	MVirtualSignal vs_message196_rxinp
+	MVirtualSignal vs_message197_txinp
+	MVirtualSignal vs_message197_rxinp
+	MVirtualSignal vs_message198_txinp
+	MVirtualSignal vs_message198_rxinp
+	MVirtualSignal vs_message199_txinp
+	MVirtualSignal vs_message199_rxinp
+	MVirtualSignal vs_message200_txinp
+	MVirtualSignal vs_message200_rxinp
+	MVirtualSignal vs_message201_txinp
+	MVirtualSignal vs_message201_rxinp
+	MVirtualSignal vs_message202_txinp
+	MVirtualSignal vs_message202_rxinp
+	MVirtualSignal vs_message203_txinp
+	MVirtualSignal vs_message203_rxinp
+	MVirtualSignal vs_message204_txinp
+	MVirtualSignal vs_message204_rxinp
+	MVirtualSignal vs_message205_txinp
+	MVirtualSignal vs_message205_rxinp
+	MVirtualSignal vs_message206_txinp
+	MVirtualSignal vs_message206_rxinp
+	MVirtualSignal vs_message207_txinp
+	MVirtualSignal vs_message207_rxinp
+	MVirtualSignal vs_message208_txinp
+	MVirtualSignal vs_message208_rxinp
+	MVirtualSignal vs_message209_txinp
+	MVirtualSignal vs_message209_rxinp
+	MVirtualSignal vs_message210_txinp
+	MVirtualSignal vs_message210_rxinp
+	MVirtualSignal vs_message211_txinp
+	MVirtualSignal vs_message211_rxinp
+	MVirtualSignal vs_message212_txinp
+	MVirtualSignal vs_message212_rxinp
+	MVirtualSignal vs_message213_txinp
+	MVirtualSignal vs_message213_rxinp
+	MVirtualSignal vs_message214_txinp
+	MVirtualSignal vs_message214_rxinp
+	MVirtualSignal vs_message215_txinp
+	MVirtualSignal vs_message215_rxinp
+	MVirtualSignal vs_message216_txinp
+	MVirtualSignal vs_message216_rxinp
+	MVirtualSignal vs_message217_txinp
+	MVirtualSignal vs_message217_rxinp
+	MVirtualSignal vs_message218_txinp
+	MVirtualSignal vs_message218_rxinp
+	MVirtualSignal vs_message219_txinp
+	MVirtualSignal vs_message219_rxinp
+	MVirtualSignal vs_message220_txinp
+	MVirtualSignal vs_message220_rxinp
+	MVirtualSignal vs_message221_txinp
+	MVirtualSignal vs_message221_rxinp
+	MVirtualSignal vs_message222_txinp
+	MVirtualSignal vs_message222_rxinp
+	MVirtualSignal vs_message223_txinp
+	MVirtualSignal vs_message223_rxinp
+	MVirtualSignal vs_message224_txinp
+	MVirtualSignal vs_message224_rxinp
+	MVirtualSignal vs_message225_txinp
+	MVirtualSignal vs_message225_rxinp
+	MVirtualSignal vs_message226_txinp
+	MVirtualSignal vs_message226_rxinp
+	MVirtualSignal vs_message227_txinp
+	MVirtualSignal vs_message227_rxinp
+	MVirtualSignal vs_message228_txinp
+	MVirtualSignal vs_message228_rxinp
+	MVirtualSignal vs_message229_txinp
+	MVirtualSignal vs_message229_rxinp
+	MVirtualSignal vs_message230_txinp
+	MVirtualSignal vs_message230_rxinp
+	MVirtualSignal vs_message231_txinp
+	MVirtualSignal vs_message231_rxinp
+	MVirtualSignal vs_message232_txinp
+	MVirtualSignal vs_message232_rxinp
+	MVirtualSignal vs_message233_txinp
+	MVirtualSignal vs_message233_rxinp
+	MVirtualSignal vs_message234_txinp
+	MVirtualSignal vs_message234_rxinp
+	MVirtualSignal vs_message235_txinp
+	MVirtualSignal vs_message235_rxinp
+	MVirtualSignal vs_message236_txinp
+	MVirtualSignal vs_message236_rxinp
+	MVirtualSignal vs_message237_txinp
+	MVirtualSignal vs_message237_rxinp
+	MVirtualSignal vs_message238_txinp
+	MVirtualSignal vs_message238_rxinp
+	MVirtualSignal vs_message239_txinp
+	MVirtualSignal vs_message239_rxinp
+	MVirtualSignal vs_message240_txinp
+	MVirtualSignal vs_message240_rxinp
+	MVirtualSignal vs_message241_txinp
+	MVirtualSignal vs_message241_rxinp
+	MVirtualSignal vs_message242_txinp
+	MVirtualSignal vs_message242_rxinp
+	MVirtualSignal vs_message243_txinp
+	MVirtualSignal vs_message243_rxinp
+	MVirtualSignal vs_message244_txinp
+	MVirtualSignal vs_message244_rxinp
+	MVirtualSignal vs_message245_txinp
+	MVirtualSignal vs_message245_rxinp
+	MVirtualSignal vs_message246_txinp
+	MVirtualSignal vs_message246_rxinp
+	MVirtualSignal vs_message247_txinp
+	MVirtualSignal vs_message247_rxinp
+	MVirtualSignal vs_message248_txinp
+	MVirtualSignal vs_message248_rxinp
+	MVirtualSignal vs_message249_txinp
+	MVirtualSignal vs_message249_rxinp
+	MVirtualSignal vs_message250_txinp
+	MVirtualSignal vs_message250_rxinp
+	MVirtualSignal vs_message251_txinp
+	MVirtualSignal vs_message251_rxinp
+	MVirtualSignal vs_message252_txinp
+	MVirtualSignal vs_message252_rxinp
+	MVirtualSignal vs_message253_txinp
+	MVirtualSignal vs_message253_rxinp
+	MVirtualSignal vs_message254_txinp
+	MVirtualSignal vs_message254_rxinp
+	MVirtualSignal vs_message255_txinp
+	MVirtualSignal vs_message255_rxinp
+	
+	public MULTICAN_CONFIG(DaveEnv daveEnv) 
+	{
+		String family = daveEnv.project.selectedDevice.deviceId.family
+		String series = daveEnv.project.selectedDevice.deviceId.series
+		
+		int mobjects = 0
+		int nodes = 0
+		app_global_can = MRequiredApp("GLOBAL_CAN","GLOBAL_CAN APP", RSHARABLE, "4.0.2")
+		gactualclock.value = MF({app_global_can.getVal(["gfloat_desired_can_freq", "value"])}, Float)
+		//
+
+		if((family+series == "XMC14") || (family+series == "XMC44") || (family+series == "XMC43") || (family+series == "XMC42") || (family+series == "XMC41"))
+		{
+		  nodes = 2
+		}
+		else if((family+series == "XMC48") || (family+series == "XMC47"))
+		{
+		  mobjects = 255
+		  nodes = 6
+		}
+		else if(family+series == "XMC45")
+		{
+		  nodes = 3
+		}
+		
+		if((family+series == "XMC14") )
+		{
+		  mobjects = 31
+		}
+		else if((family+series == "XMC45") || (family+series == "XMC44") || (family+series == "XMC43") || (family+series == "XMC42"))
+		{
+		  mobjects = 63
+		}
+		
+		MF is_node0_enabled = MF({(rArraygindexgroup_nodesettings[0].gcheck_enablenode.value)}, Boolean)
+		MF is_node1_enabled = MF({(rArraygindexgroup_nodesettings[1].gcheck_enablenode.value)}, Boolean)
+		
+		MF is_node2_enabled = MF({(rArraygindexgroup_nodesettings[2].gcheck_enablenode.value) && 
+			                      ((family+series == "XMC48") || (family+series == "XMC47") || (family+series == "XMC45"))}, Boolean)
+		
+		MF is_node3_enabled = MF({(rArraygindexgroup_nodesettings[3].gcheck_enablenode.value) &&
+			                      ((family+series == "XMC48") || (family+series == "XMC47"))}, Boolean)
+		
+		MF is_node4_enabled = MF({(rArraygindexgroup_nodesettings[4].gcheck_enablenode.value) &&
+			                      ((family+series == "XMC48") || (family+series == "XMC47"))}, Boolean)
+		
+		MF is_node5_enabled = MF({(rArraygindexgroup_nodesettings[5].gcheck_enablenode.value) &&
+			                      ((family+series == "XMC48") || (family+series == "XMC47"))}, Boolean)
+		
+		MF is_loop_back_mode_enabled0 = MF({(rArraygindexgroup_nodesettings[0].gcheck_loopback_mode.value)}, Boolean);
+		MF is_loop_back_mode_enabled1 = MF({(rArraygindexgroup_nodesettings[1].gcheck_loopback_mode.value)}, Boolean);
+		MF is_loop_back_mode_enabled2 = MF({(rArraygindexgroup_nodesettings[2].gcheck_loopback_mode.value)}, Boolean);
+		MF is_loop_back_mode_enabled3 = MF({(rArraygindexgroup_nodesettings[3].gcheck_loopback_mode.value)}, Boolean);
+		MF is_loop_back_mode_enabled4 = MF({(rArraygindexgroup_nodesettings[4].gcheck_loopback_mode.value)}, Boolean);
+		MF is_loop_back_mode_enabled5 = MF({(rArraygindexgroup_nodesettings[5].gcheck_loopback_mode.value)}, Boolean);
+		
+		
+		MF is_loopback_disabled_node_enabled0 = MF({((rArraygindexgroup_nodesettings[0].gcheck_loopback_mode.value == false) &&
+												    (rArraygindexgroup_nodesettings[0].gcheck_enablenode.value == true))
+											       }, Boolean)
+
+		MF is_loopback_disabled_node_enabled1 = MF({((rArraygindexgroup_nodesettings[1].gcheck_loopback_mode.value == false) &&
+												     (rArraygindexgroup_nodesettings[1].gcheck_enablenode.value == true))
+												   }, Boolean)
+											   
+		MF is_loopback_disabled_node_enabled2 = MF({
+			                                         if(
+														(rArraygindexgroup_nodesettings[2].gcheck_enablenode.value == true) &&
+				                                        ((family+series == "XMC48") || (family+series == "XMC47") || (family+series == "XMC45")) && 
+	                                                    (rArraygindexgroup_nodesettings[2].gcheck_loopback_mode.value == false))
+													 {
+														 true
+													 } 
+													 else
+													 {
+														 false
+													 }
+		                                           }, Boolean);
+						 
+	MF is_loopback_disabled_node_enabled3 = MF({
+												   if(
+													  (rArraygindexgroup_nodesettings[3].gcheck_enablenode.value == true) &&
+													  ((family+series == "XMC48") || (family+series == "XMC47")) &&
+													  (rArraygindexgroup_nodesettings[3].gcheck_loopback_mode.value == false))
+												   {
+													   true
+												   }
+												   else
+												   {
+													   false
+												   }
+												 }, Boolean);
+						 
+	MF is_loopback_disabled_node_enabled4 = MF({
+												 if(
+													(rArraygindexgroup_nodesettings[4].gcheck_enablenode.value == true) &&
+													((family+series == "XMC48") || (family+series == "XMC47")) &&
+													(rArraygindexgroup_nodesettings[4].gcheck_loopback_mode.value == false))
+												 {
+													 true
+												 }
+												 else
+												 {
+													 false
+												 }
+											   }, Boolean);
+										   
+	MF is_loopback_disabled_node_enabled5 = MF({
+											   if(
+												  (rArraygindexgroup_nodesettings[5].gcheck_enablenode.value == true) &&
+												  ((family+series == "XMC48") || (family+series == "XMC47")) &&
+												  (rArraygindexgroup_nodesettings[5].gcheck_loopback_mode.value == false))
+											   {
+												   true
+											   }
+											   else
+											   {
+												   false
+											   }
+											 }, Boolean);
+
+		////		/* -------------------------------------------------------------- */
+		////		/* ------------ Hardware resource consumption block ------------- */
+		////		/* -------------------------------------------------------------- */
+
+
+		hwres_can_node0  =  MVirtualResourceGroup("NODE0", ["peripheral","can", "0", "node", "0"],is_node0_enabled)
+		hwres_can_node1  =  MVirtualResourceGroup("NODE1", ["peripheral","can", "0", "node", "1"],is_node1_enabled)
+		hwres_can_node2  =  MVirtualResourceGroup("NODE2", ["peripheral","can", "0", "node", "2"],is_node2_enabled)
+		hwres_can_node3  =  MVirtualResourceGroup("NODE3", ["peripheral","can", "0", "node", "3"],is_node3_enabled)
+		hwres_can_node4  =  MVirtualResourceGroup("NODE4", ["peripheral","can", "0", "node", "4"],is_node4_enabled)
+		hwres_can_node5  =  MVirtualResourceGroup("NODE5", ["peripheral","can", "0", "node", "5"],is_node5_enabled)
+
+		ginteger_number_message_objects.maxValue = MF({if(family+series == "XMC14")
+			                                            {
+														  32
+														}
+														else if((family+series == "XMC45") || (family+series == "XMC44") || 
+															    (family+series == "XMC43") || (family+series == "XMC42"))
+														{
+														  64
+														}
+														else if((family+series == "XMC48") || (family+series == "XMC47"))
+														{
+														  256
+														}
+														else
+														{
+														  1
+														}
+													  },Integer)
+		for(int index in 0..mobjects)
+		{
+			int loop_count = index;
+			this."hwres_can_mobj${index}"=
+					MVirtualResourceGroup("MO_${index}",["peripheral", "can", "*", "mo","${loop_count}"],MF({ginteger_number_message_objects.value > loop_count}, Boolean))
+		}
+		
+		for(int index1 in 0..mobjects)
+		{
+			int loop_count1 = index1;
+
+			MF is_msg_obj_enabled = MF({(ginteger_number_message_objects.value > loop_count1)}, Boolean)
+
+			if(index1 < 10)
+			{
+				this."vs_message${loop_count1}_rxinp" =
+						MVirtualSignal(this."hwres_can_mobj${index1}", "event_lmo_0${loop_count1}_rxinp", "rxinp", is_msg_obj_enabled, true)
+//				MVirtualSignal(this."hwres_can_mobj${index1}", "event_lmo_${loop_count1}_rxinp", "rxinp", is_msg_obj_enabled, true)
+
+				this."vs_message${loop_count1}_txinp" =
+						MVirtualSignal(this."hwres_can_mobj${index1}","event_lmo_0${loop_count1}_txinp", "txinp", is_msg_obj_enabled, true)
+			}
+			else
+			{
+				this."vs_message${loop_count1}_rxinp" =
+						MVirtualSignal(this."hwres_can_mobj${index1}", "event_lmo_${loop_count1}_rxinp", "rxinp", is_msg_obj_enabled, true)
+				this."vs_message${loop_count1}_txinp" =
+						MVirtualSignal(this."hwres_can_mobj${index1}", "event_lmo_${loop_count1}_txinp", "txinp", is_msg_obj_enabled, true)
+			}
+		}
+		
+
+		/* -------------------------------------------------------------- */
+		/* -------------- APP IO Signals -------------------------------- */
+		/* -------------------------------------------------------------- */
+		vs_can_rxd0    = MVirtualSignal( hwres_can_node0, "rx_pin_node0", "rxd", is_loopback_disabled_node_enabled0)
+		vs_can_txd0    = MVirtualSignal( hwres_can_node0, "tx_pin_node0", "txd", is_loopback_disabled_node_enabled0)
+
+		vs_can_rxd1    = MVirtualSignal( hwres_can_node1, "rx_pin_node1", "rxd", is_loopback_disabled_node_enabled1)
+		vs_can_txd1    = MVirtualSignal( hwres_can_node1, "tx_pin_node1", "txd", is_loopback_disabled_node_enabled1)
+
+		vs_can_rxd2    = MVirtualSignal( hwres_can_node2, "rx_pin_node2", "rxd", is_loopback_disabled_node_enabled2)
+		vs_can_txd2    = MVirtualSignal( hwres_can_node2, "tx_pin_node2", "txd", is_loopback_disabled_node_enabled2)
+
+		vs_can_rxd3    = MVirtualSignal( hwres_can_node3, "rx_pin_node3", "rxd", is_loopback_disabled_node_enabled3)
+		vs_can_txd3    = MVirtualSignal( hwres_can_node3, "tx_pin_node3", "txd", is_loopback_disabled_node_enabled3)
+		
+		vs_can_rxd4    = MVirtualSignal( hwres_can_node4, "rx_pin_node4", "rxd", is_loopback_disabled_node_enabled4)
+		vs_can_txd4    = MVirtualSignal( hwres_can_node4, "tx_pin_node4", "txd", is_loopback_disabled_node_enabled4)
+		
+		vs_can_rxd5    = MVirtualSignal( hwres_can_node5, "rx_pin_node5", "rxd", is_loopback_disabled_node_enabled5)
+		vs_can_txd5    = MVirtualSignal( hwres_can_node5, "tx_pin_node5", "txd", is_loopback_disabled_node_enabled5)
+		
+		vs_can_alinp0   = MVirtualSignal( hwres_can_node0, "event_node_alert0", "alinp", is_node0_enabled)
+		vs_can_lecinp0  = MVirtualSignal( hwres_can_node0, "event_node_lec_error0", "lecinp", is_node0_enabled)
+		vs_can_trinp0   = MVirtualSignal( hwres_can_node0,  "event_node_transfer_ok0", "trinp", is_node0_enabled)
+		vs_can_cfcinp0  = MVirtualSignal( hwres_can_node0, "event_node_frame_count0", "cfcinp", is_node0_enabled)
+
+		vs_can_alinp1   = MVirtualSignal( hwres_can_node1, "event_node_alert1", "alinp", is_node1_enabled)
+		vs_can_lecinp1  = MVirtualSignal( hwres_can_node1, "event_node_lec_error1", "lecinp", is_node1_enabled)
+		vs_can_trinp1   = MVirtualSignal( hwres_can_node1, "event_node_transfer_ok1", "trinp", is_node1_enabled)
+		vs_can_cfcinp1  = MVirtualSignal( hwres_can_node1, "event_node_frame_count1", "cfcinp", is_node1_enabled)
+
+		vs_can_alinp2   = MVirtualSignal( hwres_can_node2, "event_node_alert2", "alinp", is_node2_enabled)
+		vs_can_lecinp2  = MVirtualSignal( hwres_can_node2, "event_node_lec_error2", "lecinp", is_node2_enabled)
+		vs_can_trinp2   = MVirtualSignal( hwres_can_node2, "event_node_transfer_ok2", "trinp", is_node2_enabled)
+		vs_can_cfcinp2  = MVirtualSignal( hwres_can_node2, "event_node_frame_count2", "cfcinp", is_node2_enabled)
+
+		vs_can_alinp3   = MVirtualSignal( hwres_can_node3, "event_node_alert3", "alinp", is_node3_enabled)
+		vs_can_lecinp3  = MVirtualSignal( hwres_can_node3, "event_node_lec_error3", "lecinp", is_node3_enabled)
+		vs_can_trinp3  = MVirtualSignal( hwres_can_node3, "event_node_transfer_ok3", "trinp", is_node3_enabled)
+		vs_can_cfcinp3  = MVirtualSignal( hwres_can_node3, "event_node_frame_count3", "cfcinp", is_node3_enabled)
+		
+		vs_can_alinp4   = MVirtualSignal( hwres_can_node4, "event_node_alert4", "alinp", is_node4_enabled)
+		vs_can_lecinp4  = MVirtualSignal( hwres_can_node4, "event_node_lec_error4", "lecinp", is_node4_enabled)
+		vs_can_trinp4   = MVirtualSignal( hwres_can_node4, "event_node_transfer_ok4", "trinp", is_node4_enabled)
+		vs_can_cfcinp4  = MVirtualSignal( hwres_can_node4, "event_node_frame_count4", "cfcinp", is_node4_enabled)
+		
+		vs_can_alinp5   = MVirtualSignal( hwres_can_node5, "event_node_alert5", "alinp", is_node5_enabled)
+		vs_can_lecinp5  = MVirtualSignal( hwres_can_node5, "event_node_lec_error5", "lecinp", is_node5_enabled)
+		vs_can_trinp5   = MVirtualSignal( hwres_can_node5, "event_node_transfer_ok5", "trinp", is_node5_enabled)
+		vs_can_cfcinp5  = MVirtualSignal( hwres_can_node5, "event_node_frame_count5", "cfcinp", is_node5_enabled)
+		
+		/*GUI configuration*/
+		gindexcombo_node.options = MF({
+										  List<String> l = new ArrayList(rArraygindexgroup_nodesettings.size())
+										  for (int i = 0; i < nodes; i++)
+										  {
+											l.add("${i}".toString())
+										  }
+										  l
+										},
+										List
+									  );
+		
+		
+		gindexcombo_logical_mo.options = MF({
+												List<String> l = new ArrayList(rArraygindexgroup_mo.size())
+												for (int i = 0; i < ginteger_number_message_objects.value; i++)
+												{
+													l.add("LMO_${i}".toString())
+												}
+												l
+											},
+											List
+											);
+
+		for(i in 0..mobjects)
+		{
+			int index = i
+			if((family+series == "XMC14") || (family+series == "XMC44") || (family+series == "XMC42"))
+			{
+			rArraygindexgroup_mo[i].gcombo_list.options = MF({
+				List l = ["List 0(unallocated objects)","List 1(Node 0)","List 2(Node 1)"];
+				if(rArraygindexgroup_nodesettings[0].gcheck_enablenode.value==false){l.remove("List 1(Node 0)")}
+				if(rArraygindexgroup_nodesettings[1].gcheck_enablenode.value==false){l.remove("List 2(Node 1)")}
+				return(l); },List);
+			}
+			else if(family+series == "XMC45") 
+			{
+			rArraygindexgroup_mo[i].gcombo_list.options = MF({
+				List l = ["List 0(unallocated objects)","List 1(Node 0)","List 2(Node 1)","List 3(Node 2)"];
+				if(rArraygindexgroup_nodesettings[0].gcheck_enablenode.value==false){l.remove("List 1(Node 0)")}
+				if(rArraygindexgroup_nodesettings[1].gcheck_enablenode.value==false){l.remove("List 2(Node 1)")}
+				if(rArraygindexgroup_nodesettings[2].gcheck_enablenode.value==false){l.remove("List 3(Node 2)")}
+				return(l); },List);
+			}
+			else if((family+series == "XMC48") || (family+series == "XMC47"))
+			{
+				rArraygindexgroup_mo[i].gcombo_list.options = MF({
+					List l = ["List 0(unallocated objects)","List 1(Node 0)","List 2(Node 1)","List 3(Node 2)",
+						       "List 4(Node 3)","List 5(Node 4)","List 6(Node 5)",];
+					if(rArraygindexgroup_nodesettings[0].gcheck_enablenode.value==false){l.remove("List 1(Node 0)")}
+					if(rArraygindexgroup_nodesettings[1].gcheck_enablenode.value==false){l.remove("List 2(Node 1)")}
+					if(rArraygindexgroup_nodesettings[2].gcheck_enablenode.value==false){l.remove("List 3(Node 2)")}
+					if(rArraygindexgroup_nodesettings[3].gcheck_enablenode.value==false){l.remove("List 4(Node 3)")}
+					if(rArraygindexgroup_nodesettings[4].gcheck_enablenode.value==false){l.remove("List 5(Node 4)")}
+					if(rArraygindexgroup_nodesettings[5].gcheck_enablenode.value==false){l.remove("List 6(Node 5)")}
+					return(l); },List);
+			}
+			rArraygindexgroup_mo[i].ginteger_data_length.enabled = MF({rArraygindexgroup_mo[index].gcombo_msgtype.value=="Tx"
+			}, Boolean);
+			rArraygindexgroup_mo[i].ginteger_db0.enabled = MF({
+				rArraygindexgroup_mo[index].ginteger_data_length.value>0 && rArraygindexgroup_mo[index].gcombo_msgtype.value=="Tx"
+			}, Boolean);
+			rArraygindexgroup_mo[i].ginteger_db1.enabled = MF({
+				rArraygindexgroup_mo[index].ginteger_data_length.value>1 && rArraygindexgroup_mo[index].gcombo_msgtype.value=="Tx"
+			}, Boolean);
+			rArraygindexgroup_mo[i].ginteger_db2.enabled = MF({
+				rArraygindexgroup_mo[index].ginteger_data_length.value>2 && rArraygindexgroup_mo[index].gcombo_msgtype.value=="Tx"
+			}, Boolean);
+			rArraygindexgroup_mo[i].ginteger_db3.enabled = MF({
+				rArraygindexgroup_mo[index].ginteger_data_length.value>3 && rArraygindexgroup_mo[index].gcombo_msgtype.value=="Tx"
+			}, Boolean);
+			rArraygindexgroup_mo[i].ginteger_db4.enabled = MF({
+				rArraygindexgroup_mo[index].ginteger_data_length.value>4 && rArraygindexgroup_mo[index].gcombo_msgtype.value=="Tx"
+			}, Boolean);
+			rArraygindexgroup_mo[i].ginteger_db5.enabled = MF({
+				rArraygindexgroup_mo[index].ginteger_data_length.value>5 && rArraygindexgroup_mo[index].gcombo_msgtype.value=="Tx"
+			}, Boolean);
+			rArraygindexgroup_mo[i].ginteger_db6.enabled = MF({
+				rArraygindexgroup_mo[index].ginteger_data_length.value>6 && rArraygindexgroup_mo[index].gcombo_msgtype.value=="Tx"
+			}, Boolean);
+			rArraygindexgroup_mo[i].ginteger_db7.enabled = MF({
+				rArraygindexgroup_mo[index].ginteger_data_length.value>7 && rArraygindexgroup_mo[index].gcombo_msgtype.value=="Tx"
+			}, Boolean);
+		}
+
+		for(i in 0..mobjects)
+		{
+			int index = i
+			rArraygindexgroup_mo[i].gcheck_enable_gateway_data_frame_send.enabled	=   MF({
+				rArraygindexgroup_mo[index].gcombo_message_object_mode_control.value=="Gateway source object"
+			},  Boolean);
+			rArraygindexgroup_mo[i].gcheck_enable_identifier_copy.enabled		=   MF({
+				rArraygindexgroup_mo[index].gcombo_message_object_mode_control.value=="Gateway source object"
+			},  Boolean);
+			rArraygindexgroup_mo[i].gcheck_enable_data_length_code_copy.enabled	=   MF({
+				rArraygindexgroup_mo[index].gcombo_message_object_mode_control.value=="Gateway source object"
+			},  Boolean);
+			rArraygindexgroup_mo[i].gcheck_enable_data_copy.enabled				=   MF({
+				rArraygindexgroup_mo[index].gcombo_message_object_mode_control.value=="Gateway source object"
+			},  Boolean);
+			rArraygindexgroup_mo[i].gcheck_enable_overflow_interrupt.enabled	=   MF({
+				rArraygindexgroup_mo[index].gcombo_message_object_mode_control.value!="Standard message object"
+			},  Boolean);
+		
+		    rArraygindexgroup_mo[i].gcheck_enable_as_gateway_dest_mo.enabled	=   MF({
+			      rArraygindexgroup_mo[index].gcombo_message_object_mode_control.value!="Gateway source object"
+
+            },  Boolean);
+
+			rArraygindexgroup_mo[i].gcombo_bot.value =   MF({"n.a.".toString()}, String);
+			rArraygindexgroup_mo[i].gcombo_top.value =   MF({"n.a.".toString()}, String);
+		}
+
+		for(i in 0..mobjects)
+		{
+			rArraygindexgroup_mo[i].gcombo_bot.options = MF({
+																def mysize = ginteger_number_message_objects.value
+																List moList = ["n.a."];
+												
+																for (int a=0; a < mysize;a++)
+																{
+																	moList.add("LMO_${a}".toString());
+																}
+												
+																return (moList);},List);
+		}
+
+		for(i in 0..mobjects)
+		{
+			rArraygindexgroup_mo[i].gcombo_top.options = MF({
+																def mysize1 = ginteger_number_message_objects.value
+																List moList1 = ["n.a."];
+												
+																for (int a=0; a < mysize1;a++)
+																{
+																	moList1.add("LMO_${a}".toString());
+																}
+												
+																return (moList1);},List);
+		}
+
+		for(i in 0..mobjects)
+		{
+			int index = i
+			rArraygindexgroup_mo[i].gcombo_bot.enabled =  MF({
+				                           rArraygindexgroup_mo[index].gcombo_message_object_mode_control.value!="Standard message object" &&
+						                   rArraygindexgroup_mo[index].gcombo_message_object_mode_control.value!="Receive FIFO slave object" &&
+						                   rArraygindexgroup_mo[index].gcombo_message_object_mode_control.value!="Transmit FIFO slave object" 
+
+			},  Boolean);
+			rArraygindexgroup_mo[i].gcombo_top.enabled =  MF({
+				                           rArraygindexgroup_mo[index].gcombo_message_object_mode_control.value!="Standard message object" &&
+						                   rArraygindexgroup_mo[index].gcombo_message_object_mode_control.value!="Receive FIFO slave object" &&
+						                   rArraygindexgroup_mo[index].gcombo_message_object_mode_control.value!="Transmit FIFO slave object" 
+			},  Boolean);
+		}
+		  
+		  rArraygindexgroup_nodesettings[0].glabel_baudrate.enabled = MF({rArraygindexgroup_nodesettings[0].gcheck_enablenode.value == true},Boolean)
+		  rArraygindexgroup_nodesettings[0].ginteger_baudrate.enabled = MF({rArraygindexgroup_nodesettings[0].gcheck_enablenode.value == true},Boolean)
+		  rArraygindexgroup_nodesettings[0].gcheck_enable_analyzer_mode.enabled = MF({rArraygindexgroup_nodesettings[0].gcheck_enablenode.value == true},Boolean)
+		  rArraygindexgroup_nodesettings[0].gcheck_loopback_mode.enabled = MF({rArraygindexgroup_nodesettings[0].gcheck_enablenode.value == true},Boolean)
+		  rArraygindexgroup_nodesettings[0].ggroup_bit_timing.enabled = MF({rArraygindexgroup_nodesettings[0].gcheck_enablenode.value ==  true},Boolean)
+		  rArraygindexgroup_nodesettings[0].ggroup_frame_counter.enabled = MF({rArraygindexgroup_nodesettings[0].gcheck_enablenode.value == true},Boolean)
+		  rArraygindexgroup_nodesettings[0].ggroup_events.enabled = MF({rArraygindexgroup_nodesettings[0].gcheck_enablenode.value == true},Boolean)
+		
+		  rArraygindexgroup_nodesettings[1].glabel_baudrate.enabled = MF({rArraygindexgroup_nodesettings[1].gcheck_enablenode.value},Boolean)
+		  rArraygindexgroup_nodesettings[1].ginteger_baudrate.enabled = MF({rArraygindexgroup_nodesettings[1].gcheck_enablenode.value},Boolean)
+		  rArraygindexgroup_nodesettings[1].gcheck_enable_analyzer_mode.enabled = MF({rArraygindexgroup_nodesettings[1].gcheck_enablenode.value},Boolean)
+		  rArraygindexgroup_nodesettings[1].gcheck_loopback_mode.enabled = MF({rArraygindexgroup_nodesettings[1].gcheck_enablenode.value},Boolean)
+		  rArraygindexgroup_nodesettings[1].ggroup_bit_timing.enabled = MF({rArraygindexgroup_nodesettings[1].gcheck_enablenode.value},Boolean)
+		  rArraygindexgroup_nodesettings[1].ggroup_frame_counter.enabled = MF({rArraygindexgroup_nodesettings[1].gcheck_enablenode.value},Boolean)
+		  rArraygindexgroup_nodesettings[1].ggroup_events.enabled = MF({rArraygindexgroup_nodesettings[1].gcheck_enablenode.value},Boolean)
+
+		  if((family+series == "XMC48") || (family+series == "XMC47") || (family+series == "XMC45"))
+		  {
+		  rArraygindexgroup_nodesettings[2].glabel_baudrate.enabled = MF({rArraygindexgroup_nodesettings[2].gcheck_enablenode.value},Boolean)
+		  rArraygindexgroup_nodesettings[2].ginteger_baudrate.enabled = MF({rArraygindexgroup_nodesettings[2].gcheck_enablenode.value},Boolean)
+		  rArraygindexgroup_nodesettings[2].gcheck_enable_analyzer_mode.enabled = MF({rArraygindexgroup_nodesettings[2].gcheck_enablenode.value},Boolean)
+		  rArraygindexgroup_nodesettings[2].gcheck_loopback_mode.enabled = MF({rArraygindexgroup_nodesettings[2].gcheck_enablenode.value},Boolean)
+		  rArraygindexgroup_nodesettings[2].ggroup_bit_timing.enabled = MF({rArraygindexgroup_nodesettings[2].gcheck_enablenode.value},Boolean)
+		  rArraygindexgroup_nodesettings[2].ggroup_frame_counter.enabled = MF({rArraygindexgroup_nodesettings[2].gcheck_enablenode.value},Boolean)
+		  rArraygindexgroup_nodesettings[2].ggroup_events.enabled = MF({rArraygindexgroup_nodesettings[2].gcheck_enablenode.value},Boolean)
+		  }
+		  
+		  if((family+series == "XMC48") || (family+series == "XMC47"))
+		  {
+			  rArraygindexgroup_nodesettings[3].glabel_baudrate.enabled = MF({rArraygindexgroup_nodesettings[3].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[3].ginteger_baudrate.enabled = MF({rArraygindexgroup_nodesettings[3].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[3].gcheck_enable_analyzer_mode.enabled = MF({rArraygindexgroup_nodesettings[3].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[3].gcheck_loopback_mode.enabled = MF({rArraygindexgroup_nodesettings[3].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[3].ggroup_bit_timing.enabled = MF({rArraygindexgroup_nodesettings[3].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[3].ggroup_frame_counter.enabled = MF({rArraygindexgroup_nodesettings[3].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[3].ggroup_events.enabled = MF({rArraygindexgroup_nodesettings[3].gcheck_enablenode.value},Boolean)
+			  
+			  rArraygindexgroup_nodesettings[4].glabel_baudrate.enabled = MF({rArraygindexgroup_nodesettings[4].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[4].ginteger_baudrate.enabled = MF({rArraygindexgroup_nodesettings[4].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[4].gcheck_enable_analyzer_mode.enabled = MF({rArraygindexgroup_nodesettings[4].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[4].gcheck_loopback_mode.enabled = MF({rArraygindexgroup_nodesettings[4].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[4].ggroup_bit_timing.enabled = MF({rArraygindexgroup_nodesettings[4].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[4].ggroup_frame_counter.enabled = MF({rArraygindexgroup_nodesettings[4].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[4].ggroup_events.enabled = MF({rArraygindexgroup_nodesettings[4].gcheck_enablenode.value},Boolean)
+	
+			  rArraygindexgroup_nodesettings[5].glabel_baudrate.enabled = MF({rArraygindexgroup_nodesettings[5].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[5].ginteger_baudrate.enabled = MF({rArraygindexgroup_nodesettings[5].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[5].gcheck_enable_analyzer_mode.enabled = MF({rArraygindexgroup_nodesettings[5].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[5].gcheck_loopback_mode.enabled = MF({rArraygindexgroup_nodesettings[5].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[5].ggroup_bit_timing.enabled = MF({rArraygindexgroup_nodesettings[5].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[5].ggroup_frame_counter.enabled = MF({rArraygindexgroup_nodesettings[5].gcheck_enablenode.value},Boolean)
+			  rArraygindexgroup_nodesettings[5].ggroup_events.enabled = MF({rArraygindexgroup_nodesettings[5].gcheck_enablenode.value},Boolean)
+		  }		
+	}
+ 
+	// File Generation
+	def generateFiles(){
+		copy("multican_config.c", "multican_config.c")
+		copy("multican_config.h", "multican_config.h")
+		generate("multican_config_confc.tmpl", "multican_config_conf.c")
+		generate("multican_config_confh.tmpl", "multican_config_conf.h")
+		generate("multican_config_externh.tmpl", "multican_config_extern.h")
+	}
+
+	/**
+	 * Add main code here
+	 */
+}

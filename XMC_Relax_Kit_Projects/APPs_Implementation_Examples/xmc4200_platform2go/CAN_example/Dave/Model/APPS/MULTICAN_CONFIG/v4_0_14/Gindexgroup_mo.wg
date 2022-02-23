@@ -1,0 +1,91 @@
+package Model.APPS.MULTICAN_CONFIG.v4_0_14;
+
+import ifx.davex.app.manifest.*;
+
+class Gindexgroup_mo{
+	 public GGroup ggroup_mo;
+	 public GLabel glabel_logical_mo;
+	 public GCombo gcombo_msgtype;
+	 public GCombo gcombo_list;
+	 public GInteger ginteger_identifier_value;
+	 public GCombo gcombo_identifier_type;
+	 public GInteger ginteger_mask_value;
+	 public GCombo gcombo_acceptance_mask;
+	 public GLabel glabel_priority;
+	 public GInteger ginteger_priority;
+	 public GGroup ggroup_data;
+	 public GInteger ginteger_data_length;
+	 public GInteger ginteger_db0;
+	 public GInteger ginteger_db1;
+	 public GInteger ginteger_db2;
+	 public GInteger ginteger_db3;
+	 public GInteger ginteger_db4;
+	 public GInteger ginteger_db5;
+	 public GInteger ginteger_db6;
+	 public GInteger ginteger_db7;
+	 public GGroup ggroup_intr_settings;
+	 public GCheck gcheck_enable_receive_interrupt;
+	 public GCheck gcheck_enable_transmit_interrupt;
+	 public GCheck gcheck_enable_overflow_interrupt;
+	 public GGroup ggroup_mmc;
+	 public GLabel glabel_message_object_mode_control;
+	 public GCombo gcombo_message_object_mode_control;
+	 public GLabel glabel_bot;
+	 public GCombo gcombo_bot;
+	 public GLabel glabel_top;
+	 public GCombo gcombo_top;
+	 public GGroup ggroup_70;
+	 public GCheck gcheck_enable_identifier_copy;
+	 public GCheck gcheck_enable_data_copy;
+	 public GCheck gcheck_enable_data_length_code_copy;
+	 public GCheck gcheck_enable_gateway_data_frame_send;
+	 public GCheck gcheck_enable_as_gateway_dest_mo;
+	 public GGroup ggroup_transfer;
+	 public GCheck gcheck_enable_single_data_transfer;
+	 public GCheck gcheck_enable_single_transmit_trial;
+	 public GCheck gcheck_enable_foreign_remote_request;
+
+	public Gindexgroup_mo (DaveEnv daveEnv, String widgetName,int index){
+	 ggroup_mo = new GGroup(widgetName:"ggroup_mo", text:"MO Settings", enabled:true, visible:true , parentWidgetName:widgetName)
+	 glabel_logical_mo = new GLabel(widgetName:"glabel_logical_mo", text:"Logical MO:", enabled:true, visible:true, parentWidgetName:widgetName)
+	 gcombo_msgtype = new GCombo(widgetName:"gcombo_msgtype", options:["Tx","Rx"], value:"Tx", enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 gcombo_list = new GCombo(widgetName:"gcombo_list", options:["List 0(unallocated objects)","List 1(Node 0)","List 2(Node 1)","List 3(Node 2)"], value:"List 0(unallocated objects)", enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 ginteger_identifier_value = new GInteger(widgetName:"ginteger_identifier_value", value:2047, minValue:0, maxValue:0x1FFFFFFFF, enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 gcombo_identifier_type = new GCombo(widgetName:"gcombo_identifier_type", options:["Std_11bit","Ext_29bit"], value:"Std_11bit", enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 ginteger_mask_value = new GInteger(widgetName:"ginteger_mask_value", value:2047, minValue:0, maxValue:0x1FFFFFFF, enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 gcombo_acceptance_mask = new GCombo(widgetName:"gcombo_acceptance_mask", options:["Std_Ext","Matching_IDE"], value:"Matching_IDE", enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 glabel_priority = new GLabel(widgetName:"glabel_priority", text:"Priority:", enabled:true, visible:true, parentWidgetName:widgetName)
+	 ginteger_priority = new GInteger(widgetName:"ginteger_priority", value:2, minValue:0, maxValue:3, enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 ggroup_data = new GGroup(widgetName:"ggroup_data", text:"Data Settings", enabled:true, visible:true , parentWidgetName:widgetName)
+	 ginteger_data_length = new GInteger(widgetName:"ginteger_data_length", value:8, minValue:0, maxValue:8, enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 ginteger_db0 = new GInteger(widgetName:"ginteger_db0", value:0, minValue:0x00, maxValue:0xff, enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 ginteger_db1 = new GInteger(widgetName:"ginteger_db1", value:0, minValue:0x00, maxValue:0xff, enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 ginteger_db2 = new GInteger(widgetName:"ginteger_db2", value:0, minValue:0x00, maxValue:0xff, enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 ginteger_db3 = new GInteger(widgetName:"ginteger_db3", value:0, minValue:0x00, maxValue:0xff, enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 ginteger_db4 = new GInteger(widgetName:"ginteger_db4", value:0, minValue:0, maxValue:0xff, enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 ginteger_db5 = new GInteger(widgetName:"ginteger_db5", value:0, minValue:0, maxValue:0xff, enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 ginteger_db6 = new GInteger(widgetName:"ginteger_db6", value:0, minValue:0, maxValue:0xff, enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 ginteger_db7 = new GInteger(widgetName:"ginteger_db7", value:0, minValue:0, maxValue:0xff, enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 ggroup_intr_settings = new GGroup(widgetName:"ggroup_intr_settings", text:"Interrupt Settings", enabled:true, visible:true , parentWidgetName:widgetName)
+	 gcheck_enable_receive_interrupt = new GCheck(widgetName:"gcheck_enable_receive_interrupt", value:false, enabled:true, visible:true, parentWidgetName:widgetName)
+	 gcheck_enable_transmit_interrupt = new GCheck(widgetName:"gcheck_enable_transmit_interrupt", value:false, enabled:true, visible:true, parentWidgetName:widgetName)
+	 gcheck_enable_overflow_interrupt = new GCheck(widgetName:"gcheck_enable_overflow_interrupt", value:false, enabled:false, visible:true, parentWidgetName:widgetName)
+	 ggroup_mmc = new GGroup(widgetName:"ggroup_mmc", text:"Message Object Mode Control(MMC) Settings", enabled:true, visible:true , parentWidgetName:widgetName)
+	 glabel_message_object_mode_control = new GLabel(widgetName:"glabel_message_object_mode_control", text:"MMC Selection:", enabled:true, visible:true, parentWidgetName:widgetName)
+	 gcombo_message_object_mode_control = new GCombo(widgetName:"gcombo_message_object_mode_control", options:["Standard message object","Receive FIFO base object","Receive FIFO slave object","Transmit FIFO base object","Transmit FIFO slave object","Gateway source object"], value:"Standard message object", enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 glabel_bot = new GLabel(widgetName:"glabel_bot", text:"Bottom pointer:", enabled:true, visible:true, parentWidgetName:widgetName)
+	 gcombo_bot = new GCombo(widgetName:"gcombo_bot", options:["n.a"], value:"n.a", enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 glabel_top = new GLabel(widgetName:"glabel_top", text:"Top pointer:", enabled:true, visible:true, parentWidgetName:widgetName)
+	 gcombo_top = new GCombo(widgetName:"gcombo_top", options:["n.a"], value:"n.a", enabled:true, visible:true, isMandatoryValue:false , parentWidgetName:widgetName)
+	 ggroup_70 = new GGroup(widgetName:"ggroup_70", text:"Gateway Settings", enabled:true, visible:true , parentWidgetName:widgetName)
+	 gcheck_enable_identifier_copy = new GCheck(widgetName:"gcheck_enable_identifier_copy", value:false, enabled:true, visible:true, parentWidgetName:widgetName)
+	 gcheck_enable_data_copy = new GCheck(widgetName:"gcheck_enable_data_copy", value:false, enabled:true, visible:true, parentWidgetName:widgetName)
+	 gcheck_enable_data_length_code_copy = new GCheck(widgetName:"gcheck_enable_data_length_code_copy", value:false, enabled:true, visible:true, parentWidgetName:widgetName)
+	 gcheck_enable_gateway_data_frame_send = new GCheck(widgetName:"gcheck_enable_gateway_data_frame_send", value:false, enabled:true, visible:true, parentWidgetName:widgetName)
+	 gcheck_enable_as_gateway_dest_mo = new GCheck(widgetName:"gcheck_enable_as_gateway_dest_mo", value:false, enabled:true, visible:true, parentWidgetName:widgetName)
+	 ggroup_transfer = new GGroup(widgetName:"ggroup_transfer", text:"Transfer Settings", enabled:true, visible:true , parentWidgetName:widgetName)
+	 gcheck_enable_single_data_transfer = new GCheck(widgetName:"gcheck_enable_single_data_transfer", value:false, enabled:true, visible:true, parentWidgetName:widgetName)
+	 gcheck_enable_single_transmit_trial = new GCheck(widgetName:"gcheck_enable_single_transmit_trial", value:false, enabled:true, visible:true, parentWidgetName:widgetName)
+	 gcheck_enable_foreign_remote_request = new GCheck(widgetName:"gcheck_enable_foreign_remote_request", value:false, enabled:true, visible:true, parentWidgetName:widgetName)
+	}
+}

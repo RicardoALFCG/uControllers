@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1645486633371_1" label="ActiveProject" name="ActiveProject">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/CAN_example" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/UART_example" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1645484845790_0" label="Window Working Set" name="Aggregate for window 1645484845789">
 <workingSet IMemento.internal.id="ActiveProject"/>

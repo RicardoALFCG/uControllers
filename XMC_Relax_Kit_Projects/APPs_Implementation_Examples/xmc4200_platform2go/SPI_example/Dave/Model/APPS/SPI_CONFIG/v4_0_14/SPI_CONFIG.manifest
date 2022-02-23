@@ -1,0 +1,883 @@
+package Model.APPS.SPI_CONFIG.v4_0_14;
+
+/*
+ Copyright (c) 2015-2020, Infineon Technologies AG
+ All rights reserved.
+                                            
+ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+ following conditions are met:
+                                                                             
+ Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+ disclaimer.
+  
+ Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following
+ disclaimer in the documentation and/or other materials provided with the distribution.
+  
+ Neither the name of the copyright holders nor the names of its contributors may be used to endorse or promote
+ products derived from this software without specific prior written permission.
+                                                                             
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+                                                                             
+ To improve the quality of the software, users are encouraged to share modifications, enhancements or bug fixes with
+ Infineon Technologies AG: dave@infineon.com. */
+
+/*************** Revision History **********************************************
+ Version     Date          Description
+ 4.0.0       06-Aug-2015   Initial version for DAVEv4.<br>    
+ 4.0.1       01-Sep-2015   Added support for BRG from external frequency input.<br>               
+ 4.0.3       16-Sep-2015   Added missing API documentation. Fixed master clock polarity.<br>  
+ 4.0.4       04-Feb-2016   1) GUI usability improved.<br>
+                           2) Help documentation improved.<br>
+                           3) Code size and functionality are improved.<br>
+                           4) APP name changed from USIC_CONFIG_SPI to SPI_CONFIG.<br>
+ 4.0.6       07-Apr-2016   Data lost event signal removed and a checkbox added in Events tab.<br>
+ 4.0.8       25-Apr-2016   GUI tool tip description improved.<br>
+ 4.0.10      12-Jul-2016   GUI image updated for baud rate generator.<br>
+ 4.0.12      11-Oct-2019   Update max. baudrate according to data sheet numbers.<br>                                 
+ 4.0.14      09-Jan-2021   Modified check for minimum XMCLib version. <BR>
+                           Fixed max. baudrate calculation. <BR>
+ *******************************************************************************/
+import ifx.davex.app.manifest.*
+
+class  SPI_CONFIG extends SPI_CONFIG_GUI {
+
+	/* ----------------------Begin : APP Properties------------------------------------------------------- */
+	/*Note  : Following App properties are mandatory and important*/
+
+	/*Begin : APP property section*/
+
+	/**
+	 * App version
+	 * Format: a string with three digit separated by a dot.
+	*/
+	def version = '4.0.14'
+  
+	/**
+	 * App categories declaration. 
+	 * It is list of strings. Subcategories are separated by slash.
+	 * No limits on number of categories and subcategories depth.
+	*/
+	def categoriesDescription = [
+		'Peripheral Configuration'
+	]
+	
+	/** 
+	 * Minimum DAVE version required for this app.
+	 * 
+	 * It is string with three digit separated by a dot.
+	*/
+	def minDaveVersion = '4.1.2'
+
+	/** 
+	 * Keywords used by search feature in Apps selection view
+	 * 
+	 * It is a list of string.
+	*/
+	def keywords = [
+		'Config',
+		'SPI',
+		'SSC',
+		'Communication',
+		'Serial',
+		'Peripheral Configuration',
+		'SPI_CONFIG',
+		'ALL'
+	]
+	
+	/**
+	 * softwareIDs is used to declare which devices are compatible with this APP.
+	 * It is a map with key a string containing a pattern that shall match the SW id of
+	 * the device and as value the minimal version of the APP.
+	*/
+	def softwareIDs = [
+		"XMC1.1.*.*.*": "4.0.1",
+		"XMC1.2.*.*.*": "4.0.1",
+		"XMC1.3.*.*.*": "4.0.1",
+		"XMC1.4.*.*.*": "4.0.1",
+		"XMC4.1.*.*.*": "4.0.1",
+		"XMC4.2.*.*.*": "4.0.1",
+		"XMC4.3.*.*.*": "4.0.1",
+		"XMC4.4.*.*.*": "4.0.1",
+		"XMC4.5.*.*.*": "4.0.1",
+		"XMC4.7.*.*.*": "4.0.1",
+		"XMC4.8.*.*.*": "4.0.1"
+	]
+	
+	/**
+	 * Singleton property:
+	 * When it is true the app can be instantiated only once. 
+	*/
+	def singleton = false
+
+
+	/**
+	 * initProvider property
+	 * It shall be true to add a call to <AppName>_Init() 
+	*/
+	def initProvider = true
+
+	/**
+	 * Deprecated app
+	 * Set it to true to indicate that the app shall be not used for new projects.
+	*/
+	def deprecated = false
+
+	/**
+	 * Sharable property.
+	 * It shall be true to allows multiple apps to require the same instance of this app.
+	*/
+	def sharable = false
+
+	/**
+	 *  App function description.
+	*/
+	def description = "Configures the USIC peripheral to work for the SPI protocol."
+	
+	/* ----------------End: APP Properties---------------------------------------------------------------- */
+	/* ----------------Begin : User Variables for hardware resources and virtual signals------------------ */ 
+	
+	/*Required Apps*/
+	MRequiredApp ra_clock             	      	     		// Consumed clock APP
+
+	/*Required resource groups*/
+	MVirtualResourceGroup hwres_usic_channel              	// USIC channel hardware resource
+	
+	/*Required virtual signals*/
+	MVirtualSignal vs_spi_dx0ins							// Input stage DX0 input selection DX0INS signal (used in all modes)
+	MVirtualSignal vs_spi_dx1ins							// Input stage DX1 input selection DX1INS signal (used for external freq. input/delay compensation)
+	MVirtualSignal vs_spi_dx1ins_sys_out					// Input stage DX1INS signal system output
+	MVirtualSignal vs_spi_dx2ins							// Input stage DX2 input selection DX2INS signal (used for transmit data validation/delay compensation)
+	MVirtualSignal vs_spi_dx2ins_sys_out					// Input stage DX2INS signal system output
+	MVirtualSignal vs_spi_dx3ins							// Input stage DX3 input selection DX3INS signal (used in full duplex and Dual SPI mode)
+	MVirtualSignal vs_spi_dx4ins							// Input stage DX4 input selection DX4INS signal (used in Quad SPI mode)
+	MVirtualSignal vs_spi_dx5ins							// Input stage DX5 input selection DX5INS signal (used in Quad SPI mode)
+	MVirtualSignal vs_spi_dout0								// Shift Data DOUT0 signal. Used in all modes
+	MVirtualSignal vs_spi_dout1								// Shift Data DOUT1 signal. Used in full duplex and Dual SPI mode
+	MVirtualSignal vs_spi_dout2								// Shift Data DOUT2 signal. Used in Quad SPI mode
+	MVirtualSignal vs_spi_dout3								// Shift Data DOUT3 signal. Used in Quad SPI mode
+	MVirtualSignal vs_spi_sclkout							// Shift clock output signal
+	MVirtualSignal vs_spi_mclkout
+	MVirtualSignal vs_spi_selo_0							// Slave Select signals
+	MVirtualSignal vs_spi_selo_1
+	MVirtualSignal vs_spi_selo_2
+	MVirtualSignal vs_spi_selo_3
+	MVirtualSignal vs_spi_selo_4
+	MVirtualSignal vs_spi_selo_5
+	MVirtualSignal vs_spi_selo_6
+	MVirtualSignal vs_spi_selo_7
+	MVirtualSignal vs_spi_standard_tx_event         		// Standard buffer transmit event signal
+	MVirtualSignal vs_spi_standard_rx_event         		// Standard buffer receive event signal
+	MVirtualSignal vs_spi_tx_shift_event            		// Transmit shift event signal
+	MVirtualSignal vs_spi_rx_start_event           			// Receive start event signal
+	MVirtualSignal vs_spi_alt_rx_event              		// Standard buffer alternative receive event signal
+	MVirtualSignal vs_spi_proto_specfic_event       		// UART protocol specific event signal
+	MVirtualSignal vs_spi_fifo_tx_event             		// FIFO transmit buffer event signal
+	MVirtualSignal vs_spi_fifo_tx_err_event         		// Transmit FIFO buffer error event signal
+	MVirtualSignal vs_spi_fifo_rx_event             		// FIFO standard receive buffer event signal
+	MVirtualSignal vs_spi_fifo_rx_err_event         		// Receive FIFO buffer error event signal
+	MVirtualSignal vs_spi_fifo_alt_rx_event         		// FIFO alternative receive buffer event signal
+	
+	/*Variable definition*/
+	GFloat gfloat_internal_clock = GFloat() 				// The peripheral clock from Clock APP. Used in baud rate calculations
+	GCombo baudrate_registers_values = GCombo()  			// To save the baud rate values
+		
+	SolverVariable sv_slave_select_0 = SolverVariable()
+	SolverVariable sv_slave_select_1 = SolverVariable()
+	SolverVariable sv_slave_select_2 = SolverVariable()
+	SolverVariable sv_slave_select_3 = SolverVariable()
+	SolverVariable sv_slave_select_4 = SolverVariable()
+	SolverVariable sv_slave_select_5 = SolverVariable()
+	SolverVariable sv_slave_select_6 = SolverVariable()
+	SolverVariable sv_slave_select_7 = SolverVariable()
+
+	/* ----------------End : User Variables for hardware resources and virtual signals-------------------- */
+	/* ----------------Begin : APP Constructor and Logic ------------------------------------------------- */
+
+	public SPI_CONFIG(DaveEnv daveEnv) {
+		/* -------------------------------------------------------------- */
+		/* -------------Local variables & constants---------------------- */
+		/* -------------------------------------------------------------- */
+		boolean isfamily_4x = false /*Identify if target family is XMC4000*/
+		boolean isfamily_1x = false /*Identify if target family is XMC1000*/
+		
+		/*This are used while solving the slave pin.*/
+		List ss_hw_resource = [
+			"selo0",
+			"selo1",
+			"selo2",
+			"selo3",
+			"selo4",
+			"selo5",
+			"selo6",
+			"selo7"
+		]
+		List ss_resource = [
+			sv_slave_select_0,
+			sv_slave_select_1,
+			sv_slave_select_2,
+			sv_slave_select_3,
+			sv_slave_select_4,
+			sv_slave_select_5,
+			sv_slave_select_6,
+			sv_slave_select_7
+		]
+		
+		/* -------------------------------------------------------------- */
+		/* ----------- Manifest function references --------------------- */
+		/* -------------------------------------------------------------- */
+		/* ---- TAB : General related  ---------------------------------- */
+		MF is_device_Master = MF({gcombo_device_type.value == "Master"}, Boolean)						// MF variable to check if the device type is a master
+		MF is_device_Slave = MF({gcombo_device_type.value == "Slave"}, Boolean)							// MF variable to check if the device type is a slave										// MF variable to check if the operation mode is not full or external half duplex
+		MF is_mode_QuadSPI = MF({gcombo_operation_mode.value == "Quad SPI"}, Boolean)					// MF variable to check if the operation mode is quad SPI
+		MF is_mode_LoopBack = MF({gcombo_operation_mode.value == "Loop Back"}, Boolean)					// MF variable to check if the operation mode is loop back
+		MF is_mode_HalfDuplex = MF({gcombo_operation_mode.value  == "Half Duplex" }, Boolean)		// MF variable to check if the operation mode is half duplex
+		
+
+		MF isnt_mode_LoopBack = MF({gcombo_operation_mode.value != "Loop Back"}, Boolean)				// MF variable to check if the operation mode is not loop back
+		MF is_mode_Dual_r_QuadSPI = MF({gcombo_operation_mode.value == "Dual SPI" ||
+			gcombo_operation_mode.value == "Quad SPI" }, Boolean)										// MF variable to check if the operation mode is dual or quad SPI
+		MF is_mode_Fullduplex_r_Halfduplex = MF({gcombo_operation_mode.value == "Full Duplex" ||
+			gcombo_operation_mode.value == "Half Duplex" }, Boolean)										// MF variable to check if the operation mode is dual or quad SPI
+		
+		MF isnt_mode_Dual_r_QuadSPI = MF({!(gcombo_operation_mode.value == "Dual SPI" ||
+			gcombo_operation_mode.value == "Quad SPI") }, Boolean)										// MF variable to check if the operation mode is dual or quad SPI
+		MF uses_DX1 = MF({ (gcombo_device_type.value == "Slave" ||
+			(gcombo_device_type.value == "Master" && 
+				(gcombo_dx1_input_stage_master.value == "External Frequency Input" || 
+					gcombo_dx1_input_stage_master.value == "Delay Compensation")) ) }, Boolean)	 		// MF variable to check if the input stage DX1 is being used
+		MF uses_DX2 = MF({ (gcombo_device_type.value == "Slave" ||
+			(gcombo_device_type.value == "Master" && 
+				(gcombo_dx2_input_stage_master.value == "Transmit Data Validation" || 
+		gcombo_dx2_input_stage_master.value == "Delay Compensation"))) }, Boolean)	 					// MF variable to check if the input stage DX2 is being used		
+		MF is_transmitDataValidation_Selected  = MF({ gcombo_device_type.value == "Master" && 
+				gcombo_dx2_input_stage_master.value == "Transmit Data Validation" }, Boolean)	 		// MF variable to check if the input stage DX2 is being used for TDV
+		MF uses_SCLKOUT = MF({ (gcombo_device_type.value == "Master" ||
+			(gcombo_device_type.value == "Slave" &&
+				gcombo_sclkout_output_slave.value == "Independent Clock Output")) }, Boolean)	 		// MF variable to check if the output SCLKOUT is being used
+		MF uses_MCLKOUT = MF({ ((gcombo_device_type.value == "Master" &&
+				gcombo_mclkout_output_master.value == "Master Time Base") ||
+			(gcombo_device_type.value == "Slave" &&
+				gcombo_mclkout_output_slave.value == "Independent Clock Output")) }, Boolean)	 		// MF variable to check if the output MCLKOUT is being used
+		
+		/* ---- TAB : Shift clock  -------------------------------------- */
+		/* ---- GROUP : Baud Rate Generation  --------------------------- */
+		MF uses_Internal_Clock = MF({gcombo_clock_selection.value == "Internal Source (FD)"}, Boolean)	 // MF variable to check if the clock selected is internal
+		MF uses_External_Clock = MF({gcombo_clock_selection.value == "External Source (DX1T)"}, Boolean) // MF variable to check if the clock selected is external
+
+		/* ---- TAB : FIFO   -------------------------------------------- */
+		/* ---- GROUP : Tx FIFO Buffer  --------------------------------- */
+		MF is_txFIFO_enabled = MF({gcombo_number_tx_fifo_entries.value != "0"}, Boolean)				 // MF variable to check if the transmit FIFO is enabled
+		MF is_txFIFO_disabled = MF({gcombo_number_tx_fifo_entries.value == "0"}, Boolean)				 // MF variable to check if the transmit FIFO is disabled
+
+		/* ---- GROUP : Rx FIFO Buffer  -------------------------------- */
+		MF is_rxFIFO_enabled = MF({gcombo_number_rx_fifo_entries.value != "0"}, Boolean)				 // MF variable to check if the receive FIFO is enabled
+		MF is_rxFIFO_disabled = MF({gcombo_number_rx_fifo_entries.value == "0"}, Boolean)				 // MF variable to check if the receive FIFO is disabled
+		
+		/* -------------------------------------------------------------- */
+		/* --------- Target Specific User Variable Initialization ------- */
+		/* -------------------------------------------------------------- */
+        String spi_config_family = daveEnv.project.selectedDevice.deviceId.family
+        String spi_config_series = daveEnv.project.selectedDevice.deviceId.series
+		if (daveEnv.project.selectedDevice.deviceId.family == "XMC4") {
+			isfamily_4x = true
+		} else if (daveEnv.project.selectedDevice.deviceId.family == "XMC1") {
+			isfamily_1x = true
+		}
+		
+		/* -------------------------------------------------------------- */
+		/* ----------- APP consumption Block ---------------------------- */
+		/* -------------------------------------------------------------- */
+		if(isfamily_4x) {
+			ra_clock = MRequiredApp("CLOCK_XMC4", "Clock APP", RSHARABLE, "4.0.4")
+		} else {
+			ra_clock = MRequiredApp("CLOCK_XMC1", "Clock APP", RSHARABLE, "4.0.4")
+		}
+		
+		/* -------------------------------------------------------------- */
+		/* ----------- Hardware resource consumption block -------------- */
+		/* -------------------------------------------------------------- */
+		hwres_usic_channel = MVirtualResourceGroup("Channel", ["peripheral", "usic", "*", "channel", "*"])
+		/*For Loop Back mode, DX0 input stage should be connected to DOUT0 by connecting DX0INS to DX0G */
+		addRegisterBitFieldConstraint(hwres_usic_channel, "dx0cr_dsel", [6], is_mode_LoopBack)
+		
+		if(isfamily_1x) {
+			addRegisterBitFieldConstraint(hwres_usic_channel, "dx3cr_dsel", [6], is_mode_LoopBack)
+		}
+		
+		/* -------------------------------------------------------------- */
+		/* ------------- APP IO Signals --------------------------------- */
+		/* -------------------------------------------------------------- */
+		vs_spi_dx0ins = MVirtualSignal(hwres_usic_channel, MF({
+			if(gcombo_device_type.value == "Slave") {
+				if(gcombo_operation_mode.value == "Half Duplex" || gcombo_operation_mode.value == "Full Duplex") {
+					"mosi"
+				} 
+			} else { // gcombo_device_type.value == "Master"
+				if(gcombo_operation_mode.value == "Half Duplex" || gcombo_operation_mode.value == "Full Duplex") {
+					"miso"
+				}
+			}
+		}, String),  "dx0ins", true, is_mode_Fullduplex_r_Halfduplex)
+		
+		vs_spi_dx1ins = MVirtualSignal(hwres_usic_channel, MF({
+			if(gcombo_device_type.value == "Slave") {
+				"sclkin"
+			} else if(gcombo_dx1_input_stage_master.value == "External Frequency Input") {
+				"external_clk_in"
+			} else if(gcombo_dx1_input_stage_master.value == "Delay Compensation") {
+				"sclk_delay_compensation"
+			}else{
+			    "dx1ins"
+			}
+		}, String), "dx1ins", uses_DX1, uses_DX1)
+		
+		vs_spi_dx1ins_sys_out = MVirtualSignal(hwres_usic_channel, "dx1ins_out", "dx1ins", uses_DX1, is_device_Slave)
+		
+		vs_spi_dx2ins = MVirtualSignal(hwres_usic_channel, MF({
+			if(gcombo_device_type.value == "Slave") {
+				"selin"
+			} else { // gcombo_device_type.value == "Master"
+				if(gcombo_dx2_input_stage_master.value == "Transmit Data Validation") {
+					"transmit_data_validation"
+				} else if(gcombo_dx2_input_stage_master.value == "Delay Compensation") {
+					"sel_delay_compensation"
+				}else{
+			    "dx2ins"
+			}
+			}
+		}, String), "dx2ins", uses_DX2, uses_DX2)
+		
+		vs_spi_dx2ins_sys_out = MVirtualSignal(hwres_usic_channel, "dx2ins_out", "dx2ins", uses_DX2, is_device_Slave)
+		
+		vs_spi_dx3ins = MVirtualSignal(hwres_usic_channel, MF({
+			if(gcombo_device_type.value == "Slave") {
+				"mosi[1]"
+			} else { // gcombo_device_type.value == "Master"
+				"miso[1]"
+			}
+		}, String), "dx3ins", is_mode_Dual_r_QuadSPI, false)
+		
+		vs_spi_dx4ins = MVirtualSignal(hwres_usic_channel, MF({
+			if(gcombo_device_type.value == "Slave") {
+				"mosi[2]"
+			} else { // gcombo_device_type.value == "Master"
+				"miso[2]"
+			}
+		}, String), "dx4ins", is_mode_QuadSPI, false)
+		
+		vs_spi_dx5ins = MVirtualSignal(hwres_usic_channel, MF({
+			if(gcombo_device_type.value == "Slave") {
+				"mosi[3]"
+			} else { // gcombo_device_type.value == "Master"
+				"miso[3]"
+			}
+		}, String), "dx5ins", is_mode_QuadSPI, false)
+		
+		vs_spi_dout0  = MVirtualSignal(hwres_usic_channel, MF({
+			if(gcombo_device_type.value == "Slave") {
+				if(gcombo_operation_mode.value == "Full Duplex" || gcombo_operation_mode.value == "Half Duplex") {
+					"miso"
+				} else if(gcombo_operation_mode.value == "Dual SPI" ||
+				gcombo_operation_mode.value == "Quad SPI") {
+					"mosi/miso[0]"
+				}
+			} else { // gcombo_device_type.value == "Master"
+				 if(gcombo_operation_mode.value == "Full Duplex" || gcombo_operation_mode.value == "Half Duplex") {
+					"mosi"
+				} else if(gcombo_operation_mode.value == "Dual SPI" ||
+				gcombo_operation_mode.value == "Quad SPI") {
+					"mosi/miso[0]"
+				}
+			}
+		}, String), "dout0", true, isnt_mode_LoopBack)
+		
+		vs_spi_dout1  = MVirtualSignal(hwres_usic_channel, MF({
+			if(gcombo_device_type.value == "Slave") {
+				"mosi/miso[1]"
+			} else { // gcombo_device_type.value == "Master"
+				"mosi/miso[1]"
+			}
+		}, String), "dout1", is_mode_Dual_r_QuadSPI, is_mode_Dual_r_QuadSPI)
+		
+		vs_spi_dout2  = MVirtualSignal(hwres_usic_channel, MF({
+			if(gcombo_device_type.value == "Slave") {
+				"mosi/miso[2]"
+			} else { // gcombo_device_type.value == "Master"
+				"mosi/miso[2]"
+			}
+		}, String), "dout2", is_mode_QuadSPI, is_mode_QuadSPI)
+		
+		vs_spi_dout3  = MVirtualSignal(hwres_usic_channel, MF({
+			if(gcombo_device_type.value == "Slave") {
+				"mosi/miso[3]"
+			} else { // gcombo_device_type.value == "Master"
+				"mosi/miso[3]"
+			}
+		}, String), "dout3", is_mode_QuadSPI, is_mode_QuadSPI)
+		
+		vs_spi_sclkout = MVirtualSignal(hwres_usic_channel, MF({ 
+			if(gcombo_device_type.value == "Master") {
+				"sclkout"
+			} else if(gcombo_sclkout_output_slave.value == "Independent Clock Output") {
+				"independent_sclk_output"
+			}else
+		    {
+				"sclkout"
+			} 
+		}, String), "sclkout", uses_SCLKOUT, uses_SCLKOUT)
+		
+		for(int index in 0..7) {
+			int loop_count = index
+			this."vs_spi_selo_${loop_count}" = MVirtualSignal(hwres_usic_channel, "selo${loop_count}", ss_resource[loop_count], MF({gint_slave_select_lines.value > loop_count}, Boolean), is_device_Master)
+			addUriElementRangeConstraint(ss_resource[loop_count], ss_hw_resource, MF({ gcombo_device_type.value == "Master" }, Boolean))
+		}
+		
+//		for(int index in 0..7) {
+//			int loop_count = index
+//
+//			this."vs_spi_config_slave_select_${loop_count}" =
+//					MVirtualSignal(hwres_usic_channel, "slave_select_${loop_count}", ss_resource[loop_count], MF({gint_slave_select_lines.value > loop_count}, Boolean), false)
+//			addUriElementRangeConstraint(ss_resource[loop_count], ss_hw_resource)
+//		}
+		
+		vs_spi_mclkout = MVirtualSignal(hwres_usic_channel, MF({ 
+			if(gcombo_device_type.value == "Master" &&
+				gcombo_mclkout_output_master.value == "Master Time Base") {
+				"master_time_base"
+			} else if(gcombo_device_type.value == "Slave" &&
+				gcombo_mclkout_output_slave.value == "Independent Clock Output") {
+				"independent_mclk_output"
+			}else
+		    {
+				"mclkout"
+			} 
+		}, String), "mclkout", uses_MCLKOUT, uses_MCLKOUT)
+		vs_spi_standard_tx_event   =  MVirtualSignal(hwres_usic_channel, "transmit_buffer_event", "transmit_buffer_int", true, true)
+		vs_spi_standard_rx_event   =  MVirtualSignal(hwres_usic_channel, "standard_receive_event", "standard_receive_int", true, true)
+		vs_spi_tx_shift_event      =  MVirtualSignal(hwres_usic_channel, "transmit_shift_event", "transmit_shift_int", true, true)
+		vs_spi_rx_start_event      =  MVirtualSignal(hwres_usic_channel, "receive_start_event", "receive_start_int", true, true)
+		vs_spi_alt_rx_event        =  MVirtualSignal(hwres_usic_channel, "alternate_receive_event", "alternate_receive_int", true, true)
+		vs_spi_proto_specfic_event =  MVirtualSignal(hwres_usic_channel, "protocol_specific_event", "protocol_specific_int", true, true)
+		vs_spi_fifo_tx_event       =  MVirtualSignal(hwres_usic_channel, "fifo_standard_transmit_buffer_event", "standard_transmit_buffer_int", is_txFIFO_enabled, is_txFIFO_enabled)
+		vs_spi_fifo_tx_err_event   =  MVirtualSignal(hwres_usic_channel, "fifo_transmit_buffer_error_event", "transmit_buffer_error_int", is_txFIFO_enabled, is_txFIFO_enabled)
+		vs_spi_fifo_rx_event       =  MVirtualSignal(hwres_usic_channel, "fifo_standard_receive_buffer_event", "standard_receive_buffer_int", is_rxFIFO_enabled, is_rxFIFO_enabled)
+		vs_spi_fifo_rx_err_event   =  MVirtualSignal(hwres_usic_channel, "fifo_receive_buffer_error_event", "receive_buffer_error_int", is_rxFIFO_enabled, is_rxFIFO_enabled)
+		vs_spi_fifo_alt_rx_event   =  MVirtualSignal(hwres_usic_channel, "fifo_alternate_receive_buffer_event", "alternate_receive_buffer_int", is_rxFIFO_enabled, is_rxFIFO_enabled)	
+		
+		/*Set the size based on UI selection. Refer USIC->TBCTR/RBCTR->SIZE bitfield in reference manual*/
+		addRegisterBitFieldConstraint(hwres_usic_channel, "tbctr_size", MF({
+			[ gcombo_number_tx_fifo_entries.options.indexOf(gcombo_number_tx_fifo_entries.value) ]
+		}, List), is_txFIFO_enabled)
+		addRegisterBitFieldConstraint(hwres_usic_channel, "rbctr_size", MF({
+			[ gcombo_number_rx_fifo_entries.options.indexOf(gcombo_number_rx_fifo_entries.value) ]
+		}, List), is_rxFIFO_enabled)
+		
+		addConnectionConstraint(vs_spi_dout0, vs_spi_dx0ins, MF({((gcombo_operation_mode.value == "Loop Back"))},Boolean))
+		
+//		addConnectionConstraint(vs_spi_dout0, vs_spi_dx0ins, MF({((gcombo_operation_mode.value == "Dual SPI") || (gcombo_operation_mode.value == "Quad SPI"))},Boolean))
+//		
+//		addConnectionConstraint(vs_spi_dout1, vs_spi_dx3ins, MF({((gcombo_operation_mode.value == "Dual SPI") || (gcombo_operation_mode.value == "Quad SPI"))},Boolean))
+//		
+//		addConnectionConstraint(vs_spi_dout2, vs_spi_dx4ins, MF({((gcombo_operation_mode.value == "Quad SPI"))},Boolean))
+//		
+//		addConnectionConstraint(vs_spi_dout3, vs_spi_dx5ins, MF({((gcombo_operation_mode.value == "Quad SPI"))},Boolean))
+		
+		/* -------------------------------------------------------------- */
+		/* --------------- APP IO Connections --------------------------- */
+		/* -------------------------------------------------------------- */
+		
+		
+		/* -------------------------------------------------------------- */
+		/* ----------- APP Configuration -------------------------------- */
+		/* ---- TAB : General  ------------------------------------------ */
+		/* ---- GROUP : Operation mode  --------------------------------- */
+				
+		/* ---- GROUP : Frame format  ----------------------------------- */
+		ginteger_word_length.maxValue = MF({ 
+			if(ginteger_frame_length.value >= 16 )
+			{
+				(16)
+			}else
+		    {
+			  ginteger_frame_length.value
+			}
+			}, Integer)
+		gmessage_frame_length.visible = MF({ gcombo_parity.value != "No Parity" && ginteger_frame_length.value == 64 }, Boolean)
+		gcheck_enable_frame_end_mode.visible = is_device_Master
+		gcheck_parity_error_event.enabled = MF({ gcombo_parity.value != "No Parity"}, Boolean)
+		
+		/* ---- GROUP : Delay Compensation  ----------------------------- */
+		gcheck_enable_delay_compensation_master.visible = is_device_Master
+		gcheck_enable_delay_compensation_slave.visible = is_device_Slave
+//		gcombo_delay_compensation_method_slave.visible = is_device_Slave
+//		gcombo_delay_compensation_method_master.visible = is_device_Master
+//		glabel_delay_compensation_method.enabled =  MF({gcheck_enable_delay_compensation_master.value || gcheck_enable_delay_compensation_slave.value }, Boolean)
+//		gcombo_delay_compensation_method_slave.enabled =  MF({gcheck_enable_delay_compensation_slave.value}, Boolean)
+//		gcombo_delay_compensation_method_master.enabled =  MF({gcheck_enable_delay_compensation_master.value}, Boolean)
+		
+		gmessage_delay_compensation_method_master.visible = MF({
+			gcombo_device_type.value == "Master" &&
+			gcheck_enable_delay_compensation_master.value == true &&
+			gcombo_dx1_input_stage_master.value != "Delay Compensation"
+		}, Boolean)
+		gmessage_delay_compensation_method_master.isError = MF({
+			gcombo_device_type.value == "Master" &&
+			gcheck_enable_delay_compensation_master.value == true &&
+			gcombo_dx1_input_stage_master.value != "Delay Compensation"
+		}, Boolean)
+
+		/* ---- GROUP : Input stages  ----------------------------------- */
+		gcombo_dx1_input_stage_master.visible = is_device_Master
+		gcombo_dx1_input_stage_slave.visible  = is_device_Slave
+		
+		gmessage_invert_dx1_input_stage.visible = MF({ 
+			if((gcombo_device_type.value == "Slave") && 
+				(gcombo_shift_clock_setting.value == "No Delay, Polarity Inversion") && 
+				(gcheck_enable_invert_dx1_input_stage.value == false)) {
+				return true 
+			} else { 
+				return false 
+			} 
+		}, Boolean)
+		gmessage_invert_dx1_input_stage.isError = MF({
+			if((gcombo_device_type.value == "Slave") &&
+				(gcombo_shift_clock_setting.value == "No Delay, Polarity Inversion") &&
+				(gcheck_enable_invert_dx1_input_stage.value == false)) {
+				return true
+			} else {
+				return false
+			}
+		}, Boolean)
+		
+		gcombo_dx2_input_stage_master.visible = is_device_Master
+		gcombo_dx2_input_stage_slave.visible = is_device_Slave
+		
+		glabel_type_transmit_data_validation.enabled = is_transmitDataValidation_Selected
+		gcombo_type_transmit_data_validation.enabled = is_transmitDataValidation_Selected
+		glabel_transmit_data_validation_trigger_edge.enabled = MF({
+			gcombo_device_type.value == "Master" && 
+				gcombo_dx2_input_stage_master.value == "Transmit Data Validation" &&
+			gcombo_type_transmit_data_validation.value == "Transfer On Event (DX2T)"
+		}, Boolean)
+		gcombo_transmit_data_validation_trigger_edge.enabled = MF({
+			gcombo_device_type.value == "Master" && 
+				gcombo_dx2_input_stage_master.value == "Transmit Data Validation" &&
+			gcombo_type_transmit_data_validation.value == "Transfer On Event (DX2T)"
+		}, Boolean)
+		
+		
+		glabel_transmit_data_validation_trigger_edge_slave.visible = MF({
+			(gcombo_device_type.value == "Slave")
+		}, Boolean)
+		
+		gcombo_transmit_data_validation_trigger_edge_slave.visible = MF({
+			(gcombo_device_type.value == "Slave")
+		}, Boolean)
+		
+		glabel_transmit_data_validation_trigger_edge_slave.enabled = MF({
+			(gcombo_device_type.value == "Slave" &&	gcheck_dx2_event.value == true)
+		}, Boolean)
+		
+		gcombo_transmit_data_validation_trigger_edge_slave.enabled = MF({
+			(gcombo_device_type.value == "Slave" &&	gcheck_dx2_event.value == true)
+		}, Boolean)
+		
+		/* ---- GROUP : Output signals  --------------------------------- */
+		gcombo_sclkout_output_master.visible = is_device_Master
+		gcombo_sclkout_output_slave.visible = is_device_Slave
+		
+		gcombo_mclkout_output_master.visible = is_device_Master
+		gcombo_mclkout_output_slave.visible = is_device_Slave
+		
+//		gcheck_enable_invert_outputs.enabled = is_device_Master
+		
+		/* ---- TAB : Shift clock  -------------------------------------- */
+		/* ---- GROUP : Baud rate generation  --------------------------- */
+		if(isfamily_4x) {
+			/*Read the peripheral bus clock to derive maximum baudrate value*/
+			gfloat_internal_clock.value = MF({ra_clock.getVal(["gfloat_peribusfreq", "value"])}, Float)
+		} else {
+			/*Read the MCLK value to derive maximum baudrate value*/
+			gfloat_internal_clock.value = MF({ra_clock.getVal(["gfloat_mclkactfrq", "value"])}, Float)
+		}
+		
+		
+		ggroup_baud_rate.visible  = MF({
+			if (gcombo_device_type.value == "Master") {
+				return true
+			} else {
+				return false
+			}
+		}, Boolean)
+		
+		glabel_desired_baud_rate.visible = uses_Internal_Clock
+		gfloat_desired_baud_rate.visible = uses_Internal_Clock
+		glabel_actual_baud_rate.visible = uses_Internal_Clock
+		gfloat_actual_baud_rate.visible = uses_Internal_Clock
+		glabel_external_clock_edge.visible = uses_External_Clock
+		gcombo_external_clock_edge.visible = uses_External_Clock
+		ginteger_divider_factor_internal_clk.visible = uses_Internal_Clock
+		ginteger_divider_factor_external_clk.visible = uses_External_Clock
+		
+		if (((spi_config_family+spi_config_series) == 'XMC45') || 
+            ((spi_config_family+spi_config_series) == 'XMC44') || 
+            ((spi_config_family+spi_config_series) == 'XMC43') || 
+            ((spi_config_family+spi_config_series) == 'XMC47') ||
+            ((spi_config_family+spi_config_series) == 'XMC48'))
+        {
+            gfloat_desired_baud_rate.maxValue = MF({
+				if (gfloat_internal_clock.value > 60) 
+				{
+					return 30000.0 as Double
+				}
+				else  
+				{
+					return (gfloat_internal_clock.value / 2) * 1000.0 as Double
+				}
+			}, Double)
+        }
+
+		if (((spi_config_family+spi_config_series) == 'XMC42') || 
+            ((spi_config_family+spi_config_series) == 'XMC41'))
+        {
+            gfloat_desired_baud_rate.maxValue = MF({
+				if (gfloat_internal_clock.value > 50) 
+                {
+                    return 25000.0 as Double
+                }
+				else  
+                {
+                    return (gfloat_internal_clock.value / 2) * 1000.0 as Double
+                }
+            }, Double)
+        }
+
+		if (((spi_config_family+spi_config_series) == 'XMC11') || 
+            ((spi_config_family+spi_config_series) == 'XMC12') || 
+            ((spi_config_family+spi_config_series) == 'XMC13'))
+        {
+            gfloat_desired_baud_rate.maxValue = MF({
+                return (gfloat_internal_clock.value / 2) * 1000.0 as Double
+            }, Double)
+        }
+
+		if ((spi_config_family+spi_config_series) == 'XMC14')
+        {
+            gfloat_desired_baud_rate.maxValue = MF({
+                return (gfloat_internal_clock.value / 4) * 1000.0 as Double
+            }, Double)
+        }
+		
+		/* ---------------Begin: Step, Divider factor & Real Baud Rate Calculation---------------------------------------------- */
+		
+		/* The logic used below is based on fractional divider configuration that uses fFD.
+		 * fFD = fPERIPH * (n/1024), 'n' represents the 'step' value
+		 * fFD is used by the clock dividers PDIV and DCTQ to obtain the required baudrate.
+		 * DCTQ is the 'Oversampling', which is fixed as 2 in case of SPI communication.
+		 * Baudrate = fFD / ( (PDIV+1) * (DCTQ+1) ) = fFD / ( (PDIV+1) * 2 )
+		 * The logic iterates through the entire range of 'step'[0 to 1023] to check for the PDIV value
+		 * with least fractional difference between the 'Desired baudrate' and the calculated baudrate
+		 * using dividers. Finally, the value of 'step' and PDIV, that generated the least fractional
+		 * difference with desired baudrate will be chosen for calculating the actual baudrate. */
+		baudrate_registers_values.options = MF({
+			Float peripheral_clock
+			Float max_baud
+			Float desired_baud
+			Integer clock_divider = 1023
+			Integer clock_divider_min
+
+			Integer pdiv
+			Integer pdiv_int
+			Integer pdiv_int_min
+			Integer pdiv_frac
+			Integer pdiv_frac_min
+
+			Integer rate
+			Integer oversampling
+			Integer calBaud
+			Integer min_calBaud_diff = 0x7fffffff
+			Integer diff_baud
+			Float real_baud_rate
+			
+			if(gcombo_clock_selection.value == "Internal Source (FD)") {
+				peripheral_clock =  (gfloat_internal_clock.value * 10000)/* Integer.parseInt(gfloat_peripheralclock.value * 10000) */
+
+				max_baud = (((gfloat_internal_clock.value * 1023)/(2)) * (1000000f/1024f))
+				max_baud = (max_baud / 1000).round(2)   /*max_baud in KHz */
+
+				desired_baud = gfloat_desired_baud_rate.value
+
+				if(desired_baud > max_baud) {
+					rate = max_baud * 10
+				} else {
+					rate = gfloat_desired_baud_rate.value * 10
+				}
+
+				oversampling = 2
+
+				clock_divider_min = 1
+				pdiv_int_min = 1
+				pdiv_frac_min = 1023
+
+				while((clock_divider < 1024) && (clock_divider > 0)) {
+					pdiv = ((peripheral_clock * clock_divider) / (rate * oversampling))
+					pdiv_int = pdiv >> 10
+					pdiv_frac = pdiv & 1023
+
+					if ((pdiv_int < 1024) && (pdiv_frac < pdiv_frac_min))
+					{
+						pdiv_frac_min = pdiv_frac
+						pdiv_int_min = pdiv_int
+						clock_divider_min = clock_divider
+					}
+					clock_divider--
+				}
+				calBaud = ((gfloat_internal_clock.value * (clock_divider_min))/((oversampling)*1024*(pdiv_int_min)) * 1000000)
+
+				real_baud_rate = (Float)(calBaud/1000)
+
+				return [
+					clock_divider_min,	// Step (FDR.STEP)
+					pdiv_int_min,		// Divider factor (BRG.PDIV)
+					real_baud_rate		// Real baud rate in kHz
+				]
+			} else {
+				return [
+					"0",		// Step (FDR.STEP)
+					"1",		// Divider factor (BRG.PDIV + 1)
+					"0.0f"		// Real baud rate in kHz
+				]
+			}
+
+		}, List)
+		/* ---------------End: Step, Divider factor & Real Baud Rate Calculation------------------------------------------------ */
+		ginteger_divider_factor_internal_clk.value = MF({baudrate_registers_values.options.get(1).toInteger()}, Integer)
+		gfloat_actual_baud_rate.value = MF({baudrate_registers_values.options.get(2).toFloat()}, Float)
+		
+		gimage_baud_rate.path = MF({
+			if(gcombo_clock_selection.value == "Internal Source (FD)") {
+				"doc/SPI_CONFIG_BRG_internal_clk.jpg"
+			} else { // gcombo_clock_selection.value == "External Source (DX1T)"
+				"doc/SPI_CONFIG_BRG_external_clk.jpg"
+			}
+		}, String)
+
+		/* ---- GROUP : Shift clock signal  ----------------------------- */
+		glabel_clock_selection.enabled  = MF({
+			if (gcombo_device_type.value == "Master") {
+				return true
+			} else {
+				return false
+			}
+		}, Boolean)
+		
+		gcombo_clock_selection.enabled  = MF({
+			if (gcombo_device_type.value == "Master") {
+				return true
+			} else {
+				return false
+			}
+		}, Boolean)
+		
+		glabel_shift_clock_setting.text = MF({
+			if (gcombo_device_type.value == "Master") {
+				"Shift clock signal (SCLKOUT) setting with respect to the shift clock (SCLK) signal from the\nBaud Rate Generator:"
+			} else {
+				"Shift clock signal (SCLKIN) setting to adapt to the function of the data shift unit:"
+			}
+		}, String)
+		gcombo_shift_clock_setting.options = MF({
+			if (gcombo_device_type.value == "Master") {
+				return [
+					"No Delay, No Polarity Inversion",
+					"No Delay, Polarity Inversion",
+					"Delayed By 1/2 Shift Clock Period, No Polarity Inversion",
+					"Delayed By 1/2 Shift Clock Period, Polarity Inversion"
+				]
+			} else {
+				return [
+					"No Delay, No Polarity Inversion",
+					"No Delay, Polarity Inversion"
+				]
+			}
+		}, List)
+		
+		/* ---- TAB : Slave select  ------------------------------------- */
+		/* ---- GROUP : Slave select  ----------------------------------- */
+		gtab_slave_select.visible  = MF({
+			if (gcombo_device_type.value == "Master") {
+				return true
+			} else {
+				return false
+			}
+		}, Boolean)
+		gtab_dummy.visible  = false
+		
+		ginteger_ld_td_dctq.value = MF({ ginteger_desired_ld_td_value.value - 1 }, Integer)
+		gfloat_actual_ld_td_value.value = MF({
+			float actual_leading_trailing_delay
+			actual_leading_trailing_delay = (ginteger_desired_ld_td_value.value) * (1000/gfloat_actual_baud_rate.value) /* Converted into micro seconds */
+			return actual_leading_trailing_delay
+		}, Float)
+		
+		ginteger_iw_nf_dctq1.value = MF({ (ginteger_desired_iw_nf_value.value == 0) ? 0 : ginteger_desired_iw_nf_value.value - 1 }, Integer)
+		gfloat_actual_iw_nf_value.value = MF({
+			float actual_interword_delay
+			actual_interword_delay = (ginteger_desired_iw_nf_value.value == 0) ? 0 : (ginteger_desired_iw_nf_value.value) * (1000/gfloat_actual_baud_rate.value) /* Converted into micro seconds */
+			return actual_interword_delay
+		}, Float)
+		
+		/* ---- TAB : FIFO  --------------------------------------------- */
+		/* ---- GROUP : Tx FIFO buffer  --------------------------------- */
+		ginteger_tx_fifo_data_pointer.enabled = false
+		gcheck_msls_event.enabled = is_device_Master
+		
+		glabel_tx_fifo_data_pointer.enabled = is_txFIFO_enabled
+		ginteger_tx_fifo_data_pointer.value = MF({ hwres_usic_channel.getRegValue("TBCTR", "tbctr_dptr") }, Integer)
+		
+		/* ---- GROUP : Tx FIFO events  ------------------------------- */
+		ggroup_tx_fifo_interrupts_conf.enabled = is_txFIFO_enabled
+		glabel_limit_for_transmit_events.enabled = is_txFIFO_enabled
+		ginteger_limit_for_transmit_events.enabled = is_txFIFO_enabled
+		ginteger_limit_for_transmit_events.maxValue = MF({
+			if(gcombo_number_tx_fifo_entries.value != "0") {
+				return Integer.parseInt(gcombo_number_tx_fifo_entries.value) - 1
+			} else {
+				return 0
+			}
+		}, Integer)
+		
+		/* ---- GROUP : Rx FIFO buffer  --------------------------------- */
+		glabel_rx_fifo_data_pointer.enabled = is_rxFIFO_enabled
+		ginteger_rx_fifo_data_pointer.enabled = false
+		ginteger_rx_fifo_data_pointer.value = MF({ hwres_usic_channel.getRegValue("RBCTR", "rbctr_dptr") }, Integer)
+		
+		/* ---- GROUP : Rx FIFO events  --------------------------------- */
+		ggroup_rx_fifo_events_conf.enabled = is_rxFIFO_enabled
+		
+		ginteger_limit_for_receive_events.maxValue = MF({
+			if(gcombo_number_rx_fifo_entries.value != "0") {
+				return Integer.parseInt(gcombo_number_rx_fifo_entries.value) - 1
+			} else {
+				return 0
+			}
+		}, Integer)
+	}
+	
+	/* -----------------End : APP Constructor and Logic--------------------------------------------------- */
+	/* -----------------Begin: File Generation------------------------------------------------------------ */
+	def generateFiles(){
+		copy("spi_config.c", "spi_config.c")
+		copy("spi_config.h", "spi_config.h")
+		generate("spi_config_confc.tmpl", "spi_config_conf.c")
+		generate("spi_config_confh.tmpl", "spi_config_conf.h")
+		generate("spi_config_extern.tmpl", "spi_config_extern.h")
+	}
+	/* -----------------End: File Generation-------------------------------------------------------------- */
+}
