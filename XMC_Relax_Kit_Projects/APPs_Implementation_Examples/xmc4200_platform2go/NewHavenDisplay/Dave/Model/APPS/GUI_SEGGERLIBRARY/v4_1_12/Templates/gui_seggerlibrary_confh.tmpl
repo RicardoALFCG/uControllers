@@ -1,0 +1,283 @@
+package Model.APPS.GUI_SEGGERLIBRARY.v4_1_12.Templates;
+
+import Model.APPS.GUI_SEGGERLIBRARY.v4_1_12.GUI_SEGGERLIBRARY
+
+out.print("""
+/**
+ * @cond
+ ***********************************************************************************************************************
+ *
+ * Copyright (c) 2015-2020, Infineon Technologies AG
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,are permitted provided that the
+ * following conditions are met:
+ *
+ *   Redistributions of source code must retain the above copyright notice, this list of conditions and the  following
+ *   disclaimer.
+ *
+ *   Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+ *   following disclaimer in the documentation and/or other materials provided with the distribution.
+ *
+ *   Neither the name of the copyright holders nor the names of its contributors may be used to endorse or promote
+ *   products derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT  OF THE
+ * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * To improve the quality of the software, users are encouraged to share modifications, enhancements or bug fixes
+ * with Infineon Technologies AG (dave@infineon.com).
+ ***********************************************************************************************************************
+ *
+ * Change History
+ * --------------
+ *
+ * 2015-02-16:
+ *     - Initial version<br>
+ *
+ * 2015-03-23:
+ *     - Added macros for display configuration
+ * 2015-10-09:
+ *     - Added macros for CMSIS_RTOS/FreeRTOS support
+ * @endcond
+ *
+ */
+
+#ifndef GUI_SEGGERLIBRARY_CONF_H
+#define GUI_SEGGERLIBRARY_CONF_H
+
+/***********************************************************************************************************************
+ * HEADER FILES
+ **********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ * MACROS
+ **********************************************************************************************************************/
+""");
+
+String appInst = null
+String user_display_init = null;
+String user_lcd_read = null;
+String user_lcd_wr_cmd = null;
+String user_lcd_wr_data = null;
+String user_lcd_wr_multiple = null;
+Map orientation = [
+	'0 degree'	:	'0',
+	'90 degree turn':'GUI_SWAP_XY | GUI_MIRROR_Y',
+	'180 degree turn':'GUI_MIRROR_X | GUI_MIRROR_Y',
+	'270 degree turn':'GUI_SWAP_XY | GUI_MIRROR_X',
+	'0 degree MIRROR X':'GUI_MIRROR_X',
+	'0 degree MIRROR Y':'GUI_MIRROR_Y',
+	'90 degree MIRROR X':'GUI_SWAP_XY',
+	'90 degree MIRROR Y':'GUI_SWAP_XY | GUI_MIRROR_X | GUI_MIRROR_Y'
+	]
+
+
+for (GUI_SEGGERLIBRARY guislInst : appInstancesList )
+{
+	appInst   = guislInst.getInstanceLabel()
+
+if(guislInst.gcombo_os.value == "None")
+{
+out.print("""#define GUI_SEGGERLIBRARY_RTOS_PRESENT   0""");
+}
+else if(guislInst.gcombo_os.value == "CMSIS_RTOS_RTX")
+{
+out.print("""#define GUI_SEGGERLIBRARY_RTOS_PRESENT   1""");
+out.print("""\n#define CMSIS_RTOS_RTX_PRESENT   1""");
+out.print("""\n#define FREERTOS_PRESENT   0""");
+}
+else if(guislInst.gcombo_os.value == "FreeRTOS")
+{
+out.print("""#define GUI_SEGGERLIBRARY_RTOS_PRESENT   1""");
+out.print("""\n#define FREERTOS_PRESENT   1""");
+out.print("""\n#define CMSIS_RTOS_RTX_PRESENT   0""");
+}
+
+out.print("""\n#define GUI_SEGGERLIBRARY_MOUSE_SUPPORT  1""");
+
+if(guislInst.gcombo_mode.value == "Advanced")
+{
+out.print("""\n#define GUI_SEGGERLIBRARY_WIN_SUPPORT    1""");
+out.print("""\n#define GUI_SEGGERLIBRARY_TOUCH_SUPPORT  1""");
+}
+else
+{
+out.print("""\n#define GUI_SEGGERLIBRARY_WIN_SUPPORT    0""");
+out.print("""\n#define GUI_SEGGERLIBRARY_TOUCH_SUPPORT    0""");
+}
+
+if(guislInst.gcheck_non_read_support.value == true)
+{
+out.print("""\n#define GUI_SEGGERLIBRARY_NON_READ_SUPPORT   1""");
+}
+else
+{
+out.print("""\n#define GUI_SEGGERLIBRARY_NON_READ_SUPPORT   0""");
+}
+
+if(guislInst.gcheck_non_read_support.value == true)
+{
+out.print("""\n#define CACHE_SIZE   ${guislInst.gint_cachesize.value }""");
+}
+else
+{
+	out.print("""\n
+/* Default cache size is used when read support is enabled*/
+#define CACHE_SIZE   4096""");
+}
+
+if(guislInst.gcheck_user_defined_section.value == false)
+{
+out.print("""\n
+#define DEFAULT_DATA_SECTION""");	
+}
+else
+{
+out.print("""\n
+#define USER_DEFINED_SECTION""");	
+}
+
+/** Check Syncoam is selected or not */
+if(guislInst.gcombo_disp_selection.value == "Other Display")
+{
+out.print("""\n#define USER_DEFINED_LCD   1""");
+out.print("""\n#define OTHER_LCD_ORIENTATION ${orientation[guislInst.gcombo_otherdisplay_orientation.value]}""");
+out.print("""\n#define GUI_LCD_XSIZE ${guislInst.gint_other_xaxis_val.value}""");
+out.print("""\n#define GUI_LCD_YSIZE ${guislInst.gint_other_yaxis_val.value}""");
+
+user_display_init = guislInst.gstring_other_display_init.value;
+user_lcd_read = guislInst.gstring_other_lcd_read.value;
+user_lcd_wr_cmd = guislInst.gstring_other_lcd_wr_cmd.value;
+user_lcd_wr_data = guislInst.gstring_other_lcd_wr_data.value;
+user_lcd_wr_multiple = guislInst.gstring_other_lcd_wr_multiple.value;
+}
+else
+{
+out.print("""\n#define  USER_DEFINED_LCD  0""");
+out.print("""\n#define SYNCOAM_LCD_ORIENTATION ${orientation[guislInst.gcombo_display_orientation.value]}""");
+out.print("""\n#define GUI_LCD_XSIZE ${guislInst.gint_xaxis_val.value}""");
+out.print("""\n#define GUI_LCD_YSIZE ${guislInst.gint_yaxis_val.value}""");
+
+user_display_init = guislInst.gstring_display_init.value;
+user_lcd_read = guislInst.gstring_lcd_read.value;
+user_lcd_wr_cmd = guislInst.gstring_lcd_wr_cmd.value;
+user_lcd_wr_data = guislInst.gstring_lcd_wr_data.value;
+user_lcd_wr_multiple = guislInst.gstring_lcd_wr_multiple.value;
+}
+
+/** Check Syncoam is selected or not */
+if(guislInst.gcombo_disp_selection.value == "Syncoam(SEPS525F) Display")
+{
+	if(guislInst.gcheck_spi_interface.value == true)
+	{
+	out.print("""\n#define SPI_INTERFACE  1""");
+	}
+	else
+	{
+	out.print("""\n#define SPI_INTERFACE  0""");   
+	}
+}
+else
+{
+	if(guislInst.gcheck_other_spi_interface.value == true)
+	{
+	out.print("""\n#define SPI_INTERFACE  1""");
+	}
+	else
+	{
+	out.print("""\n#define SPI_INTERFACE  0""");   
+	}
+}
+
+if((guislInst.gcombo_resolution.value == "8-bit") && (guislInst.gcombo_disp_selection.value == "Other Display"))
+{
+out.print("""\n#define DISPLAY_8BPP  1""")
+out.print("""\n#define DISPLAY_16BPP  0""")
+}
+else if((guislInst.gcombo_resolution.value == "16-bit") && (guislInst.gcombo_disp_selection.value == "Other Display"))
+{
+out.print("""\n#define DISPLAY_8BPP  0""")
+out.print("""\n#define DISPLAY_16BPP  1""")
+}
+else if(guislInst.gcombo_disp_selection.value == "Syncoam(SEPS525F) Display")
+{
+out.print("""\n#define DISPLAY_8BPP  1""")
+}
+else
+{
+out.print("""\n#define DISPLAY_8BPP  0""")
+}
+
+if(user_display_init != "")
+{
+out.print("""\n
+#if (USER_DEFINED_LCD == 1 || SPI_INTERFACE == 0)""");
+out.print("""
+#define User_LCD_Init ${user_display_init.value}  
+#endif""");
+}
+
+if(user_lcd_read != "" || user_lcd_wr_cmd != "" || user_lcd_wr_data != "" || user_lcd_wr_multiple != "")
+{
+out.print("""\n#if ((USER_DEFINED_LCD == 1 || SPI_INTERFACE == 0) && (DISPLAY_8BPP == 1))""");
+if(user_lcd_read != "")
+{
+out.print("""\n#define User_LCD_8_Read ${user_lcd_read.value} """);
+}
+if(user_lcd_wr_cmd != "")
+{
+out.print("""\n#define User_LCD_8_WriteCmd ${user_lcd_wr_cmd.value} """);
+}
+if(user_lcd_wr_data != "")
+{
+out.print("""\n#define User_LCD_8_WriteData ${user_lcd_wr_data.value} """);
+}
+if(user_lcd_wr_multiple != "")
+{
+out.print("""\n#define User_LCD_8_WriteMultiple ${user_lcd_wr_multiple.value} """);
+}
+out.print("""\n#endif""");
+
+out.print("""\n#if ((USER_DEFINED_LCD == 1) && (DISPLAY_16BPP == 1))""");
+if(user_lcd_read != "")
+{
+out.print("""\n#define User_LCD_16_Read ${user_lcd_read.value} """);
+}
+if(user_lcd_wr_cmd != "")
+{
+out.print("""\n#define User_LCD_16_WriteCmd ${user_lcd_wr_cmd.value} """);
+}
+if(user_lcd_wr_data != "")
+{
+out.print("""\n#define User_LCD_16_WriteData ${user_lcd_wr_data.value} """);
+}
+if(user_lcd_wr_multiple != "")
+{
+out.print("""\n#define User_LCD_16_WriteMultiple ${user_lcd_wr_multiple.value} """);
+}
+out.print("""\n#endif""");
+
+}
+
+out.print("""\n#if (!USER_DEFINED_LCD && SPI_INTERFACE == 1)""");
+out.print("""\n#define IOHandle (${appInst}_config)""");
+out.print("""\n#endif""");
+out.print("""\n""");
+
+}
+
+out.print("""
+#define GUI_SEGGERLIBRARY_MAJOR_VERSION (${(GUI_SEGGERLIBRARY.version).findAll( /\d+/ )*.toInteger()[0]}U)
+#define GUI_SEGGERLIBRARY_MINOR_VERSION (${(GUI_SEGGERLIBRARY.version).findAll( /\d+/ )*.toInteger()[1]}U)
+#define GUI_SEGGERLIBRARY_PATCH_VERSION (${(GUI_SEGGERLIBRARY.version).findAll( /\d+/ )*.toInteger()[2]}U)
+""");
+
+out.print("""
+#endif
+""");

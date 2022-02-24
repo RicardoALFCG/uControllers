@@ -1,0 +1,322 @@
+   1              	 .syntax unified
+   2              	 .cpu cortex-m4
+   3              	 .eabi_attribute 27,3
+   4              	 .fpu fpv4-sp-d16
+   5              	 .eabi_attribute 20,1
+   6              	 .eabi_attribute 21,1
+   7              	 .eabi_attribute 23,3
+   8              	 .eabi_attribute 24,1
+   9              	 .eabi_attribute 25,1
+  10              	 .eabi_attribute 26,1
+  11              	 .eabi_attribute 30,6
+  12              	 .eabi_attribute 34,1
+  13              	 .eabi_attribute 18,4
+  14              	 .thumb
+  15              	 .file "main.c"
+  16              	 .text
+  17              	.Ltext0:
+  18              	 .cfi_sections .debug_frame
+  19              	 .global s_tick
+  20              	 .section .bss.s_tick,"aw",%nobits
+  21              	 .align 2
+  24              	s_tick:
+  25 0000 00000000 	 .space 4
+  26              	 .global s_trigger
+  27              	 .section .bss.s_trigger,"aw",%nobits
+  30              	s_trigger:
+  31 0000 00       	 .space 1
+  32              	 .section .rodata
+  33              	 .align 2
+  34              	.LC0:
+  35 0000 31307320 	 .ascii "10s TIMER\000"
+  35      54494D45 
+  35      5200
+  36 000a 0000     	 .align 2
+  37              	.LC1:
+  38 000c 3000     	 .ascii "0\000"
+  39 000e 0000     	 .section .text.main,"ax",%progbits
+  40              	 .align 2
+  41              	 .global main
+  42              	 .thumb
+  43              	 .thumb_func
+  45              	main:
+  46              	.LFB360:
+  47              	 .file 1 "../main.c"
+   1:../main.c     **** #include <DAVE.h>                 //Declarations from DAVE Code Generation (includes SFR declaratio
+   2:../main.c     **** 
+   3:../main.c     **** 
+   4:../main.c     **** void delay (unsigned int count);
+   5:../main.c     **** int s_tick = 0;
+   6:../main.c     **** uint8_t s_trigger = 0;
+   7:../main.c     **** 
+   8:../main.c     **** 
+   9:../main.c     **** int main(void)
+  10:../main.c     **** {
+  48              	 .loc 1 10 0
+  49              	 .cfi_startproc
+  50              	 
+  51              	 
+  52 0000 80B5     	 push {r7,lr}
+  53              	.LCFI0:
+  54              	 .cfi_def_cfa_offset 8
+  55              	 .cfi_offset 7,-8
+  56              	 .cfi_offset 14,-4
+  57 0002 82B0     	 sub sp,sp,#8
+  58              	.LCFI1:
+  59              	 .cfi_def_cfa_offset 16
+  60 0004 00AF     	 add r7,sp,#0
+  61              	.LCFI2:
+  62              	 .cfi_def_cfa_register 7
+  11:../main.c     ****   DAVE_STATUS_t status;
+  12:../main.c     **** 
+  13:../main.c     ****   status = DAVE_Init();           /* Initialization of DAVE APPs  */
+  63              	 .loc 1 13 0
+  64 0006 FFF7FEFF 	 bl DAVE_Init
+  65 000a 0346     	 mov r3,r0
+  66 000c FB71     	 strb r3,[r7,#7]
+  14:../main.c     **** 
+  15:../main.c     ****   if(status == DAVE_STATUS_FAILURE)
+  67              	 .loc 1 15 0
+  68 000e FB79     	 ldrb r3,[r7,#7]
+  69 0010 012B     	 cmp r3,#1
+  70 0012 00D1     	 bne .L2
+  71              	.L3:
+  16:../main.c     ****   {
+  17:../main.c     ****     /* Placeholder for error handler code. The while loop below can be replaced with an user error 
+  18:../main.c     ****     XMC_DEBUG("DAVE APPs initialization failed\n");
+  19:../main.c     **** 
+  20:../main.c     ****     while(1U)
+  21:../main.c     ****     {
+  22:../main.c     **** 
+  23:../main.c     ****     }
+  72              	 .loc 1 23 0 discriminator 1
+  73 0014 FEE7     	 b .L3
+  74              	.L2:
+  24:../main.c     ****   }
+  25:../main.c     **** 
+  26:../main.c     ****   /* Set background colour */
+  27:../main.c     ****   //GUI_SetBkColor(GUI_BLUE);
+  28:../main.c     ****   /* Clear screen */
+  29:../main.c     ****   GUI_Clear();
+  75              	 .loc 1 29 0
+  76 0016 FFF7FEFF 	 bl GUI_Clear
+  30:../main.c     **** 
+  31:../main.c     ****   /* Display text */
+  32:../main.c     ****   GUI_SetFont(&GUI_Font20B_1);
+  77              	 .loc 1 32 0
+  78 001a 0D48     	 ldr r0,.L5
+  79 001c FFF7FEFF 	 bl GUI_SetFont
+  33:../main.c     ****   GUI_SetColor(GUI_WHITE);
+  80              	 .loc 1 33 0
+  81 0020 6FF07F40 	 mvn r0,#-16777216
+  82 0024 FFF7FEFF 	 bl GUI_SetColor
+  34:../main.c     ****   GUI_DispStringHCenterAt("10s TIMER", 80, 30);
+  83              	 .loc 1 34 0
+  84 0028 0A48     	 ldr r0,.L5+4
+  85 002a 5021     	 movs r1,#80
+  86 002c 1E22     	 movs r2,#30
+  87 002e FFF7FEFF 	 bl GUI_DispStringHCenterAt
+  88              	.L4:
+  35:../main.c     **** 
+  36:../main.c     **** 
+  37:../main.c     ****   while(1U)
+  38:../main.c     ****   {
+  39:../main.c     **** 
+  40:../main.c     **** 
+  41:../main.c     **** 	  /* Display text */
+  42:../main.c     **** 	  GUI_SetColor(GUI_WHITE);
+  89              	 .loc 1 42 0 discriminator 1
+  90 0032 6FF07F40 	 mvn r0,#-16777216
+  91 0036 FFF7FEFF 	 bl GUI_SetColor
+  43:../main.c     **** 	  GUI_DispStringHCenterAt(s_tick + "0", 80, 60);
+  92              	 .loc 1 43 0 discriminator 1
+  93 003a 074B     	 ldr r3,.L5+8
+  94 003c 1B68     	 ldr r3,[r3]
+  95 003e 1A46     	 mov r2,r3
+  96 0040 064B     	 ldr r3,.L5+12
+  97 0042 1344     	 add r3,r3,r2
+  98 0044 1846     	 mov r0,r3
+  99 0046 5021     	 movs r1,#80
+ 100 0048 3C22     	 movs r2,#60
+ 101 004a FFF7FEFF 	 bl GUI_DispStringHCenterAt
+  44:../main.c     **** 
+  45:../main.c     **** 
+  46:../main.c     **** 
+  47:../main.c     ****   }
+ 102              	 .loc 1 47 0 discriminator 1
+ 103 004e F0E7     	 b .L4
+ 104              	.L6:
+ 105              	 .align 2
+ 106              	.L5:
+ 107 0050 00000000 	 .word GUI_Font20B_1
+ 108 0054 00000000 	 .word .LC0
+ 109 0058 00000000 	 .word s_tick
+ 110 005c 0C000000 	 .word .LC1
+ 111              	 .cfi_endproc
+ 112              	.LFE360:
+ 114              	 .section .text.CCU41_1_IRQHandler,"ax",%progbits
+ 115              	 .align 2
+ 116              	 .global CCU41_1_IRQHandler
+ 117              	 .thumb
+ 118              	 .thumb_func
+ 120              	CCU41_1_IRQHandler:
+ 121              	.LFB361:
+  48:../main.c     **** }
+  49:../main.c     **** 
+  50:../main.c     **** void tick(){
+ 122              	 .loc 1 50 0
+ 123              	 .cfi_startproc
+ 124              	 
+ 125              	 
+ 126              	 
+ 127 0000 80B4     	 push {r7}
+ 128              	.LCFI3:
+ 129              	 .cfi_def_cfa_offset 4
+ 130              	 .cfi_offset 7,-4
+ 131 0002 00AF     	 add r7,sp,#0
+ 132              	.LCFI4:
+ 133              	 .cfi_def_cfa_register 7
+  51:../main.c     **** 	s_tick = s_tick + 1;
+ 134              	 .loc 1 51 0
+ 135 0004 094B     	 ldr r3,.L9
+ 136 0006 1B68     	 ldr r3,[r3]
+ 137 0008 0133     	 adds r3,r3,#1
+ 138 000a 084A     	 ldr r2,.L9
+ 139 000c 1360     	 str r3,[r2]
+  52:../main.c     **** 
+  53:../main.c     **** 	if(s_tick == 10){
+ 140              	 .loc 1 53 0
+ 141 000e 074B     	 ldr r3,.L9
+ 142 0010 1B68     	 ldr r3,[r3]
+ 143 0012 0A2B     	 cmp r3,#10
+ 144 0014 02D1     	 bne .L8
+  54:../main.c     **** 		s_tick = 0;
+ 145              	 .loc 1 54 0
+ 146 0016 054B     	 ldr r3,.L9
+ 147 0018 0022     	 movs r2,#0
+ 148 001a 1A60     	 str r2,[r3]
+ 149              	.L8:
+  55:../main.c     **** 	}
+  56:../main.c     **** 	s_trigger = 1;
+ 150              	 .loc 1 56 0
+ 151 001c 044B     	 ldr r3,.L9+4
+ 152 001e 0122     	 movs r2,#1
+ 153 0020 1A70     	 strb r2,[r3]
+  57:../main.c     **** 
+  58:../main.c     **** }
+ 154              	 .loc 1 58 0
+ 155 0022 BD46     	 mov sp,r7
+ 156              	.LCFI5:
+ 157              	 .cfi_def_cfa_register 13
+ 158              	 
+ 159 0024 5DF8047B 	 ldr r7,[sp],#4
+ 160              	.LCFI6:
+ 161              	 .cfi_restore 7
+ 162              	 .cfi_def_cfa_offset 0
+ 163 0028 7047     	 bx lr
+ 164              	.L10:
+ 165 002a 00BF     	 .align 2
+ 166              	.L9:
+ 167 002c 00000000 	 .word s_tick
+ 168 0030 00000000 	 .word s_trigger
+ 169              	 .cfi_endproc
+ 170              	.LFE361:
+ 172              	 .section .text.delay,"ax",%progbits
+ 173              	 .align 2
+ 174              	 .global delay
+ 175              	 .thumb
+ 176              	 .thumb_func
+ 178              	delay:
+ 179              	.LFB362:
+  59:../main.c     **** /**
+  60:../main.c     ****  * @brief Delay function:This routine is used for creating delay
+  61:../main.c     ****  * @param[in] count (value = n sec X 12 X 1000000)
+  62:../main.c     ****  * @return None
+  63:../main.c     ****  */
+  64:../main.c     **** void delay (volatile unsigned int count)
+  65:../main.c     **** {
+ 180              	 .loc 1 65 0
+ 181              	 .cfi_startproc
+ 182              	 
+ 183              	 
+ 184              	 
+ 185 0000 80B4     	 push {r7}
+ 186              	.LCFI7:
+ 187              	 .cfi_def_cfa_offset 4
+ 188              	 .cfi_offset 7,-4
+ 189 0002 83B0     	 sub sp,sp,#12
+ 190              	.LCFI8:
+ 191              	 .cfi_def_cfa_offset 16
+ 192 0004 00AF     	 add r7,sp,#0
+ 193              	.LCFI9:
+ 194              	 .cfi_def_cfa_register 7
+ 195 0006 7860     	 str r0,[r7,#4]
+  66:../main.c     **** 	while (count != 0)
+ 196              	 .loc 1 66 0
+ 197 0008 02E0     	 b .L12
+ 198              	.L13:
+  67:../main.c     **** 	{
+  68:../main.c     **** 		count--;
+ 199              	 .loc 1 68 0
+ 200 000a 7B68     	 ldr r3,[r7,#4]
+ 201 000c 013B     	 subs r3,r3,#1
+ 202 000e 7B60     	 str r3,[r7,#4]
+ 203              	.L12:
+  66:../main.c     **** 	while (count != 0)
+ 204              	 .loc 1 66 0
+ 205 0010 7B68     	 ldr r3,[r7,#4]
+ 206 0012 002B     	 cmp r3,#0
+ 207 0014 F9D1     	 bne .L13
+  69:../main.c     **** 	}
+  70:../main.c     **** }
+ 208              	 .loc 1 70 0
+ 209 0016 0C37     	 adds r7,r7,#12
+ 210              	.LCFI10:
+ 211              	 .cfi_def_cfa_offset 4
+ 212 0018 BD46     	 mov sp,r7
+ 213              	.LCFI11:
+ 214              	 .cfi_def_cfa_register 13
+ 215              	 
+ 216 001a 5DF8047B 	 ldr r7,[sp],#4
+ 217              	.LCFI12:
+ 218              	 .cfi_restore 7
+ 219              	 .cfi_def_cfa_offset 0
+ 220 001e 7047     	 bx lr
+ 221              	 .cfi_endproc
+ 222              	.LFE362:
+ 224              	 .text
+ 225              	.Letext0:
+ 226              	 .file 2 "c:\\dave_4-4-2_64bit_2018-02-23\\dave_4-4-2_64bit_2018-02-23\\dave-ide-4.4.2-64bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 227              	 .file 3 "c:\\dave_4-4-2_64bit_2018-02-23\\dave_4-4-2_64bit_2018-02-23\\dave-ide-4.4.2-64bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 228              	 .file 4 "C:/Users/RGoncalves/Documents/GitHub/uControllers/XMC_Relax_Kit_Projects/APPs_Implementation_Examples/xmc4200_platform2go/NewHavenDisplay/Libraries/XMCLib/inc/xmc_usic.h"
+ 229              	 .file 5 "C:/Users/RGoncalves/Documents/GitHub/uControllers/XMC_Relax_Kit_Projects/APPs_Implementation_Examples/xmc4200_platform2go/NewHavenDisplay/Libraries/XMCLib/inc/xmc_spi.h"
+ 230              	 .file 6 "c:\\dave_4-4-2_64bit_2018-02-23\\dave_4-4-2_64bit_2018-02-23\\dave-ide-4.4.2-64bit\\eclipse\\emwin\\start\\gui\\inc\\GUI_Type.h"
+ 231              	 .file 7 "C:/Users/RGoncalves/Documents/GitHub/uControllers/XMC_Relax_Kit_Projects/APPs_Implementation_Examples/xmc4200_platform2go/NewHavenDisplay/Dave/Generated/DAVE.h"
+ 232              	 .file 8 "C:/Users/RGoncalves/Documents/GitHub/uControllers/XMC_Relax_Kit_Projects/APPs_Implementation_Examples/xmc4200_platform2go/NewHavenDisplay/Libraries/CMSIS/Include/cmsis_gcc.h"
+ 233              	 .file 9 "C:/Users/RGoncalves/Documents/GitHub/uControllers/XMC_Relax_Kit_Projects/APPs_Implementation_Examples/xmc4200_platform2go/NewHavenDisplay/Libraries/CMSIS/Include/core_cm4.h"
+ 234              	 .file 10 "C:/Users/RGoncalves/Documents/GitHub/uControllers/XMC_Relax_Kit_Projects/APPs_Implementation_Examples/xmc4200_platform2go/NewHavenDisplay/Libraries/CMSIS/Infineon/XMC4200_series/Include/system_XMC4200.h"
+ 235              	 .file 11 "c:\\dave_4-4-2_64bit_2018-02-23\\dave_4-4-2_64bit_2018-02-23\\dave-ide-4.4.2-64bit\\eclipse\\emwin\\start\\gui\\inc\\gui.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+    {standard input}:24     .bss.s_tick:00000000 s_tick
+    {standard input}:21     .bss.s_tick:00000000 $d
+    {standard input}:30     .bss.s_trigger:00000000 s_trigger
+    {standard input}:31     .bss.s_trigger:00000000 $d
+    {standard input}:33     .rodata:00000000 $d
+    {standard input}:40     .text.main:00000000 $t
+    {standard input}:45     .text.main:00000000 main
+    {standard input}:107    .text.main:00000050 $d
+    {standard input}:115    .text.CCU41_1_IRQHandler:00000000 $t
+    {standard input}:120    .text.CCU41_1_IRQHandler:00000000 CCU41_1_IRQHandler
+    {standard input}:167    .text.CCU41_1_IRQHandler:0000002c $d
+    {standard input}:173    .text.delay:00000000 $t
+    {standard input}:178    .text.delay:00000000 delay
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+DAVE_Init
+GUI_Clear
+GUI_SetFont
+GUI_SetColor
+GUI_DispStringHCenterAt
+GUI_Font20B_1

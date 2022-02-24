@@ -1,0 +1,144 @@
+#include <DAVE.h>                 //Declarations from DAVE Code Generation (includes SFR declaration)
+
+
+void delay (unsigned int count);
+uint8_t s_tick = 0;
+uint8_t s_trigger = 0;
+
+
+
+uint8_t AcX_H;
+uint8_t AcX_L;
+int16_t AcX_int16;
+float   AcX;
+uint8_t AcY_H;
+uint8_t AcY_L;
+int16_t AcY_int16;
+float   AcY;
+uint8_t AcZ_H;
+uint8_t AcZ_L;
+int16_t AcZ_int16;
+float   AcZ;
+
+uint8_t temp_H;
+uint8_t temp_L;
+int16_t temp_int16;
+float temperature;
+// float ad=25.3F;
+
+uint8_t GyX_H;
+uint8_t GyX_L;
+int16_t GyX_int16;
+int16_t GyX_int16_max=0;
+int16_t GyX_int16_min=0;
+float   GyX;
+uint8_t GyY_H;
+uint8_t GyY_L;
+int16_t GyY_int16;
+int16_t GyY_int16_max=0;
+int16_t GyY_int16_min=0;
+float   GyY;
+uint8_t GyZ_H;
+uint8_t GyZ_L;
+int16_t GyZ_int16;
+int16_t GyZ_int16_max=0;
+int16_t GyZ_int16_min=0;
+float   GyZ;
+int main(void)
+{
+  DAVE_STATUS_t status;
+
+  status = DAVE_Init();           /* Initialization of DAVE APPs  */
+
+  if(status == DAVE_STATUS_FAILURE)
+  {
+    /* Placeholder for error handler code. The while loop below can be replaced with an user error handler. */
+    XMC_DEBUG("DAVE APPs initialization failed\n");
+
+    while(1U)
+    {
+
+    }
+  }
+
+  /* Set background colour */
+  //GUI_SetBkColor(GUI_BLUE);
+  /* Clear screen */
+  GUI_Clear();
+
+  /* Display text */
+  GUI_SetFont(&GUI_Font20B_1);
+  GUI_SetColor(GUI_WHITE);
+  GUI_DispStringHCenterAt("10s TIMER", 80, 30);
+
+  delay(12000000); //1s
+      GUI_Clear();
+
+      GUI_SetFont(&GUI_Font20_1);
+      GUI_SetColor(GUI_ORANGE);
+      GUI_DispString("AcX");
+      GUI_DispStringAt("AcY", 0, 20);
+      GUI_DispStringAt("AcZ", 0, 40);
+      GUI_SetColor(GUI_BLUE);
+      GUI_DispStringAt("GyX", 0, 60);
+      GUI_DispStringAt("GyY", 0, 80);
+      GUI_DispStringAt("GyZ", 0, 100);
+      GUI_SetColor(GUI_YELLOW);
+      GUI_DispStringAt("TEMP", 110, 0);
+      GUI_DispStringAt("MPU", 110, 60);
+      GUI_DispStringAt("6050", 110, 80);
+
+
+      delay(120000); //10ms
+
+
+  while(1U)
+  {
+
+	   	delay(600000); //50ms
+
+	        GUI_SetColor(GUI_BLACK);
+	        GUI_FillRect(96,0,100,120);
+	        GUI_SetColor(GUI_WHITE);
+
+	    	GUI_GotoXY (40, 0);
+	    	GUI_DispSFloatFix(AcX, 6,3);
+	    	GUI_GotoXY (40, 20);
+	    	GUI_DispSFloatFix(AcY, 6,3);
+	    	GUI_GotoXY (40, 40);
+	    	GUI_DispSFloatFix(AcZ, 6,3);
+
+	    	GUI_GotoXY (40, 60);
+	    	GUI_DispSFloatFix(GyX, 6,3);
+	    	GUI_GotoXY (40, 80);
+	    	GUI_DispSFloatFix(GyY, 6,3);
+	    	GUI_GotoXY (40, 100);
+	    	GUI_DispSFloatFix(GyZ, 6,3);
+
+	    	GUI_GotoXY (110, 20);
+	    	GUI_DispSFloatFix(temperature, 5,1);
+
+  }
+}
+
+void tick(){
+	s_tick = s_tick + 1;
+
+	if(s_tick == 10){
+		s_tick = 0;
+	}
+	s_trigger = 1;
+
+}
+/**
+ * @brief Delay function:This routine is used for creating delay
+ * @param[in] count (value = n sec X 12 X 1000000)
+ * @return None
+ */
+void delay (volatile unsigned int count)
+{
+	while (count != 0)
+	{
+		count--;
+	}
+}
