@@ -2,7 +2,7 @@
 
 
 void delay (unsigned int count);
-uint32_t s_tick = 0;
+int s_tick = 0;
 uint8_t s_trigger = 0;
 
 
@@ -39,7 +39,7 @@ int main(void)
 	  if(s_trigger){
 		  /* Display text */
 		  GUI_SetColor(GUI_WHITE);
-		  GUI_DispDecAt(s_tick, 80, 60, 1);
+		  GUI_DispBinAt(s_tick, 80, 60, 1);
 	  }
   }
 }

@@ -1,4 +1,4 @@
-01:01:00 **** Incremental Build of configuration Debug for project NewHavenDisplay ****
+23:43:24 **** Incremental Build of configuration Debug for project NewHavenDisplay ****
 "\"C:\\DAVE_4-4-2_64bit_2018-02-23\\DAVE_4-4-2_64bit_2018-02-23\\DAVE-IDE-4.4.2-64Bit\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
 'Building file: ../main.c'
 'Invoking: ARM-GCC C Compiler'
@@ -17,7 +17,7 @@
 'Invoking: ARM-GCC Print Size'
 "C:/DAVE_4-4-2_64bit_2018-02-23/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "NewHavenDisplay.elf"
    text	   data	    bss	    dec	    hex	filename
-  58636	    188	   6948	  65772	  100ec	NewHavenDisplay.elf
+  58964	    192	   6944	  66100	  10234	NewHavenDisplay.elf
 'Finished building: NewHavenDisplay.siz'
 
 'Invoking: ARM-GCC Create Listing'
@@ -25,5 +25,5 @@
 'Finished building: NewHavenDisplay.lst'
 
 
-01:01:03 Build Finished (took 2s.8ms)
+23:43:25 Build Finished (took 853ms)
 

@@ -9778,3 +9778,161 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.d
 
 !ENTRY SOLVER 1 0 2022-02-24 09:47:19.019
 !MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2022-02-24 22:41:16.729 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY SOLVER 1 0 2022-02-24 22:41:40.516
+!MESSAGE USER_ACTION : Default solver exe path is: C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2022-02-24 22:41:40.605
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2022-02-24 22:41:40.605
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2022-02-24 22:41:40.781
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2022-02-24 22:41:41.890
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.2.00.F64.ALL] is: 1106 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-24 22:41:42.054
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 3 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-24 22:41:42.368
+!MESSAGE USER_ACTION : Active project:NewHavenDisplay[ Software ID:XMC4.2.00.F64.ALL]
+
+!ENTRY COMMON 1 0 2022-02-24 22:41:43.467
+!MESSAGE Time Taken By De-Serialization  : 691 ms :: C:\Users\RGoncalves\Documents\GitHub\uControllers\XMC_Relax_Kit_Projects\APPs_Implementation_Examples\xmc4200_platform2go\NewHavenDisplay\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2022-02-24 22:41:43.490
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-24 22:41:43.600
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 1232 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-24 22:41:43.613
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 9 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-24 22:41:43.621
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 7 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-24 22:41:43.622
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-24 22:41:44.645
+!MESSAGE USER_ACTION : Time taken for rendering views is: 1023 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-24 22:41:44.911
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 2859 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2022-02-24 22:41:45.180
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2022-02-24 22:41:45.281
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2022-02-24 22:41:45.955
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.4//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2022-02-24 22:41:46.395
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.4//daveSite.xml
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-02-24 22:58:49.712
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-02-24 22:58:49.713
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 22:58:53.247
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 22:58:53.682
+!MESSAGE C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.ui 4 4 2022-02-24 22:58:57.150
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.DebugLast: {ActionDelegateHandlerProxy(null,com.dave.activeproject.ui.actions.ActiveProjDebugLastAction in com.dave.activeproject)} vs {ActionDelegateHandlerProxy(null,org.eclipse.debug.internal.ui.actions.DebugLastAction in org.eclipse.debug.ui)}
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2022-02-24 23:33:18.752
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: C:\Users\RGoncalves\Documents\GitHub\uControllers\XMC_Relax_Kit_Projects\APPs_Implementation_Examples\xmc4200_platform2go\NewHavenDisplay\Debug\NewHavenDisplay.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:126)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:292)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.checkBinaryDetails(LaunchConfigurationDelegate.java:502)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:230)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:179)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:152)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2022-02-24 23:33:18.753
+!MESSAGE C:\Users\RGoncalves\Documents\GitHub\uControllers\XMC_Relax_Kit_Projects\APPs_Implementation_Examples\xmc4200_platform2go\NewHavenDisplay\Debug\NewHavenDisplay.elf not found
+!STACK 0
+java.io.FileNotFoundException: C:\Users\RGoncalves\Documents\GitHub\uControllers\XMC_Relax_Kit_Projects\APPs_Implementation_Examples\xmc4200_platform2go\NewHavenDisplay\Debug\NewHavenDisplay.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:126)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:292)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.checkBinaryDetails(LaunchConfigurationDelegate.java:502)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:230)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:179)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:152)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:33:53.971
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:33:54.289
+!MESSAGE C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:35:20.121
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:35:20.450
+!MESSAGE C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:37:18.706
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:37:19.031
+!MESSAGE C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:38:01.632
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:38:01.945
+!MESSAGE C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:38:22.209
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:38:22.528
+!MESSAGE C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:39:40.787
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:39:41.127
+!MESSAGE C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:42:11.997
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:42:12.312
+!MESSAGE C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:43:25.418
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2022-02-24 23:43:25.735
+!MESSAGE C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx

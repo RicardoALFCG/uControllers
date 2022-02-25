@@ -14,6 +14,8 @@ C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\
                               ./Dave/Generated/GUI_SEGGERLIBRARY/LCDConf.o (LCD_SetVSizeEx)
 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__memset.o)
                               C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o) (GUI__memset)
+C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o)
+                              ./main.o (GUI_DispDecAt)
 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetFont.o)
                               ./main.o (GUI_SetFont)
 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetColor.o)
@@ -21,9 +23,9 @@ C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\
 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispStringHCenter.o)
                               ./main.o (GUI_DispStringHCenterAt)
 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispStringAt.o)
-                              C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispStringHCenter.o) (GUI_DispStringAt)
+                              C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o) (GUI_DispStringAt)
 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispString.o)
-                              C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispStringAt.o) (GUI_DispString)
+                              C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o) (GUI_DispString)
 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Device.o)
                               C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Set.o) (GUI_DEVICE__GetpDriver)
 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
@@ -38,6 +40,10 @@ C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\
                               C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispString.o) (GUI_GetYAdjust)
 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
                               C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Device.o) (GUI_ALLOC_FreeFixedBlock)
+C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecShift.o)
+                              C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o) (GUI_Long2Len)
+C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecMin.o)
+                              C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o) (GUI_AddDecMin)
 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
                               ./Dave/Generated/GUI_SEGGERLIBRARY/LCDConf.o (LCD_API_ColorConv_M565)
 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
@@ -2077,6 +2083,22 @@ Discarded input sections
  .data          0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__memset.o)
  .bss           0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__memset.o)
  .comment       0x00000000       0x71 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__memset.o)
+ .text          0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o)
+ .data          0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o)
+ .bss           0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o)
+ .text.GUI_DispDecShift
+                0x00000000       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o)
+ .text.GUI_DispSDecShift
+                0x00000000       0x34 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o)
+ .text.GUI_DispDecMin
+                0x00000000       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o)
+ .text.GUI_DispDecSpace
+                0x00000000       0x58 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o)
+ .text.GUI_DispSDec
+                0x00000000       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o)
+ .text.GUI_DispDec
+                0x00000000       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o)
+ .comment       0x00000000       0x71 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o)
  .text          0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetFont.o)
  .data          0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetFont.o)
  .bss           0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetFont.o)
@@ -2184,6 +2206,22 @@ Discarded input sections
  .text.GUI_ALLOC_SetMaxPercentage
                 0x00000000       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
  .comment       0x00000000       0x71 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+ .text          0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecShift.o)
+ .data          0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecShift.o)
+ .bss           0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecShift.o)
+ .text.GUI_Long2Len
+                0x00000000       0xa0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecShift.o)
+ .text.GUI_AddSign
+                0x00000000       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecShift.o)
+ .comment       0x00000000       0x71 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecShift.o)
+ .text          0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecMin.o)
+ .data          0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecMin.o)
+ .bss           0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecMin.o)
+ .text.GUI_AddDecMin
+                0x00000000       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecMin.o)
+ .comment       0x00000000       0x71 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecMin.o)
+ .ARM.attributes
+                0x00000000       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecMin.o)
  .text          0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
  .data          0x00000000        0x0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
  .text.GUICC_M565_SetCustColorConv
@@ -2663,7 +2701,7 @@ END GROUP
                 0x00000800                stack_size = DEFINED (stack_size)?stack_size:0x800
                 0x00000040                no_init_size = 0x40
 
-.text           0x08000000     0xe50c load address 0x0c000000
+.text           0x08000000     0xe654 load address 0x0c000000
                 0x08000000                sText = .
  *(.reset)
  .reset         0x08000000      0x294 ./Startup/startup_XMC4200.o
@@ -3157,489 +3195,495 @@ END GROUP
  .text.DAVE_Init
                 0x08003478       0x60 ./Dave/Generated/DAVE.o
                 0x08003478                DAVE_Init
- .text.main     0x080034d8       0x60 ./main.o
+ .text.main     0x080034d8       0x64 ./main.o
                 0x080034d8                main
  .text.CCU41_1_IRQHandler
-                0x08003538       0x34 ./main.o
-                0x08003538                CCU41_1_IRQHandler
+                0x0800353c       0x34 ./main.o
+                0x0800353c                CCU41_1_IRQHandler
  .text._SetPhysRAMAddr
-                0x0800356c       0x88 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x08003570       0x88 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
  .text._SetRect
-                0x080035f4      0x1a0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x080035f8      0x1a0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
  .text._SetOrientation
-                0x08003794       0x44 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x08003798       0x44 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
  .text._ReadPixel_16bpp_B8
-                0x080037d8       0x2c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x080037dc       0x2c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
  .text._ReadPixel_18bpp_B9
-                0x08003804       0x2c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x08003808       0x2c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
  .text._ReadPixel_16bpp_B16
-                0x08003830       0x24 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x08003834       0x24 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
  .text._SetReg_B8
-                0x08003854       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x08003858       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
  .text._SetReg_B9
-                0x0800386c       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x08003870       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
  .text._SetReg_B16
-                0x08003888        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x0800388c        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
  .text._WritePara_B8
-                0x08003894       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x08003898       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
  .text._WritePara_B9
-                0x080038ac       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x080038b0       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
  .text._WritePara_B16
-                0x080038c8        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x080038cc        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
  .text._SetInterface
-                0x080038d4       0x50 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x080038d8       0x50 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
  .text.GUIDRV_FlexColor_SetFunc66718
-                0x08003924       0x68 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
-                0x08003924                GUIDRV_FlexColor_SetFunc66718
+                0x08003928       0x68 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+                0x08003928                GUIDRV_FlexColor_SetFunc66718
  .text._ReadData
-                0x0800398c        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_16bpp_C0B8.o)
+                0x08003990        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_16bpp_C0B8.o)
  .text._WriteData
-                0x08003998       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_16bpp_C0B8.o)
+                0x0800399c       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_16bpp_C0B8.o)
  .text._FillRect
-                0x080039b4      0x400 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_16bpp_C0B8.o)
+                0x080039b8      0x400 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_16bpp_C0B8.o)
  .text._DrawBitmap
-                0x08003db4      0xf64 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_16bpp_C0B8.o)
+                0x08003db8      0xf64 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_16bpp_C0B8.o)
  .text.GUIDRV_FlexColor_SetMode16bppC0B8
-                0x08004d18       0x74 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_16bpp_C0B8.o)
-                0x08004d18                GUIDRV_FlexColor_SetMode16bppC0B8
+                0x08004d1c       0x74 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_16bpp_C0B8.o)
+                0x08004d1c                GUIDRV_FlexColor_SetMode16bppC0B8
  .text._Log2PhysX_X0Y0S0
-                0x08004d8c        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004d90        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._Log2PhysX_X1Y0S0
-                0x08004d90        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004d94        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._Log2PhysX_X0Y1S0
-                0x08004d98        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004d9c        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._Log2PhysX_X1Y1S0
-                0x08004d9c        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004da0        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._Log2PhysX_X0Y0S1
-                0x08004da4        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004da8        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._Log2PhysX_X1Y0S1
-                0x08004da8        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004dac        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._Log2PhysX_X0Y1S1
-                0x08004db0        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004db4        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._Log2PhysX_X1Y1S1
-                0x08004db4        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004db8        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._Log2PhysY_X0Y0S0
-                0x08004dbc        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
- .text._Log2PhysY_X1Y0S0
                 0x08004dc0        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+ .text._Log2PhysY_X1Y0S0
+                0x08004dc4        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._Log2PhysY_X0Y1S0
-                0x08004dc4        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004dc8        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._Log2PhysY_X1Y1S0
-                0x08004dcc        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004dd0        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._Log2PhysY_X0Y0S1
-                0x08004dd4        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
- .text._Log2PhysY_X1Y0S1
                 0x08004dd8        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+ .text._Log2PhysY_X1Y0S1
+                0x08004ddc        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._Log2PhysY_X0Y1S1
-                0x08004ddc        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004de0        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._Log2PhysY_X1Y1S1
-                0x08004de4        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004de8        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._SetPixelIndex
-                0x08004dec        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004df0        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._GetPixelIndex
-                0x08004df8        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004dfc        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._XorPixel
-                0x08004e04       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004e08       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._DrawHLine
-                0x08004e34       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004e38       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._DrawVLine
-                0x08004e48       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004e4c       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._FillRect
-                0x08004e5c       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004e60       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._DrawBitmap
-                0x08004e70       0x28 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004e74       0x28 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._GetDevFunc_SetRect
-                0x08004e98        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004e9c        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._GetDevFunc_SetRectOutside
-                0x08004e9c       0x48 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004ea0       0x48 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._ReadPixelCust_16bpp
-                0x08004ee4       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004ee8       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._ReadPixelCust_18bpp
-                0x08004ef4       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004ef8       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._ReadRectCust_16bpp
-                0x08004f04       0x3c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004f08       0x3c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._ReadRectCust_18bpp
-                0x08004f40       0x3c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004f44       0x3c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._GetDevFunc
-                0x08004f7c       0x6c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004f80       0x6c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._GetDevProp
-                0x08004fe8       0x64 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08004fec       0x64 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._GetDevData
-                0x0800504c        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08005050        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._GetRect
-                0x08005058       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x0800505c       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text.GUIDRV_FlexColor__SetLog2Phys
-                0x08005070       0x50 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
-                0x08005070                GUIDRV_FlexColor__SetLog2Phys
- .text._SetOrg  0x080050c0       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08005074       0x50 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08005074                GUIDRV_FlexColor__SetLog2Phys
+ .text._SetOrg  0x080050c4       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._GetDevFunc_SetVSize
-                0x080050d8       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x080050dc       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._SetDevFunc
-                0x08005118       0xc8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x0800511c       0xc8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._GetDevFunc_Init
-                0x080051e0       0x78 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x080051e4       0x78 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text._GetDevFunc_SetSize
-                0x08005258       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x0800525c       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
  .text.GUIDRV_FlexColor__SetPixelIndexNoCache
-                0x08005298       0x98 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
-                0x08005298                GUIDRV_FlexColor__SetPixelIndexNoCache
+                0x0800529c       0x98 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x0800529c                GUIDRV_FlexColor__SetPixelIndexNoCache
  .text.GUIDRV_FlexColor__GetPixelIndexNoCache
-                0x08005330       0xc0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
-                0x08005330                GUIDRV_FlexColor__GetPixelIndexNoCache
+                0x08005334       0xc0 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08005334                GUIDRV_FlexColor__GetPixelIndexNoCache
  .text.GUIDRV_FlexColor__InitOnce
-                0x080053f0       0x38 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
-                0x080053f0                GUIDRV_FlexColor__InitOnce
+                0x080053f4       0x38 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x080053f4                GUIDRV_FlexColor__InitOnce
  .text.GUIDRV_FlexColor_Config
-                0x08005428       0x68 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
-                0x08005428                GUIDRV_FlexColor_Config
+                0x0800542c       0x68 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x0800542c                GUIDRV_FlexColor_Config
  .text.GUIDRV_FlexColor_SetFunc
-                0x08005490       0x60 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
-                0x08005490                GUIDRV_FlexColor_SetFunc
+                0x08005494       0x60 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x08005494                GUIDRV_FlexColor_SetFunc
  .text.LCD_SetVSizeEx
-                0x080054f0       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Set.o)
-                0x080054f0                LCD_SetVSizeEx
+                0x080054f4       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Set.o)
+                0x080054f4                LCD_SetVSizeEx
  .text.LCD_SetSizeEx
-                0x08005520       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Set.o)
-                0x08005520                LCD_SetSizeEx
+                0x08005524       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Set.o)
+                0x08005524                LCD_SetSizeEx
  .text.LCD_SetLUTEntryEx
-                0x08005550       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Set.o)
-                0x08005550                LCD_SetLUTEntryEx
+                0x08005554       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Set.o)
+                0x08005554                LCD_SetLUTEntryEx
  .text.GUI__memset
-                0x08005580      0x1d8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__memset.o)
-                0x08005580                GUI__memset
+                0x08005584      0x1d8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__memset.o)
+                0x08005584                GUI__memset
+ .text.GUI_DispDecAt
+                0x0800575c       0x28 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o)
+                0x0800575c                GUI_DispDecAt
  .text.GUI_SetFont
-                0x08005758       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetFont.o)
-                0x08005758                GUI_SetFont
+                0x08005784       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetFont.o)
+                0x08005784                GUI_SetFont
  .text.GUI_SetColor
-                0x0800576c        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetColor.o)
-                0x0800576c                GUI_SetColor
+                0x08005798        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetColor.o)
+                0x08005798                GUI_SetColor
  .text.GUI_DispStringHCenterAt
-                0x08005770       0x34 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispStringHCenter.o)
-                0x08005770                GUI_DispStringHCenterAt
+                0x0800579c       0x34 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispStringHCenter.o)
+                0x0800579c                GUI_DispStringHCenterAt
  .text.GUI_DispStringAt
-                0x080057a4       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispStringAt.o)
-                0x080057a4                GUI_DispStringAt
+                0x080057d0       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispStringAt.o)
+                0x080057d0                GUI_DispStringAt
  .text.GUI_DispString
-                0x080057b8      0x134 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispString.o)
-                0x080057b8                GUI_DispString
+                0x080057e4      0x134 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispString.o)
+                0x080057e4                GUI_DispString
  .text.GUI_DEVICE__GetpDriver
-                0x080058ec       0x2c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Device.o)
-                0x080058ec                GUI_DEVICE__GetpDriver
- .text.GUI_DEVICE_Unlink
                 0x08005918       0x2c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Device.o)
-                0x08005918                GUI_DEVICE_Unlink
+                0x08005918                GUI_DEVICE__GetpDriver
+ .text.GUI_DEVICE_Unlink
+                0x08005944       0x2c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Device.o)
+                0x08005944                GUI_DEVICE_Unlink
  .text.GUI_DEVICE_Link
-                0x08005944       0x88 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Device.o)
-                0x08005944                GUI_DEVICE_Link
+                0x08005970       0x88 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Device.o)
+                0x08005970                GUI_DEVICE_Link
  .text.GUI_DEVICE_CreateAndLink
-                0x080059cc       0x70 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Device.o)
-                0x080059cc                GUI_DEVICE_CreateAndLink
- .text._OnExit  0x08005a3c       0x2c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
+                0x080059f8       0x70 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Device.o)
+                0x080059f8                GUI_DEVICE_CreateAndLink
+ .text._OnExit  0x08005a68       0x2c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
  .text.GUI_SetDefaultFont
-                0x08005a68        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
-                0x08005a68                GUI_SetDefaultFont
+                0x08005a94        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
+                0x08005a94                GUI_SetDefaultFont
  .text.GUI_Clear
-                0x08005a74       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
-                0x08005a74                GUI_Clear
+                0x08005aa0       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
+                0x08005aa0                GUI_Clear
  .text.GUI_Init
-                0x08005aa4       0xb8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
-                0x08005aa4                GUI_Init
+                0x08005ad0       0xb8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
+                0x08005ad0                GUI_Init
  .text.GUI__RegisterExit
-                0x08005b5c       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
-                0x08005b5c                GUI__RegisterExit
+                0x08005b88       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
+                0x08005b88                GUI__RegisterExit
  .text.GUIPROP_DispChar
-                0x08005b6c       0xf4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharP.o)
-                0x08005b6c                GUIPROP_DispChar
+                0x08005b98       0xf4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharP.o)
+                0x08005b98                GUIPROP_DispChar
  .text.GUIPROP_GetCharDistX
-                0x08005c60       0x48 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharP.o)
-                0x08005c60                GUIPROP_GetCharDistX
+                0x08005c8c       0x48 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharP.o)
+                0x08005c8c                GUIPROP_GetCharDistX
  .text.GUIPROP_GetFontInfo
-                0x08005ca8        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharP.o)
-                0x08005ca8                GUIPROP_GetFontInfo
+                0x08005cd4        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharP.o)
+                0x08005cd4                GUIPROP_GetFontInfo
  .text.GUIPROP_IsInFont
-                0x08005cb0       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharP.o)
-                0x08005cb0                GUIPROP_IsInFont
+                0x08005cdc       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharP.o)
+                0x08005cdc                GUIPROP_IsInFont
  .text.GUIMONO_DispChar
-                0x08005ccc      0x15c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharM.o)
-                0x08005ccc                GUIMONO_DispChar
+                0x08005cf8      0x15c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharM.o)
+                0x08005cf8                GUIMONO_DispChar
  .text.GUIMONO_GetCharDistX
-                0x08005e28       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharM.o)
-                0x08005e28                GUIMONO_GetCharDistX
+                0x08005e54       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharM.o)
+                0x08005e54                GUIMONO_GetCharDistX
  .text.GUIMONO_GetFontInfo
-                0x08005e40        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharM.o)
-                0x08005e40                GUIMONO_GetFontInfo
+                0x08005e6c        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharM.o)
+                0x08005e6c                GUIMONO_GetFontInfo
  .text.GUIMONO_IsInFont
-                0x08005e48       0x34 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharM.o)
-                0x08005e48                GUIMONO_IsInFont
+                0x08005e74       0x34 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharM.o)
+                0x08005e74                GUIMONO_IsInFont
  .text._Log2VisBuffered
-                0x08005e7c        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharLine.o)
+                0x08005ea8        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharLine.o)
  .text._DispLine
-                0x08005e80       0x7c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharLine.o)
+                0x08005eac       0x7c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharLine.o)
  .text.GUI__GetLineNumChars
-                0x08005efc       0x8c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharLine.o)
-                0x08005efc                GUI__GetLineNumChars
+                0x08005f28       0x8c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharLine.o)
+                0x08005f28                GUI__GetLineNumChars
  .text.GUI__GetLineDistX
-                0x08005f88       0x80 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharLine.o)
-                0x08005f88                GUI__GetLineDistX
+                0x08005fb4       0x80 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharLine.o)
+                0x08005fb4                GUI__GetLineDistX
  .text.GUI__DispLine
-                0x08006008       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharLine.o)
-                0x08006008                GUI__DispLine
+                0x08006034       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharLine.o)
+                0x08006034                GUI__DispLine
  .text.GUI_GetYAdjust
-                0x08006048       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Char.o)
-                0x08006048                GUI_GetYAdjust
+                0x08006074       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Char.o)
+                0x08006074                GUI_GetYAdjust
  .text.GUI_GetFontDistY
-                0x08006078       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Char.o)
-                0x08006078                GUI_GetFontDistY
+                0x080060a4       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Char.o)
+                0x080060a4                GUI_GetFontDistY
  .text.GUI_GetCharDistX
-                0x08006088       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Char.o)
-                0x08006088                GUI_GetCharDistX
+                0x080060b4       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Char.o)
+                0x080060b4                GUI_GetCharDistX
  .text.GUI_GetCharDistXEx
-                0x080060a0       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Char.o)
-                0x080060a0                GUI_GetCharDistXEx
- .text._OnExit  0x080060b4       0x3c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x080060cc       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Char.o)
+                0x080060cc                GUI_GetCharDistXEx
+ .text._OnExit  0x080060e0       0x3c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
  .text._AddFreeMemory
-                0x080060f0      0x350 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x0800611c      0x350 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
  .text._RemoveHoles
-                0x08006440      0x1dc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
- .text._Alloc   0x0800661c      0x2d4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x0800646c      0x1dc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+ .text._Alloc   0x08006648      0x2d4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
  .text._EnlargeBlocks
-                0x080068f0      0x124 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x0800691c      0x124 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
  .text._InitOnce.part.0
-                0x08006a14      0x550 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x08006a40      0x550 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
  .text.GUI_ALLOC_FreeFixedBlock
-                0x08006f64       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
-                0x08006f64                GUI_ALLOC_FreeFixedBlock
+                0x08006f90       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x08006f90                GUI_ALLOC_FreeFixedBlock
  .text.GUI_ALLOC_GetFixedBlock
-                0x08006f78      0x198 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
-                0x08006f78                GUI_ALLOC_GetFixedBlock
+                0x08006fa4      0x198 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x08006fa4                GUI_ALLOC_GetFixedBlock
  .text.GUI_ALLOC_AllocNoInit
-                0x08007110        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
-                0x08007110                GUI_ALLOC_AllocNoInit
+                0x0800713c        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x0800713c                GUI_ALLOC_AllocNoInit
  .text.GUI_ALLOC_LockH
-                0x08007118       0x24 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
-                0x08007118                GUI_ALLOC_LockH
+                0x08007144       0x24 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x08007144                GUI_ALLOC_LockH
  .text.GUI_ALLOC_UnlockH
-                0x0800713c       0x34 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
-                0x0800713c                GUI_ALLOC_UnlockH
+                0x08007168       0x34 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x08007168                GUI_ALLOC_UnlockH
  .text.GUI_ALLOC_AssignMemory
-                0x08007170       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
-                0x08007170                GUI_ALLOC_AssignMemory
+                0x0800719c       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x0800719c                GUI_ALLOC_AssignMemory
  .text.GUI_ALLOC_SetAvBlockSize
-                0x08007184       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
-                0x08007184                GUI_ALLOC_SetAvBlockSize
+                0x080071b0       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x080071b0                GUI_ALLOC_SetAvBlockSize
  .text.GUI_ALLOC_Free
-                0x080071a4       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
-                0x080071a4                GUI_ALLOC_Free
+                0x080071d0       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x080071d0                GUI_ALLOC_Free
+ .text.GUI_AddDecShift
+                0x08007210       0xf8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecShift.o)
+                0x08007210                GUI_AddDecShift
  .text.LCD_Index2Color_M565
-                0x080071e4       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
-                0x080071e4                LCD_Index2Color_M565
+                0x08007308       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
+                0x08007308                LCD_Index2Color_M565
  .text._Color2Index_M565
-                0x08007214       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
+                0x08007338       0x30 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
  .text._GetIndexMask_M565
-                0x08007244        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
+                0x08007368        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
  .text._Color2IndexBulk
-                0x0800724c       0xe8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
+                0x08007370       0xe8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
  .text._Index2ColorBulk
-                0x08007334       0xbc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
+                0x08007458       0xbc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
  .text._GetDevData
-                0x080073f0       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+                0x08007514       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
  .text._GetDevFunc
-                0x08007400       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
- .text._SetOrg  0x08007410       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+                0x08007524       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+ .text._SetOrg  0x08007534       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
  .text._GetDevProp
-                0x08007420       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+                0x08007544       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
  .text._GetRect
-                0x08007434       0x34 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+                0x08007558       0x34 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
  .text._DrawBitmap
-                0x08007468     0x1480 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+                0x0800758c     0x1480 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
  .text._XorPixel
-                0x080088e8       0x84 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+                0x08008a0c       0x84 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
  .text._GetPixelIndex
-                0x0800896c       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+                0x08008a90       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
  .text._SetPixelIndex
-                0x080089ac       0x74 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+                0x08008ad0       0x74 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
  .text._DrawVLine
-                0x08008a20      0x1b4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+                0x08008b44      0x1b4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
  .text._FillRect
-                0x08008bd4      0x224 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+                0x08008cf8      0x224 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
  .text._DrawHLine
-                0x08008df8       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
- .text._OnExit  0x08008e08       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Color.o)
+                0x08008f1c       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+ .text._OnExit  0x08008f2c       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Color.o)
  .text.LCD_InitColors
-                0x08008e20       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Color.o)
-                0x08008e20                LCD_InitColors
+                0x08008f44       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Color.o)
+                0x08008f44                LCD_InitColors
  .text.LCD_GetpPalConvTableBM
-                0x08008e60       0x90 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Color.o)
-                0x08008e60                LCD_GetpPalConvTableBM
+                0x08008f84       0x90 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Color.o)
+                0x08008f84                LCD_GetpPalConvTableBM
  .text.LCD_InitLUT
-                0x08008ef0       0xd8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Color.o)
-                0x08008ef0                LCD_InitLUT
+                0x08009014       0xd8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Color.o)
+                0x08009014                LCD_InitLUT
  .text._SetBkColor
-                0x08008fc8       0x3c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x080090ec       0x3c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
  .text._SetColor
-                0x08009004       0x3c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x08009128       0x3c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
  .text._SetDrawMode
-                0x08009040       0x28 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x08009164       0x28 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
  .text.LCD_SetDrawMode
-                0x08009068       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x08009068                LCD_SetDrawMode
+                0x0800918c       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x0800918c                LCD_SetDrawMode
  .text.LCD_DrawPixel
-                0x0800907c       0x5c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x0800907c                LCD_DrawPixel
+                0x080091a0       0x5c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x080091a0                LCD_DrawPixel
  .text.LCD_DrawHLine
-                0x080090d8       0x4c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x080090d8                LCD_DrawHLine
+                0x080091fc       0x4c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x080091fc                LCD_DrawHLine
  .text.LCD_FillRect
-                0x08009124       0x5c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x08009124                LCD_FillRect
+                0x08009248       0x5c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x08009248                LCD_FillRect
  .text.LCD__DrawBitmap_1bpp
-                0x08009180      0x4f4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x08009180                LCD__DrawBitmap_1bpp
+                0x080092a4      0x4f4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x080092a4                LCD__DrawBitmap_1bpp
  .text.LCD_DrawBitmap
-                0x08009674      0x5d4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x08009674                LCD_DrawBitmap
+                0x08009798      0x5d4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x08009798                LCD_DrawBitmap
  .text.LCD_SetClipRectMax
-                0x08009c48       0x24 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x08009c48                LCD_SetClipRectMax
+                0x08009d6c       0x24 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x08009d6c                LCD_SetClipRectMax
  .text.LCD_Init
-                0x08009c6c       0xd8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x08009c6c                LCD_Init
+                0x08009d90       0xd8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x08009d90                LCD_Init
  .text.LCD_Color2Index
-                0x08009d44       0x24 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x08009d44                LCD_Color2Index
+                0x08009e68       0x24 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x08009e68                LCD_Color2Index
  .text.LCD_Index2Color
-                0x08009d68       0x24 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x08009d68                LCD_Index2Color
+                0x08009e8c       0x24 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x08009e8c                LCD_Index2Color
  .text.LCD_SetColorIndex
-                0x08009d8c       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x08009d8c                LCD_SetColorIndex
+                0x08009eb0       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x08009eb0                LCD_SetColorIndex
  .text.LCD_SetBkColorIndex
-                0x08009dac       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x08009dac                LCD_SetBkColorIndex
+                0x08009ed0       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x08009ed0                LCD_SetBkColorIndex
  .text.LCD_SetBkColor
-                0x08009dcc       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x08009dcc                LCD_SetBkColor
+                0x08009ef0       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x08009ef0                LCD_SetBkColor
  .text.LCD_SetColor
-                0x08009de0       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
-                0x08009de0                LCD_SetColor
+                0x08009f04       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x08009f04                LCD_SetColor
  .text.GUI__memset16
-                0x08009df4       0xa4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__memset16.o)
-                0x08009df4                GUI__memset16
+                0x08009f18       0xa4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__memset16.o)
+                0x08009f18                GUI__memset16
  .text.GUI__ManageCacheEx
-                0x08009e98       0xd4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__ManageCache.o)
-                0x08009e98                GUI__ManageCacheEx
+                0x08009fbc       0xd4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__ManageCache.o)
+                0x08009fbc                GUI__ManageCacheEx
  .text.GUI__ManageCache
-                0x08009f6c       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__ManageCache.o)
-                0x08009f6c                GUI__ManageCache
+                0x0800a090       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__ManageCache.o)
+                0x0800a090                GUI__ManageCache
  .text._GetCharCode
-                0x08009f80        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC_EncodeNone.o)
+                0x0800a0a4        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC_EncodeNone.o)
  .text._GetCharSize
-                0x08009f84        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC_EncodeNone.o)
+                0x0800a0a8        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC_EncodeNone.o)
  .text._CalcSizeOfChar
-                0x08009f88        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC_EncodeNone.o)
- .text._Encode  0x08009f8c        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC_EncodeNone.o)
+                0x0800a0ac        0x4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC_EncodeNone.o)
+ .text._Encode  0x0800a0b0        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC_EncodeNone.o)
  .text.GUI_UC__GetCharCodeInc
-                0x08009f94       0x28 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC.o)
-                0x08009f94                GUI_UC__GetCharCodeInc
+                0x0800a0b8       0x28 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC.o)
+                0x0800a0b8                GUI_UC__GetCharCodeInc
  .text.GUI_UC__NumChars2NumBytes
-                0x08009fbc       0x64 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC.o)
-                0x08009fbc                GUI_UC__NumChars2NumBytes
+                0x0800a0e0       0x64 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC.o)
+                0x0800a0e0                GUI_UC__NumChars2NumBytes
  .text.GUI_SetTextAlign
-                0x0800a020       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetTextAlign.o)
-                0x0800a020                GUI_SetTextAlign
+                0x0800a144       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetTextAlign.o)
+                0x0800a144                GUI_SetTextAlign
  .text.GUI_SetOrg
-                0x0800a034       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetOrg.o)
-                0x0800a034                GUI_SetOrg
+                0x0800a158       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetOrg.o)
+                0x0800a158                GUI_SetOrg
  .text.GUI_SelectLayer
-                0x0800a074       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SelectLayer.o)
-                0x0800a074                GUI_SelectLayer
+                0x0800a198       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SelectLayer.o)
+                0x0800a198                GUI_SelectLayer
  .text.GUI_RectsIntersect
-                0x0800a08c       0x3c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_RectsIntersect.o)
-                0x0800a08c                GUI_RectsIntersect
+                0x0800a1b0       0x3c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_RectsIntersect.o)
+                0x0800a1b0                GUI_RectsIntersect
  .text.GUI_GotoXY
-                0x0800a0c8       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Goto.o)
-                0x0800a0c8                GUI_GotoXY
+                0x0800a1ec       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Goto.o)
+                0x0800a1ec                GUI_GotoXY
  .text.GUI_GetBkColor
-                0x0800a0dc       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_GetColor.o)
-                0x0800a0dc                GUI_GetBkColor
+                0x0800a200       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_GetColor.o)
+                0x0800a200                GUI_GetBkColor
  .text.GUI_GetColor
-                0x0800a0ec       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_GetColor.o)
-                0x0800a0ec                GUI_GetColor
+                0x0800a210       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_GetColor.o)
+                0x0800a210                GUI_GetColor
  .text._GetIndexMask_0
-                0x0800a0fc       0x4c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_0.o)
+                0x0800a220       0x4c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_0.o)
  .text._Index2Color_0
-                0x0800a148       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_0.o)
+                0x0800a26c       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_0.o)
  .text._Color2Index_0
-                0x0800a168       0xe4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_0.o)
+                0x0800a28c       0xe4 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_0.o)
  .text.GUI_MEMDEV__WriteToActiveOpaque
-                0x0800a24c      0xf2c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_WriteToActiveOpaque.o)
-                0x0800a24c                GUI_MEMDEV__WriteToActiveOpaque
+                0x0800a370      0xf2c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_WriteToActiveOpaque.o)
+                0x0800a370                GUI_MEMDEV__WriteToActiveOpaque
  .text.GUI_USAGE_AddRect
-                0x0800b178       0x6c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_Usage.o)
-                0x0800b178                GUI_USAGE_AddRect
+                0x0800b29c       0x6c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_Usage.o)
+                0x0800b29c                GUI_USAGE_AddRect
  .text.GUI_MEMDEV_GetDataPtr
-                0x0800b1e4       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_GetDataPtr.o)
-                0x0800b1e4                GUI_MEMDEV_GetDataPtr
+                0x0800b308       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_GetDataPtr.o)
+                0x0800b308                GUI_MEMDEV_GetDataPtr
  .text.GUI_MEMDEV_GetBitsPerPixel
-                0x0800b204       0x2c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV.o)
-                0x0800b204                GUI_MEMDEV_GetBitsPerPixel
+                0x0800b328       0x2c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV.o)
+                0x0800b328                GUI_MEMDEV_GetBitsPerPixel
  .text.LCD_UpdateColorIndices
-                0x0800b230       0x28 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_UpdateColorIndices.o)
-                0x0800b230                LCD_UpdateColorIndices
+                0x0800b354       0x28 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_UpdateColorIndices.o)
+                0x0800b354                LCD_UpdateColorIndices
  .text.LCD_GetNumLayers
-                0x0800b258       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetNumDisplays.o)
-                0x0800b258                LCD_GetNumLayers
+                0x0800b37c       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetNumDisplays.o)
+                0x0800b37c                LCD_GetNumLayers
  .text.LCD_GetBitsPerPixelEx
-                0x0800b268       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
-                0x0800b268                LCD_GetBitsPerPixelEx
+                0x0800b38c       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
+                0x0800b38c                LCD_GetBitsPerPixelEx
  .text.LCD_GetNumColorsEx
-                0x0800b284       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
-                0x0800b284                LCD_GetNumColorsEx
+                0x0800b3a8       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
+                0x0800b3a8                LCD_GetNumColorsEx
  .text.LCD_GetNumColors
-                0x0800b2a0       0x24 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
-                0x0800b2a0                LCD_GetNumColors
+                0x0800b3c4       0x24 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
+                0x0800b3c4                LCD_GetNumColors
  .text.GUI_GetBitsPerPixelEx
-                0x0800b2c4       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
-                0x0800b2c4                GUI_GetBitsPerPixelEx
+                0x0800b3e8       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
+                0x0800b3e8                GUI_GetBitsPerPixelEx
  .text.LCD_GetPalette
-                0x0800b2dc       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
-                0x0800b2dc                LCD_GetPalette
+                0x0800b400       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
+                0x0800b400                LCD_GetPalette
  .text.GUI_GetpfIndex2ColorEx
-                0x0800b2fc       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
-                0x0800b2fc                GUI_GetpfIndex2ColorEx
+                0x0800b420       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
+                0x0800b420                GUI_GetpfIndex2ColorEx
  .text.GUI_GetpfColor2IndexEx
-                0x0800b310       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
-                0x0800b310                GUI_GetpfColor2IndexEx
+                0x0800b434       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
+                0x0800b434                GUI_GetpfColor2IndexEx
  .text.LCD__GetBPPDevice
-                0x0800b324       0x64 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
-                0x0800b324                LCD__GetBPPDevice
+                0x0800b448       0x64 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
+                0x0800b448                LCD__GetBPPDevice
  .text.LCD_GetBkColorIndex
-                0x0800b388       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetColorIndex.o)
-                0x0800b388                LCD_GetBkColorIndex
+                0x0800b4ac       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetColorIndex.o)
+                0x0800b4ac                LCD_GetBkColorIndex
  .text.LCD_GetColorIndex
-                0x0800b398       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetColorIndex.o)
-                0x0800b398                LCD_GetColorIndex
+                0x0800b4bc       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetColorIndex.o)
+                0x0800b4bc                LCD_GetColorIndex
  .text.GUI__CompactPixelIndices
-                0x0800b3a8      0x250 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__CompactPixelIndices.o)
-                0x0800b3a8                GUI__CompactPixelIndices
+                0x0800b4cc      0x250 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__CompactPixelIndices.o)
+                0x0800b4cc                GUI__CompactPixelIndices
  .text.GUI_SelectLCD
-                0x0800b5f8       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SelectLCD.o)
-                0x0800b5f8                GUI_SelectLCD
+                0x0800b71c       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SelectLCD.o)
+                0x0800b71c                GUI_SelectLCD
  .text.GUI_CalcColorDist
-                0x0800b608       0x54 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CalcColorDist.o)
-                0x0800b608                GUI_CalcColorDist
+                0x0800b72c       0x54 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CalcColorDist.o)
+                0x0800b72c                GUI_CalcColorDist
  .text.LCD_SelectLCD
-                0x0800b65c       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_SelectLCD.o)
-                0x0800b65c                LCD_SelectLCD
+                0x0800b780       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_SelectLCD.o)
+                0x0800b780                LCD_SelectLCD
  .text.__libc_init_array
-                0x0800b69c       0x4c c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
-                0x0800b69c                __libc_init_array
- .text.memcpy   0x0800b6e8       0x16 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
-                0x0800b6e8                memcpy
- .text.memmove  0x0800b6fe       0x36 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memmove.o)
-                0x0800b6fe                memmove
- .text.memset   0x0800b734       0x10 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
-                0x0800b734                memset
+                0x0800b7c0       0x4c c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
+                0x0800b7c0                __libc_init_array
+ .text.memcpy   0x0800b80c       0x16 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
+                0x0800b80c                memcpy
+ .text.memmove  0x0800b822       0x36 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memmove.o)
+                0x0800b822                memmove
+ .text.memset   0x0800b858       0x10 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
+                0x0800b858                memset
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -3654,89 +3698,91 @@ END GROUP
  *(.dtors)
  *(.rodata .rodata.*)
  .rodata.SPI_MASTER_0_MOSI
-                0x0800b744        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x0800b744                SPI_MASTER_0_MOSI
+                0x0800b868        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x0800b868                SPI_MASTER_0_MOSI
  .rodata.SPI_MASTER_0_MISO
-                0x0800b74c        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x0800b74c                SPI_MASTER_0_MISO
+                0x0800b870        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x0800b870                SPI_MASTER_0_MISO
  .rodata.SPI_MASTER_0_SCLKOUT
-                0x0800b754        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x0800b754                SPI_MASTER_0_SCLKOUT
+                0x0800b878        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x0800b878                SPI_MASTER_0_SCLKOUT
  .rodata.SPI_MASTER_0_SCLKOUT_Config
-                0x0800b75c       0x14 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x0800b75c                SPI_MASTER_0_SCLKOUT_Config
+                0x0800b880       0x14 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x0800b880                SPI_MASTER_0_SCLKOUT_Config
  .rodata.SPI_MASTER_0_SS_0
-                0x0800b770        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x0800b770                SPI_MASTER_0_SS_0
+                0x0800b894        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x0800b894                SPI_MASTER_0_SS_0
  .rodata.SPI_MASTER_0_SS_0_Config
-                0x0800b778       0x14 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x0800b778                SPI_MASTER_0_SS_0_Config
+                0x0800b89c       0x14 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x0800b89c                SPI_MASTER_0_SS_0_Config
  .rodata.SPI_MASTER_0_Config
-                0x0800b78c       0x8c ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x0800b78c                SPI_MASTER_0_Config
+                0x0800b8b0       0x8c ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x0800b8b0                SPI_MASTER_0_Config
  .rodata.INTERRUPT_0
-                0x0800b818        0x4 ./Dave/Generated/INTERRUPT/interrupt_conf.o
-                0x0800b818                INTERRUPT_0
+                0x0800b93c        0x4 ./Dave/Generated/INTERRUPT/interrupt_conf.o
+                0x0800b93c                INTERRUPT_0
  .rodata.GUI_SEGGERLIBRARY_0_gpio_pin_config
-                0x0800b81c        0xc ./Dave/Generated/GUI_SEGGERLIBRARY/gui_seggerlibrary_conf.o
-                0x0800b81c                GUI_SEGGERLIBRARY_0_gpio_pin_config
+                0x0800b940        0xc ./Dave/Generated/GUI_SEGGERLIBRARY/gui_seggerlibrary_conf.o
+                0x0800b940                GUI_SEGGERLIBRARY_0_gpio_pin_config
  .rodata.GUI_SEGGERLIBRARY_0_config
-                0x0800b828        0xc ./Dave/Generated/GUI_SEGGERLIBRARY/gui_seggerlibrary_conf.o
-                0x0800b828                GUI_SEGGERLIBRARY_0_config
- .rodata        0x0800b834       0x14 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
- .rodata        0x0800b848       0x10 ./main.o
- .rodata        0x0800b858      0x73c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(F6x8.o)
-                0x0800b858                GUI_Font6x9
-                0x0800b87c                GUI_Font6x8
- .rodata        0x0800bf94     0x108c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(F20B_1.o)
-                0x0800bf94                GUI_Font20B_1
- .rodata        0x0800d020        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
- .rodata        0x0800d028       0x74 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
-                0x0800d068                GUIDRV_FlexColor_API
- .rodata        0x0800d09c        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
- .rodata        0x0800d0a4       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
-                0x0800d0a4                LCD_API_ColorConv_M565
- .rodata        0x0800d0bc       0x74 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
-                0x0800d0bc                GUI_MEMDEV_DEVICE_16
- .rodata        0x0800d130     0x1048 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(F20B_ASCII.o)
-                0x0800d130                GUI_Font20B_ASCII
-                0x0800d154                GUI_Font20B_ASCII_Prop1
-                0x0800d160                GUI_Font20B_ASCII_CharInfo
- .rodata        0x0800e178      0x100 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Mirror.o)
-                0x0800e178                LCD_aMirror
- .rodata        0x0800e278        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
- .rodata        0x0800e284       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_63_255.o)
-                0x0800e284                GUI__aConvert_63_255
- .rodata        0x0800e2c4       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_31_255.o)
-                0x0800e2c4                GUI__aConvert_31_255
- .rodata        0x0800e2e4      0x100 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_255_63.o)
-                0x0800e2e4                GUI__aConvert_255_63
- .rodata        0x0800e3e4      0x100 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_255_31.o)
-                0x0800e3e4                GUI__aConvert_255_31
- .rodata        0x0800e4e4       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC_EncodeNone.o)
-                0x0800e4e4                GUI_UC_None
- .rodata        0x0800e4f4       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_0.o)
-                0x0800e4f4                LCD_API_ColorConv_0
+                0x0800b94c        0xc ./Dave/Generated/GUI_SEGGERLIBRARY/gui_seggerlibrary_conf.o
+                0x0800b94c                GUI_SEGGERLIBRARY_0_config
+ .rodata        0x0800b958       0x14 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .rodata        0x0800b96c        0xc ./main.o
+ .rodata        0x0800b978      0x73c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(F6x8.o)
+                0x0800b978                GUI_Font6x9
+                0x0800b99c                GUI_Font6x8
+ .rodata        0x0800c0b4     0x108c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(F20B_1.o)
+                0x0800c0b4                GUI_Font20B_1
+ .rodata        0x0800d140        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor_Func66718.o)
+ .rodata        0x0800d148       0x74 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+                0x0800d188                GUIDRV_FlexColor_API
+ .rodata        0x0800d1bc        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
+ .rodata        0x0800d1c4       0x28 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecShift.o)
+                0x0800d1c4                GUI_Pow10
+ .rodata        0x0800d1ec       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
+                0x0800d1ec                LCD_API_ColorConv_M565
+ .rodata        0x0800d204       0x74 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+                0x0800d204                GUI_MEMDEV_DEVICE_16
+ .rodata        0x0800d278     0x1048 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(F20B_ASCII.o)
+                0x0800d278                GUI_Font20B_ASCII
+                0x0800d29c                GUI_Font20B_ASCII_Prop1
+                0x0800d2a8                GUI_Font20B_ASCII_CharInfo
+ .rodata        0x0800e2c0      0x100 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Mirror.o)
+                0x0800e2c0                LCD_aMirror
+ .rodata        0x0800e3c0        0xc C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+ .rodata        0x0800e3cc       0x40 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_63_255.o)
+                0x0800e3cc                GUI__aConvert_63_255
+ .rodata        0x0800e40c       0x20 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_31_255.o)
+                0x0800e40c                GUI__aConvert_31_255
+ .rodata        0x0800e42c      0x100 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_255_63.o)
+                0x0800e42c                GUI__aConvert_255_63
+ .rodata        0x0800e52c      0x100 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_255_31.o)
+                0x0800e52c                GUI__aConvert_255_31
+ .rodata        0x0800e62c       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC_EncodeNone.o)
+                0x0800e62c                GUI_UC_None
+ .rodata        0x0800e63c       0x18 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_0.o)
+                0x0800e63c                LCD_API_ColorConv_0
  *(.gnu.linkonce.r*)
  *(vtable)
-                0x0800e50c                . = ALIGN (0x4)
+                0x0800e654                . = ALIGN (0x4)
 
-.glue_7         0x0800e50c        0x0 load address 0x0c00e50c
+.glue_7         0x0800e654        0x0 load address 0x0c00e654
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x0800e50c        0x0 load address 0x0c00e50c
+.glue_7t        0x0800e654        0x0 load address 0x0c00e654
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x0800e50c        0x0 load address 0x0c00e50c
+.vfp11_veneer   0x0800e654        0x0 load address 0x0c00e654
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x0800e50c        0x0 load address 0x0c00e50c
+.v4_bx          0x0800e654        0x0 load address 0x0c00e654
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x0800e50c        0x0 load address 0x0c00e50c
+.iplt           0x0800e654        0x0 load address 0x0c00e654
  .iplt          0x00000000        0x0 ./Startup/startup_XMC4200.o
 
-.rel.dyn        0x0800e50c        0x0 load address 0x0c00e50c
+.rel.dyn        0x0800e654        0x0 load address 0x0c00e654
  .rel.iplt      0x00000000        0x0 ./Startup/startup_XMC4200.o
 
 .eh_frame_hdr
@@ -3747,13 +3793,13 @@ END GROUP
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0800e50c                . = ALIGN (0x4)
-                0x0800e50c                __exidx_start = .
+                0x0800e654                . = ALIGN (0x4)
+                0x0800e654                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0800e50c                __exidx_end = .
-                0x0800e50c                . = ALIGN (0x4)
+                0x0800e654                __exidx_end = .
+                0x0800e654                . = ALIGN (0x4)
 
 Stack           0x1fffc000      0x800
                 0x1fffc000                __stack_start = .
@@ -3762,16 +3808,16 @@ Stack           0x1fffc000      0x800
                 0x1fffc800                __stack_end = .
                 0x1fffc800                __initial_sp = .
 
-.ram_code       0x1fffc800        0x0 load address 0x0c00e50c
+.ram_code       0x1fffc800        0x0 load address 0x0c00e654
                 0x1fffc800                . = ALIGN (0x4)
                 0x1fffc800                __ram_code_start = .
  *(.ram_code)
                 0x1fffc800                . = ALIGN (0x4)
                 0x1fffc800                __ram_code_end = .
-                0x0c00e50c                __ram_code_load = LOADADDR (.ram_code)
+                0x0c00e654                __ram_code_load = LOADADDR (.ram_code)
                 0x00000000                __ram_code_size = (__ram_code_end - __ram_code_start)
 
-.data           0x1fffc800       0xbc load address 0x0c00e50c
+.data           0x1fffc800       0xc0 load address 0x0c00e654
                 0x1fffc800                . = ALIGN (0x4)
                 0x1fffc800                __data_start = .
  *(.data)
@@ -3810,65 +3856,65 @@ Stack           0x1fffc000      0x800
  .data.GLOBAL_CCU4_0
                 0x1fffc8ac       0x10 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
                 0x1fffc8ac                GLOBAL_CCU4_0
+ .data.s_tick   0x1fffc8bc        0x4 ./main.o
+                0x1fffc8bc                s_tick
  *(*.data)
  *(.gnu.linkonce.d*)
-                0x1fffc8bc                . = ALIGN (0x4)
-                0x1fffc8bc                PROVIDE (__preinit_array_start, .)
+                0x1fffc8c0                . = ALIGN (0x4)
+                0x1fffc8c0                PROVIDE (__preinit_array_start, .)
  *(.preinit_array)
-                0x1fffc8bc                PROVIDE (__preinit_array_end, .)
-                0x1fffc8bc                . = ALIGN (0x4)
-                0x1fffc8bc                PROVIDE (__init_array_start, .)
+                0x1fffc8c0                PROVIDE (__preinit_array_end, .)
+                0x1fffc8c0                . = ALIGN (0x4)
+                0x1fffc8c0                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array)
-                0x1fffc8bc                PROVIDE (__init_array_end, .)
-                0x1fffc8bc                . = ALIGN (0x4)
-                0x1fffc8bc                PROVIDE (__fini_array_start, .)
+                0x1fffc8c0                PROVIDE (__init_array_end, .)
+                0x1fffc8c0                . = ALIGN (0x4)
+                0x1fffc8c0                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array)
-                0x1fffc8bc                PROVIDE (__fini_array_end, .)
-                0x1fffc8bc                . = ALIGN (0x4)
-                0x1fffc8bc                __data_end = .
-                0x0c00e50c                __data_load = LOADADDR (.data)
-                0x000000bc                __data_size = (__data_end - __data_start)
-                0x0000e5c8                __text_size = (((__exidx_end - sText) + __data_size) + __ram_code_size)
-                0x0800e5c8                eText = (sText + __text_size)
+                0x1fffc8c0                PROVIDE (__fini_array_end, .)
+                0x1fffc8c0                . = ALIGN (0x4)
+                0x1fffc8c0                __data_end = .
+                0x0c00e654                __data_load = LOADADDR (.data)
+                0x000000c0                __data_size = (__data_end - __data_start)
+                0x0000e714                __text_size = (((__exidx_end - sText) + __data_size) + __ram_code_size)
+                0x0800e714                eText = (sText + __text_size)
 
-.igot.plt       0x1fffc8bc        0x0 load address 0x0c00e5c8
+.igot.plt       0x1fffc8c0        0x0 load address 0x0c00e714
  .igot.plt      0x00000000        0x0 ./Startup/startup_XMC4200.o
 
-.bss            0x1fffc8bc     0x1304 load address 0x0c00e5c8
-                0x1fffc8bc                . = ALIGN (0x4)
-                0x1fffc8bc                __bss_start = .
+.bss            0x1fffc8c0     0x1300 load address 0x0c00e714
+                0x1fffc8c0                . = ALIGN (0x4)
+                0x1fffc8c0                __bss_start = .
  *(.bss)
- .bss           0x1fffc8bc       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
- .bss           0x1fffc8d8       0x68 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
- .bss           0x1fffc940       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
- .bss           0x1fffc954        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
- .bss           0x1fffc95c        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Color.o)
- .bss           0x1fffc964       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__ManageCache.o)
+ .bss           0x1fffc8c0       0x1c C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDRV_FlexColor.o)
+ .bss           0x1fffc8dc       0x68 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
+ .bss           0x1fffc944       0x14 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+ .bss           0x1fffc958        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
+ .bss           0x1fffc960        0x8 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Color.o)
+ .bss           0x1fffc968       0x10 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__ManageCache.o)
  *(.bss*)
  .bss.g_timer_list
-                0x1fffc974        0x4 ./Dave/Generated/SYSTIMER/systimer.o
-                0x1fffc974                g_timer_list
- .bss.g_timer_tracker
                 0x1fffc978        0x4 ./Dave/Generated/SYSTIMER/systimer.o
-                0x1fffc978                g_timer_tracker
- .bss.g_systick_count
+                0x1fffc978                g_timer_list
+ .bss.g_timer_tracker
                 0x1fffc97c        0x4 ./Dave/Generated/SYSTIMER/systimer.o
-                0x1fffc97c                g_systick_count
+                0x1fffc97c                g_timer_tracker
+ .bss.g_systick_count
+                0x1fffc980        0x4 ./Dave/Generated/SYSTIMER/systimer.o
+                0x1fffc980                g_systick_count
  .bss.SYSTIMER_0
-                0x1fffc980        0x4 ./Dave/Generated/SYSTIMER/systimer_conf.o
-                0x1fffc980                SYSTIMER_0
+                0x1fffc984        0x4 ./Dave/Generated/SYSTIMER/systimer_conf.o
+                0x1fffc984                SYSTIMER_0
  .bss.SPI_MASTER_0_MISO_Config
-                0x1fffc984       0x14 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x1fffc984                SPI_MASTER_0_MISO_Config
+                0x1fffc988       0x14 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x1fffc988                SPI_MASTER_0_MISO_Config
  .bss.aMemory.7568
-                0x1fffc998     0x1000 ./Dave/Generated/GUI_SEGGERLIBRARY/Config/GUIConf.o
+                0x1fffc99c     0x1000 ./Dave/Generated/GUI_SEGGERLIBRARY/Config/GUIConf.o
  .bss.CLOCK_XMC4_0
-                0x1fffd998        0x4 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
-                0x1fffd998                CLOCK_XMC4_0
- .bss.s_tick    0x1fffd99c        0x4 ./main.o
-                0x1fffd99c                s_tick
+                0x1fffd99c        0x4 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+                0x1fffd99c                CLOCK_XMC4_0
  .bss.s_trigger
                 0x1fffd9a0        0x1 ./main.o
                 0x1fffd9a0                s_trigger
@@ -3899,7 +3945,7 @@ Stack           0x1fffc000      0x800
  *(.gnu.linkonce.b*)
                 0x1fffdbc0                . = ALIGN (0x4)
                 0x1fffdbc0                __bss_end = .
-                0x00001304                __bss_size = (__bss_end - __bss_start)
+                0x00001300                __bss_size = (__bss_end - __bss_start)
                 0x00002440                __shift_loc = (__bss_end >= ORIGIN (DSRAM_1_system))?0x0:(ORIGIN (DSRAM_1_system) - __bss_end)
 
 USB_RAM         0x20000000        0x0
@@ -4070,7 +4116,7 @@ USB_RAM         0x20000000        0x0
  .debug_abbrev  0x00002cf1      0x1da ./Dave/Generated/DAVE.o
  .debug_abbrev  0x00002ecb      0x1da ./main.o
 
-.debug_line     0x00000000     0x8b6b
+.debug_line     0x00000000     0x8b5f
  *(.debug_line)
  .debug_line    0x00000000       0x87 ./Startup/startup_XMC4200.o
  .debug_line    0x00000087      0x3ee ./Startup/system_XMC4200.o
@@ -4099,7 +4145,7 @@ USB_RAM         0x20000000        0x0
  .debug_line    0x00007905      0x3f9 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
  .debug_line    0x00007cfe      0x3cf ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
  .debug_line    0x000080cd      0x59c ./Dave/Generated/DAVE.o
- .debug_line    0x00008669      0x502 ./main.o
+ .debug_line    0x00008669      0x4f6 ./main.o
 
 .debug_frame    0x00000000     0x3afc
  *(.debug_frame)
@@ -4253,7 +4299,7 @@ USB_RAM         0x20000000        0x0
  *(.debug_varnames)
 
 .build_attributes
-                0x00000000     0x1116
+                0x00000000     0x117c
  *(.ARM.attributes)
  .ARM.attributes
                 0x00000000       0x25 ./Startup/startup_XMC4200.o
@@ -4326,101 +4372,105 @@ USB_RAM         0x20000000        0x0
  .ARM.attributes
                 0x00000724       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__memset.o)
  .ARM.attributes
-                0x00000757       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetFont.o)
+                0x00000757       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Val.o)
  .ARM.attributes
-                0x0000078a       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetColor.o)
+                0x0000078a       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetFont.o)
  .ARM.attributes
-                0x000007bd       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispStringHCenter.o)
+                0x000007bd       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetColor.o)
  .ARM.attributes
-                0x000007f0       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispStringAt.o)
+                0x000007f0       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispStringHCenter.o)
  .ARM.attributes
-                0x00000823       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispString.o)
+                0x00000823       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispStringAt.o)
  .ARM.attributes
-                0x00000856       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Device.o)
+                0x00000856       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_DispString.o)
  .ARM.attributes
-                0x00000889       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
+                0x00000889       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Device.o)
  .ARM.attributes
-                0x000008bc       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharP.o)
+                0x000008bc       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Core.o)
  .ARM.attributes
-                0x000008ef       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharM.o)
+                0x000008ef       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharP.o)
  .ARM.attributes
-                0x00000922       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharLine.o)
+                0x00000922       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharM.o)
  .ARM.attributes
-                0x00000955       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Char.o)
+                0x00000955       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CharLine.o)
  .ARM.attributes
-                0x00000988       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
+                0x00000988       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Char.o)
  .ARM.attributes
-                0x000009bb       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
+                0x000009bb       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Alloc.o)
  .ARM.attributes
-                0x000009ee       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
+                0x000009ee       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_AddDecShift.o)
  .ARM.attributes
-                0x00000a21       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(F20B_ASCII.o)
+                0x00000a21       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_M565.o)
  .ARM.attributes
-                0x00000a54       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Mirror.o)
+                0x00000a54       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_16.o)
  .ARM.attributes
-                0x00000a87       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Color.o)
+                0x00000a87       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(F20B_ASCII.o)
  .ARM.attributes
-                0x00000aba       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
+                0x00000aba       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Mirror.o)
  .ARM.attributes
-                0x00000aed       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__memset16.o)
+                0x00000aed       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_Color.o)
  .ARM.attributes
-                0x00000b20       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__ManageCache.o)
+                0x00000b20       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD.o)
  .ARM.attributes
-                0x00000b53       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_63_255.o)
+                0x00000b53       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__memset16.o)
  .ARM.attributes
-                0x00000b86       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_31_255.o)
+                0x00000b86       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__ManageCache.o)
  .ARM.attributes
-                0x00000bb9       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_255_63.o)
+                0x00000bb9       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_63_255.o)
  .ARM.attributes
-                0x00000bec       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_255_31.o)
+                0x00000bec       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_31_255.o)
  .ARM.attributes
-                0x00000c1f       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC_EncodeNone.o)
+                0x00000c1f       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_255_63.o)
  .ARM.attributes
-                0x00000c52       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC.o)
+                0x00000c52       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__DivTbl_255_31.o)
  .ARM.attributes
-                0x00000c85       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetTextAlign.o)
+                0x00000c85       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC_EncodeNone.o)
  .ARM.attributes
-                0x00000cb8       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetOrg.o)
+                0x00000cb8       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_UC.o)
  .ARM.attributes
-                0x00000ceb       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SelectLayer.o)
+                0x00000ceb       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetTextAlign.o)
  .ARM.attributes
-                0x00000d1e       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_RectsIntersect.o)
+                0x00000d1e       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SetOrg.o)
  .ARM.attributes
-                0x00000d51       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Goto.o)
+                0x00000d51       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SelectLayer.o)
  .ARM.attributes
-                0x00000d84       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_GetColor.o)
+                0x00000d84       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_RectsIntersect.o)
  .ARM.attributes
-                0x00000db7       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_0.o)
+                0x00000db7       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_Goto.o)
  .ARM.attributes
-                0x00000dea       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_WriteToActiveOpaque.o)
+                0x00000dea       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_GetColor.o)
  .ARM.attributes
-                0x00000e1d       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_Usage.o)
+                0x00000e1d       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUICC_0.o)
  .ARM.attributes
-                0x00000e50       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_GetDataPtr.o)
+                0x00000e50       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_WriteToActiveOpaque.o)
  .ARM.attributes
-                0x00000e83       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV.o)
+                0x00000e83       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_Usage.o)
  .ARM.attributes
-                0x00000eb6       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_UpdateColorIndices.o)
+                0x00000eb6       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV_GetDataPtr.o)
  .ARM.attributes
-                0x00000ee9       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetNumDisplays.o)
+                0x00000ee9       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUIDEV.o)
  .ARM.attributes
-                0x00000f1c       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
+                0x00000f1c       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_UpdateColorIndices.o)
  .ARM.attributes
-                0x00000f4f       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetColorIndex.o)
+                0x00000f4f       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetNumDisplays.o)
  .ARM.attributes
-                0x00000f82       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__CompactPixelIndices.o)
+                0x00000f82       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetEx.o)
  .ARM.attributes
-                0x00000fb5       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SelectLCD.o)
+                0x00000fb5       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_GetColorIndex.o)
  .ARM.attributes
-                0x00000fe8       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CalcColorDist.o)
+                0x00000fe8       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI__CompactPixelIndices.o)
  .ARM.attributes
-                0x0000101b       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_SelectLCD.o)
+                0x0000101b       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_SelectLCD.o)
  .ARM.attributes
-                0x0000104e       0x32 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
+                0x0000104e       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(GUI_CalcColorDist.o)
  .ARM.attributes
-                0x00001080       0x32 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
+                0x00001081       0x33 C:\DAVE_4-4-2_64bit_2018-02-23\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\/emWin/Start/GUI\libGUI_basic_xmc4.a(LCD_SelectLCD.o)
  .ARM.attributes
-                0x000010b2       0x32 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memmove.o)
+                0x000010b4       0x32 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x000010e4       0x32 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
+                0x000010e6       0x32 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00001118       0x32 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x0000114a       0x32 c:/dave_4-4-2_64bit_2018-02-23/dave_4-4-2_64bit_2018-02-23/dave-ide-4.4.2-64bit/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
 OUTPUT(NewHavenDisplay.elf elf32-littlearm)

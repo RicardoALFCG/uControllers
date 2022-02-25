@@ -39,7 +39,7 @@ int main(void)
 	  if(s_trigger){
 		  /* Display text */
 		  GUI_SetColor(GUI_WHITE);
-		  GUI_DispDecAt(s_tick, 80, 60, 1);
+		  GUI_DispBinAt(s_tick, 80, 60, 1);
 	  }
   }
 }
