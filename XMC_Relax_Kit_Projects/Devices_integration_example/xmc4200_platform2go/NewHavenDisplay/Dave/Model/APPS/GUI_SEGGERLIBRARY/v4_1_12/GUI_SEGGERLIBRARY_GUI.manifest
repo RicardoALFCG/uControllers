@@ -1,0 +1,105 @@
+package Model.APPS.GUI_SEGGERLIBRARY.v4_1_12;
+
+// Import statements
+import ifx.davex.app.manifest.*
+
+abstract class GUI_SEGGERLIBRARY_GUI extends AppManifest {
+	 /* Begin : UI variable section */
+	 public GTab gtab_settings;
+	 public GTab gtab_disp_controller_config;
+	 public GTab gtab_syncoam_display_config;
+	 public GTab gtab_other_disp_config;
+	 public GInteger gint_cachesize;
+	 public GInteger gint_xaxis_val;
+	 public GInteger gint_yaxis_val;
+	 public GInteger gint_other_xaxis_val;
+	 public GInteger gint_other_yaxis_val;
+	 public GCombo gcombo_mode;
+	 public GCombo gcombo_os;
+	 public GCombo gcombo_disp_selection;
+	 public GCombo gcombo_resolution;
+	 public GCombo gcombo_display_orientation;
+	 public GCombo gcombo_otherdisplay_orientation;
+	 public GString gstring_library_info;
+	 public GString gstring_libraryname;
+	 public GString gstring_display_init;
+	 public GString gstring_lcd_read;
+	 public GString gstring_lcd_wr_cmd;
+	 public GString gstring_lcd_wr_data;
+	 public GString gstring_lcd_wr_multiple;
+	 public GString gstring_other_display_init;
+	 public GString gstring_other_lcd_read;
+	 public GString gstring_other_lcd_wr_cmd;
+	 public GString gstring_other_lcd_wr_data;
+	 public GString gstring_other_lcd_wr_multiple;
+	 public GCheck gcheck_enable_at_init;
+	 public GCheck gcheck_non_read_support;
+	 public GCheck gcheck_user_defined_section;
+	 public GCheck gcheck_spi_interface;
+	 public GCheck gcheck_other_spi_interface;
+	 public GLabel glabel_disp_selection;
+	 public GLabel glabel_resolution;
+	 public GLabel glabel_syncoam_rgb;
+	 public GLabel glabel_display_orientation;
+	 public GLabel glabel_xaxis_val;
+	 public GLabel glabel_yaxis_val;
+	 public GLabel glabel_otherdisplay_orientation;
+	 public GLabel glabel_other_xaxis_val;
+	 public GLabel glabel_other_yaxis_val;
+	 public GLabel glabel_library_info;
+	 public GGroup ggroup_disp_selection;
+	 public GGroup ggroup_physicalsize_config;
+	 public GGroup ggroup_other_physicalsize_config;
+
+	 public GUI_SEGGERLIBRARY_GUI(DaveEnv daveEnv){
+
+	 gtab_settings = GTab(widgetName:"gtab_settings", text:"Seggerlibrary Settings", enabled:true, visible:true)
+	 gtab_disp_controller_config = GTab(widgetName:"gtab_disp_controller_config", text:"LCD Settings", enabled:true, visible:true)
+	 gtab_syncoam_display_config = GTab(widgetName:"gtab_syncoam_display_config", text:"Syncoam Display Settings", enabled:true, visible:true)
+	 gtab_other_disp_config = GTab(widgetName:"gtab_other_disp_config", text:"Other Display Settings", enabled:true, visible:false)
+	 gint_cachesize = GInteger(widgetName:"gint_cachesize", value:4096, minValue:4096, maxValue:180000, enabled:true, visible:true, isMandatoryValue:false)
+	 gint_xaxis_val = GInteger(widgetName:"gint_xaxis_val", value:160, minValue:0, maxValue:Long.MAX_VALUE, enabled:false, visible:true, isMandatoryValue:false)
+	 gint_yaxis_val = GInteger(widgetName:"gint_yaxis_val", value:128, minValue:0, maxValue:Long.MAX_VALUE, enabled:false, visible:true, isMandatoryValue:false)
+	 gint_other_xaxis_val = GInteger(widgetName:"gint_other_xaxis_val", value:160, minValue:0, maxValue:999, enabled:true, visible:true, isMandatoryValue:false)
+	 gint_other_yaxis_val = GInteger(widgetName:"gint_other_yaxis_val", value:128, minValue:0, maxValue:999, enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_mode = GCombo(widgetName:"gcombo_mode", options:["Basic","Advanced"], value:"Basic", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_os = GCombo(widgetName:"gcombo_os", options:["None","FreeRTOS","CMSIS_RTOS_RTX"], value:"None", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_disp_selection = GCombo(widgetName:"gcombo_disp_selection", options:["Syncoam(SEPS525F) Display","Other Display"], value:"Syncoam(SEPS525F) Display", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_resolution = GCombo(widgetName:"gcombo_resolution", options:["8-bit","16-bit"], value:"8-bit", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_display_orientation = GCombo(widgetName:"gcombo_display_orientation", options:["0 degree","90 degree turn","180 degree turn","270 degree turn","0 degree MIRROR X","0 degree MIRROR Y","90 degree MIRROR X","90 degree MIRROR Y"], value:"0 degree", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_otherdisplay_orientation = GCombo(widgetName:"gcombo_otherdisplay_orientation", options:["0 degree","90 degree turn","180 degree turn","270 degree turn","0 degree MIRROR X","0 degree MIRROR Y","90 degree MIRROR X","90 degree MIRROR Y"], value:"0 degree", enabled:true, visible:true, isMandatoryValue:false)
+	 gstring_library_info = GString(widgetName:"gstring_library_info", value:"Basic library will have access only to text based graphics.", enabled:false, visible:true, isMandatoryValue:false)
+	 gstring_libraryname = GString(widgetName:"gstring_libraryname", value:"", enabled:true, visible:true, isMandatoryValue:false)
+	 gstring_display_init = GString(widgetName:"gstring_display_init", value:"", enabled:true, visible:true, isMandatoryValue:false)
+	 gstring_lcd_read = GString(widgetName:"gstring_lcd_read", value:"", enabled:true, visible:true, isMandatoryValue:false)
+	 gstring_lcd_wr_cmd = GString(widgetName:"gstring_lcd_wr_cmd", value:"", enabled:true, visible:true, isMandatoryValue:false)
+	 gstring_lcd_wr_data = GString(widgetName:"gstring_lcd_wr_data", value:"", enabled:true, visible:true, isMandatoryValue:false)
+	 gstring_lcd_wr_multiple = GString(widgetName:"gstring_lcd_wr_multiple", value:"", enabled:true, visible:true, isMandatoryValue:false)
+	 gstring_other_display_init = GString(widgetName:"gstring_other_display_init", value:"", enabled:true, visible:true, isMandatoryValue:false)
+	 gstring_other_lcd_read = GString(widgetName:"gstring_other_lcd_read", value:"", enabled:true, visible:true, isMandatoryValue:false)
+	 gstring_other_lcd_wr_cmd = GString(widgetName:"gstring_other_lcd_wr_cmd", value:"", enabled:true, visible:true, isMandatoryValue:false)
+	 gstring_other_lcd_wr_data = GString(widgetName:"gstring_other_lcd_wr_data", value:"", enabled:true, visible:true, isMandatoryValue:false)
+	 gstring_other_lcd_wr_multiple = GString(widgetName:"gstring_other_lcd_wr_multiple", value:"", enabled:true, visible:true, isMandatoryValue:false)
+	 gcheck_enable_at_init = GCheck(widgetName:"gcheck_enable_at_init", value:true, enabled:true, visible:true)
+	 gcheck_non_read_support = GCheck(widgetName:"gcheck_non_read_support", value:false, enabled:true, visible:true)
+	 gcheck_user_defined_section = GCheck(widgetName:"gcheck_user_defined_section", value:false, enabled:true, visible:true)
+	 gcheck_spi_interface = GCheck(widgetName:"gcheck_spi_interface", value:true, enabled:true, visible:true)
+	 gcheck_other_spi_interface = GCheck(widgetName:"gcheck_other_spi_interface", value:true, enabled:true, visible:true)
+	 glabel_disp_selection = GLabel(widgetName:"glabel_disp_selection", text:"Display controller:", enabled:true, visible:true)
+	 glabel_resolution = GLabel(widgetName:"glabel_resolution", text:"RGB interface:", enabled:true, visible:true)
+	 glabel_syncoam_rgb = GLabel(widgetName:"glabel_syncoam_rgb", text:"8-bit", enabled:true, visible:true)
+	 glabel_display_orientation = GLabel(widgetName:"glabel_display_orientation", text:"Display orientation:", enabled:true, visible:true)
+	 glabel_xaxis_val = GLabel(widgetName:"glabel_xaxis_val", text:"X-Axis:", enabled:true, visible:true)
+	 glabel_yaxis_val = GLabel(widgetName:"glabel_yaxis_val", text:"Y-Axis:", enabled:true, visible:true)
+	 glabel_otherdisplay_orientation = GLabel(widgetName:"glabel_otherdisplay_orientation", text:"Display orientation:", enabled:true, visible:true)
+	 glabel_other_xaxis_val = GLabel(widgetName:"glabel_other_xaxis_val", text:"X-Axis:", enabled:true, visible:true)
+	 glabel_other_yaxis_val = GLabel(widgetName:"glabel_other_yaxis_val", text:"Y-Axis:", enabled:true, visible:true)
+	 glabel_library_info = GLabel(widgetName:"glabel_library_info", text:"Library Description", enabled:true, visible:true)
+	 ggroup_disp_selection = GGroup(widgetName:"ggroup_disp_selection", text:"Selection", enabled:true, visible:true)
+	 ggroup_physicalsize_config = GGroup(widgetName:"ggroup_physicalsize_config", text:"Physical Size Configuration", enabled:true, visible:true)
+	 ggroup_other_physicalsize_config = GGroup(widgetName:"ggroup_other_physicalsize_config", text:"Physical Size Configuration", enabled:true, visible:true)
+
+
+	 }
+	/* End : UI variable section */
+}

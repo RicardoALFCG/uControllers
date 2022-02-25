@@ -1,0 +1,270 @@
+<p1:Tab  xmlns="http://www.eclipse.org/xwt/presentation" xmlns:x="http://www.eclipse.org/xwt" xmlns:p1="clr-namespace:com.ifx.davex.ui.controls.app" x:Class="e" layout="{x:Null}" background="COLOR_WHITE">
+    <p1:TabFolder bounds="5, 5, 500, 600">
+        <p1:GTab text="Seggerlibrary Settings" visible="true" enabled="true" manifestObj="true" widgetName="gtab_settings">
+            <p1:GTab.control>
+                <p1:Tab widgetName="composite_3" location="16, 24">
+                    <p1:Tab.layout>
+                        <GridLayout/>
+                    </p1:Tab.layout>
+                    <p1:GGroup text="Configuration" widgetName="ggroup_2">
+                        <p1:GGroup.layout>
+                            <GridLayout numColumns="2"/>
+                        </p1:GGroup.layout>
+                        <p1:GGroup.layoutData>
+                            <GridData heightHint="463"/>
+                        </p1:GGroup.layoutData>
+                        <p1:GCheck text="Initialize GUI library during APP initialization" manifestObj="true" widgetName="gcheck_enable_at_init" value="true" description="GUI_Init() is called as a part of APP initialization when this option is selected, otherwise user has to make an explicit call to this function.">
+                            <p1:GCheck.layoutData>
+                                <GridData horizontalSpan="2"/>
+                            </p1:GCheck.layoutData>
+                        </p1:GCheck>
+                        <p1:GLabel text="GUI library:" visible="true" widgetName="glabel_mode"/>
+                        <p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_mode" options="Basic&#13;&#10;Advanced" value="Basic" description="Basic library  supports only text based graphics. &lt;br&gt;&#13;&#10;Advance library supports window manager,touch screen and USB.">
+                            <p1:GCombo.layoutData>
+                                <GridData widthHint="130"/>
+                            </p1:GCombo.layoutData>
+                        </p1:GCombo>
+                        <p1:GGroup text="Features supported by GUI Library:" widgetName="ggroup_library_info">
+                            <p1:GGroup.layoutData>
+                                <GridData horizontalSpan="2"/>
+                            </p1:GGroup.layoutData>
+                            <p1:GString x:Style="BORDER | WRAP" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gstring_library_info" bounds="8, 21, 442, 40" value="Basic library will have access only to text based graphics." enabled="false" description="Basic/Advanced library information"/>
+                        </p1:GGroup>
+                        <p1:GLabel text="It is required to add the below mentioned library name in the project settings. &#13;&#10;For more details, refer Path Settings tab." widgetName="glabel_libraryname" foreground="COLOR_BLACK">
+                            <p1:GLabel.layoutData>
+                                <GridData horizontalSpan="2"/>
+                            </p1:GLabel.layoutData>
+                        </p1:GLabel>
+                        <p1:GString description="Displays library name based on configuration" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gstring_libraryname" x:Style="BORDER">
+                            <p1:GString.layoutData>
+                                <GridData horizontalSpan="2" widthHint="205"/>
+                            </p1:GString.layoutData>
+                        </p1:GString>
+                        <p1:GLabel text="OS support:" visible="true" widgetName="glabel_os"/>
+                        <p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_os" options="None&#13;&#10;FreeRTOS&#13;&#10;CMSIS_RTOS_RTX" value="None" description="Enables the OS support based on selection. ">
+                            <p1:GCombo.layoutData>
+                                <GridData widthHint="130"/>
+                            </p1:GCombo.layoutData>
+                        </p1:GCombo>
+                        <p1:GCheck description="Enables cache for non-readable display. User should enter appropriate cache size while enabling this option." manifestObj="true" text="Enable cache for non-readable display" toolTipText="" widgetName="gcheck_non_read_support">
+                            <p1:GCheck.layoutData>
+                                <GridData horizontalSpan="2"/>
+                            </p1:GCheck.layoutData>
+                        </p1:GCheck>
+                        <p1:GLabel text="     Cache size:" widgetName="glabel_cachesize"/>
+                        <p1:GInteger description="To use display cache, the minimum RAM required is: &lt;br&gt;&#13;&#10;(LCD_XSIZE * LCD_YSIZE * BytesPerPixel) + 6000 &lt;br&gt;&#13;&#10;where BytesPerPixel is 2 for 16-bit mode and 1 for  8-bit mode. &lt;br&gt;&#13;&#10;e.g.: For SEPS525F OLED display: (160 * 128 * 2) + 6000 = min. 46960 &lt;br&gt;&#13;&#10;When cache size is disabled, default cache size of 4096 is used by the APP. &lt;br&gt;&#13;&#10;&#13;&#10;1. Cache feature can only be utilized for XMC48/47/45 and XMC4400 variants. Other  XMC      variants cannot have this feature due to less amount of RAM. &lt;br&gt;&#13;&#10;&#13;&#10;2. In the case of XMC48/4700 maximum of 180KB RAM can be allocated &lt;br&gt;&#13;&#10;    In the case of XMC4500, maximum value of 60KB RAM can be allocated. &lt;br&gt;&#13;&#10;    In the case of XMC4400, maximum value of 76KB RAM can be allocated. &lt;br&gt;&#13;&#10;    User can utilize the cache feature for smaller displays (x-axis and y-axis) which can be &#13;&#10;    equivalent to the maximum cache size. &lt;br&gt;&#13;&#10;&#13;&#10;Hint: &lt;br&gt;&#13;&#10;For larger displays, it is suggested to interface with SDRAM/external RAM so that full display cache can be allocated and utilized in that specified area." format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" maxValue="180000" minValue="4096" toolTipText="Refer APP help documentation (Configuration Parameters section) for details." value="4096" widgetName="gint_cachesize">
+                            <p1:GInteger.layoutData>
+                                <GridData widthHint="130"/>
+                            </p1:GInteger.layoutData>
+                        </p1:GInteger>
+                        <p1:GCheck text="Enable user defined section in linker file for cache memory" manifestObj="true" widgetName="gcheck_user_defined_section" description="By checking this option, user should write his own section in linker named &quot;.user_defined_section&quot; which can point to external RAM/SDRAM area for cache memory.&#13;&#10;Refer Usage section for more details about linker file.">
+                            <p1:GCheck.layoutData>
+                                <GridData horizontalSpan="2"/>
+                            </p1:GCheck.layoutData>
+                        </p1:GCheck>
+                        <p1:GLabel text="NOTE: &#13;&#10;User defined section for cache memory is applicable only for XMC48/47/45 devices. &#13;&#10;For other devices, it is disabled due to non-availability of EBU support.&#13;&#10;&#13;&#10;Bigger displays require more cache size which cannot fit in internal RAM. &#13;&#10;So, user should write his own section called &quot;.user_defined_section&quot; in linker &#13;&#10;file which can point to external RAM/SDRAM area for cache memory. &#13;&#10;&#13;&#10;Refer usage section in documentation for more details about linker file modification." visible="true" widgetName="glabel_32">
+                            <p1:GLabel.layoutData>
+                                <GridData horizontalSpan="2"/>
+                            </p1:GLabel.layoutData>
+                        </p1:GLabel>
+                    </p1:GGroup>
+                </p1:Tab>
+            </p1:GTab.control>
+        </p1:GTab>
+        <p1:GTab text="LCD Settings" visible="true" enabled="true" manifestObj="true" widgetName="gtab_disp_controller_config">
+            <p1:GTab.control>
+                <p1:Tab widgetName="composite_1">
+                    <p1:GGroup text="Selection" widgetName="ggroup_disp_selection" bounds="5, 19, 480, 103" manifestObj="true">
+                        <p1:GLabel text="Display controller:" visible="true" widgetName="glabel_disp_selection" bounds="10, 30, 104, 15" manifestObj="true"/>
+                        <p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_disp_selection" bounds="134, 29, 210, 21" options="Syncoam(SEPS525F) Display&#13;&#10;Other Display" value="Syncoam(SEPS525F) Display" description="Display controller selection(SEPS525F / Other display)"/>
+                        <p1:GLabel text="RGB interface:" visible="true" widgetName="glabel_resolution" bounds="12, 65, 90, 15" manifestObj="true"/>
+                        <p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_resolution" bounds="134, 61, 89, 21" options="8-bit&#13;&#10;16-bit" value="8-bit" description="For Syncoam displays, only 8-bit option is provided. &lt;br&gt;&#13;&#10;For Other displays, (8-bit and 16-bit) options are provided."/>
+                        <p1:GLabel text="8-bit" visible="true" manifestObj="true" widgetName="glabel_syncoam_rgb" bounds="139, 65, 55, 15"/>
+                    </p1:GGroup>
+                </p1:Tab>
+            </p1:GTab.control>
+        </p1:GTab>
+        <p1:GTab text="Syncoam Display Settings" visible="true" enabled="true" manifestObj="true" widgetName="gtab_syncoam_display_config">
+            <p1:GTab.control>
+                <p1:Tab widgetName="composite_2">
+                	<p1:Tab.layout>
+                		<GridLayout/>
+                	</p1:Tab.layout>
+                    <p1:GGroup text="Configuration" widgetName="ggroup_3">
+                    	<p1:GGroup.layoutData>
+                    		<GridData widthHint="469"/>
+                    	</p1:GGroup.layoutData>
+                    	<p1:GGroup.layout>
+                    		<GridLayout numColumns="2"/>
+                    	</p1:GGroup.layout>
+                        <p1:GCheck text="SPI interface" manifestObj="true" widgetName="gcheck_spi_interface" value="true" description="If this option is selected, SPI interface is used as the communication interface with the display module."/>
+                        <Label/>
+                        <p1:GLabel text="Display orientation:" visible="true" manifestObj="true" widgetName="glabel_display_orientation">
+                        	<p1:GLabel.layoutData>
+                        		<GridData widthHint="118"/>
+                        	</p1:GLabel.layoutData>
+                        </p1:GLabel>
+                        <p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_display_orientation" options="0 degree&#13;&#10;90 degree turn&#13;&#10;180 degree turn&#13;&#10;270 degree turn&#13;&#10;0 degree MIRROR X&#13;&#10;0 degree MIRROR Y&#13;&#10;90 degree MIRROR X&#13;&#10;90 degree MIRROR Y" value="0 degree" description="The orientation that show on the display."/>
+                        <p1:GGroup text="Physical Size Configuration" manifestObj="true" widgetName="ggroup_physicalsize_config">
+                        	<p1:GGroup.layoutData>
+                        		<GridData horizontalSpan="2" widthHint="453" heightHint="77"/>
+                        	</p1:GGroup.layoutData>
+                            <p1:GLabel text="X-Axis:" visible="true" manifestObj="true" widgetName="glabel_xaxis_val" bounds="10, 29, 42, 15"/>
+                            <p1:GInteger x:Style="NONE" minValue="0" maxValue="MAX_VALUE" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" manifestObj="true" widgetName="gint_xaxis_val" bounds="129, 19, 66, 23" description="Number of pixels in display X-axis" value="160" enabled="false"/>
+                            <p1:GLabel text="Y-Axis:" visible="true" manifestObj="true" widgetName="glabel_yaxis_val" bounds="8, 56, 43, 15"/>
+                            <p1:GInteger x:Style="NONE" minValue="0" maxValue="MAX_VALUE" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" manifestObj="true" widgetName="gint_yaxis_val" bounds="129, 52, 67, 23" value="128" description="Number of pixels in display Y-axis" enabled="false"/>
+                        </p1:GGroup>
+                    </p1:GGroup>
+                    <p1:GGroup text="User Callback Functions" widgetName="ggroup_user_callback">
+                    	<p1:GGroup.layoutData>
+                    		<GridData widthHint="469"/>
+                    	</p1:GGroup.layoutData>
+                    	<p1:GGroup.layout>
+                    		<GridLayout numColumns="2"/>
+                    	</p1:GGroup.layout>
+                        <p1:GLabel text="Display initialization:" widgetName="glabel_display_init"/>
+                        <p1:GString description="User defined callback function for display initialization. &lt;br&gt;&#13;&#10;The function should be defined in the user code. It should have the following signature:&lt;br&gt;&lt;br&gt;&#13;&#10;void MyLcd_init(void);" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" toolTipText="User defined callback function for display initialization" widgetName="gstring_display_init" x:Style="BORDER">
+                        	<p1:GString.layoutData>
+                        		<GridData widthHint="324" horizontalAlignment="FILL"/>
+                        	</p1:GString.layoutData>
+                        </p1:GString>
+                        <p1:GLabel text="LCD read:" widgetName="glabel_lcd_read"/>
+                        <p1:GString description="User defined callback function for reading from display module. &lt;br&gt;&#13;&#10;The function should be defined in the user code. It should have the following signature:&lt;br&gt;&lt;br&gt;&#13;&#10;e.g. for 8bpp: &lt;br&gt;&#13;&#10;void MyLCD_Read(uint8_t *, int ); &lt;br&gt;&#13;&#10;e.g for 16bpp:&lt;br&gt;&#13;&#10;void MyLCD_Read(uint16_t *, int );" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" toolTipText="User defined callback function to read from display module" widgetName="gstring_lcd_read" x:Style="BORDER">
+                        	<p1:GString.layoutData>
+                        		<GridData horizontalAlignment="FILL"/>
+                        	</p1:GString.layoutData>
+                        </p1:GString>
+                        <p1:GLabel text="LCD write(command):" widgetName="glabel_lcd_wr_cmd"/>
+                        <p1:GString description="User defined callback function for writing command to display module. &lt;br&gt;&#13;&#10;The function should be defined in the user code. It should have the following signature:&lt;br&gt;&lt;br&gt;&#13;&#10;e.g. for 8bpp: &lt;br&gt;&#13;&#10;void MyLCD_wr_cmd(uint8_t ); &lt;br&gt;&#13;&#10;e.g. for 16bpp: &lt;br&gt;&#13;&#10;void MyLCD_wr_cmd(uint16_t ); &lt;br&gt;&#13;&#10;" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" toolTipText="User defined callback function to write a command to display module" widgetName="gstring_lcd_wr_cmd" x:Style="BORDER">
+                        	<p1:GString.layoutData>
+                        		<GridData horizontalAlignment="FILL"/>
+                        	</p1:GString.layoutData>
+                        </p1:GString>
+                        <p1:GLabel text="LCD write(data):" widgetName="glabel_lcd_wr_data"/>
+                        <p1:GString description="User defined callback function for writing data to display module.&lt;br&gt;&#13;&#10;The function should be defined in the user code. It should have the following signature:&lt;br&gt;&lt;br&gt;&#13;&#10;e.g. for 8bpp: &lt;br&gt;&#13;&#10;void MyLCD_wr_data(uint8_t); &lt;br&gt;&#13;&#10;e.g. for 16bpp: &lt;br&gt;&#13;&#10;void MyLCD_wr_data(uint16_t); &lt;br&gt;" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" toolTipText="User defined callback function to write data byte to display module" widgetName="gstring_lcd_wr_data" x:Style="BORDER">
+                        	<p1:GString.layoutData>
+                        		<GridData horizontalAlignment="FILL"/>
+                        	</p1:GString.layoutData>
+                        </p1:GString>
+                        <p1:GLabel text="LCD write(multiple):" widgetName="glabel_lcd_wr_multiple"/>
+                        <p1:GString description="User defined callback function for writing data to display module.&lt;br&gt;&#13;&#10;The function should be defined in the user code. It should have the following signature:&lt;br&gt;&lt;br&gt;&#13;&#10;e.g. for 8bpp: &lt;br&gt;&#13;&#10;void MyLCD_wr_multipledata(uint8_t *, int); &lt;br&gt;&#13;&#10;e.g. for 16bpp: &lt;br&gt;&#13;&#10;void MyLCD_wr_multipledata(uint16_t *, int);" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" toolTipText="User defined callback function to write multiple data bytes to display module." widgetName="gstring_lcd_wr_multiple" x:Style="BORDER">
+                        	<p1:GString.layoutData>
+                        		<GridData horizontalAlignment="FILL"/>
+                        	</p1:GString.layoutData>
+                        </p1:GString>
+                        <p1:GString x:Style="BORDER | WRAP" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" widgetName="gstring_note1" value="NOTE: Please refer to help documentation (APP Configuration Parameters) about the callback function declaration in application code" enabled="false">
+                        	<p1:GString.layoutData>
+                        		<GridData horizontalSpan="2" widthHint="441" horizontalAlignment="FILL"/>
+                        	</p1:GString.layoutData>
+                        </p1:GString>
+                    </p1:GGroup>
+                </p1:Tab>
+            </p1:GTab.control>
+        </p1:GTab>
+        <p1:GTab enabled="true" manifestObj="true" text="Other Display Settings" widgetName="gtab_other_disp_config">
+            <p1:GTab.control>
+                <p1:Tab>
+                	<p1:Tab.layout>
+                		<GridLayout/>
+                	</p1:Tab.layout>
+                    <p1:GGroup text="Configuration" widgetName="ggroup_other_config">
+                    	<p1:GGroup.layout>
+                    		<GridLayout numColumns="2"/>
+                    	</p1:GGroup.layout>
+                    	<p1:GGroup.layoutData>
+                    		<GridData widthHint="476"/>
+                    	</p1:GGroup.layoutData>
+                        <p1:GCheck description="If this option is selected, SPI interface is used as the communication interface with the display module." manifestObj="true" text="SPI interface" value="true" widgetName="gcheck_other_spi_interface"/>
+                        <Label/>
+                        <p1:GLabel manifestObj="true" text="Display orientation:" widgetName="glabel_otherdisplay_orientation">
+                        	<p1:GLabel.layoutData>
+                        		<GridData widthHint="114"/>
+                        	</p1:GLabel.layoutData>
+                        </p1:GLabel>
+                        <p1:GCombo description="The orientation that show on the display." mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="0 degree&#13;&#10;90 degree turn&#13;&#10;180 degree turn&#13;&#10;270 degree turn&#13;&#10;0 degree MIRROR X&#13;&#10;0 degree MIRROR Y&#13;&#10;90 degree MIRROR X&#13;&#10;90 degree MIRROR Y" value="0 degree" widgetName="gcombo_otherdisplay_orientation"/>
+                        <p1:GGroup manifestObj="true" text="Physical Size Configuration" widgetName="ggroup_other_physicalsize_config">
+                        	<p1:GGroup.layout>
+                        		<GridLayout numColumns="2"/>
+                        	</p1:GGroup.layout>
+                        	<p1:GGroup.layoutData>
+                        		<GridData horizontalSpan="2" widthHint="460"/>
+                        	</p1:GGroup.layoutData>
+                            <p1:GLabel manifestObj="true" text="X-Axis:" widgetName="glabel_other_xaxis_val">
+                            	<p1:GLabel.layoutData>
+                            		<GridData widthHint="107"/>
+                            	</p1:GLabel.layoutData>
+                            </p1:GLabel>
+                            <p1:GInteger description="Number of pixels in display X-axis" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" maxValue="999" minValue="0" value="160" widgetName="gint_other_xaxis_val">
+                            	<p1:GInteger.layoutData>
+                            		<GridData widthHint="42" horizontalAlignment="FILL"/>
+                            	</p1:GInteger.layoutData>
+                            </p1:GInteger>
+                            <p1:GLabel manifestObj="true" text="Y-Axis:" widgetName="glabel_other_yaxis_val"/>
+                            <p1:GInteger description="Number of pixels in display Y-axis" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" maxValue="999" minValue="0" value="128" widgetName="gint_other_yaxis_val">
+                            	<p1:GInteger.layoutData>
+                            		<GridData widthHint="40" horizontalAlignment="FILL"/>
+                            	</p1:GInteger.layoutData>
+                            </p1:GInteger>
+                        </p1:GGroup>
+                    </p1:GGroup>
+                    <p1:GGroup text="User Callback Functions" widgetName="ggroup_other_user_callback">
+                    	<p1:GGroup.layoutData>
+                    		<GridData widthHint="475"/>
+                    	</p1:GGroup.layoutData>
+                    	<p1:GGroup.layout>
+                    		<GridLayout numColumns="2"/>
+                    	</p1:GGroup.layout>
+                        <p1:GLabel text="Display initialization:" widgetName="glabel_other_display_init"/>
+                        <p1:GString description="User defined callback function for display initialization. &lt;br&gt;&#13;&#10;The function should be defined in the user code. It should have the following signature:&lt;br&gt;&lt;br&gt;&#13;&#10;void MyLcd_init(void);" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" toolTipText="User defined callback function for display initialization" widgetName="gstring_other_display_init" x:Style="BORDER">
+                        	<p1:GString.layoutData>
+                        		<GridData widthHint="329" horizontalAlignment="FILL"/>
+                        	</p1:GString.layoutData>
+                        </p1:GString>
+                        <p1:GLabel text="LCD read:" widgetName="glabel_other_lcd_read"/>
+                        <p1:GString description="User defined callback function for reading from display module. &lt;br&gt;&#13;&#10;The function should be defined in the user code. It should have the following signature:&lt;br&gt;&lt;br&gt;&#13;&#10;e.g. for 8bpp: &lt;br&gt;&#13;&#10;void MyLCD_Read(uint8_t *, int ); &lt;br&gt;&#13;&#10;e.g for 16bpp:&lt;br&gt;&#13;&#10;void MyLCD_Read(uint16_t *, int );" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" toolTipText="User defined callback function for reading from display module" widgetName="gstring_other_lcd_read" x:Style="BORDER">
+                        	<p1:GString.layoutData>
+                        		<GridData horizontalAlignment="FILL"/>
+                        	</p1:GString.layoutData>
+                        </p1:GString>
+                        <p1:GLabel text="LCD write(command):" widgetName="glabel_other_lcd_wr_cmd"/>
+                        <p1:GString description="User defined callback function for writing command to display module. &lt;br&gt;&#13;&#10;The function should be defined in the user code. It should have the following signature:&lt;br&gt;&lt;br&gt;&#13;&#10;e.g. for 8bpp: &lt;br&gt;&#13;&#10;void MyLCD_wr_cmd(uint8_t  cmd ); &lt;br&gt;&#13;&#10;e.g. for 16bpp: &lt;br&gt;&#13;&#10;void MyLCD_wr_cmd(uint16_t  cmd ); &lt;br&gt;&#13;&#10;" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" toolTipText="User defined callback function for writing command to display module" widgetName="gstring_other_lcd_wr_cmd" x:Style="BORDER">
+                        	<p1:GString.layoutData>
+                        		<GridData horizontalAlignment="FILL"/>
+                        	</p1:GString.layoutData>
+                        </p1:GString>
+                        <p1:GLabel text="LCD write(data):" widgetName="glabel_other_lcd_wr_data"/>
+                        <p1:GString description="User defined callback function for writing data to display module.&lt;br&gt;&#13;&#10;The function should be defined in the user code. It should have the following signature:&lt;br&gt;&lt;br&gt;&#13;&#10;e.g. for 8bpp: &lt;br&gt;&#13;&#10;void MyLCD_wr_data(uint8_t data ); &lt;br&gt;&#13;&#10;e.g. for 16bpp: &lt;br&gt;&#13;&#10;void MyLCD_wr_data(uint16_t data ); &lt;br&gt;" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" toolTipText="User defined callback function for writing data to display module" widgetName="gstring_other_lcd_wr_data" x:Style="BORDER">
+                        	<p1:GString.layoutData>
+                        		<GridData horizontalAlignment="FILL"/>
+                        	</p1:GString.layoutData>
+                        </p1:GString>
+                        <p1:GLabel text="LCD write(multiple):" widgetName="glabel_other_lcd_wr_multiple"/>
+                        <p1:GString description="User defined callback function for writing data to display module.&lt;br&gt;&#13;&#10;The function should be defined in the user code. It should have the following signature:&lt;br&gt;&lt;br&gt;&#13;&#10;e.g. for 8bpp: &lt;br&gt;&#13;&#10;void MyLCD_wr_multipledata(uint8_t *, int); &lt;br&gt;&#13;&#10;e.g. for 16bpp: &lt;br&gt;&#13;&#10;void MyLCD_wr_multipledata(uint16_t *, int);" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" toolTipText="User defined callback function for writing multiple data to display module." widgetName="gstring_other_lcd_wr_multiple" x:Style="BORDER">
+                        	<p1:GString.layoutData>
+                        		<GridData horizontalAlignment="FILL"/>
+                        	</p1:GString.layoutData>
+                        </p1:GString>
+                        <p1:GString enabled="false" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" value="NOTE: Please refer to help documentation (APP Configuration Parameters) about the callback function declaration in application code" widgetName="gstring_note2" x:Style="BORDER | WRAP">
+                        	<p1:GString.layoutData>
+                        		<GridData horizontalSpan="2" widthHint="453"/>
+                        	</p1:GString.layoutData>
+                        </p1:GString>
+                    </p1:GGroup>
+                </p1:Tab>
+            </p1:GTab.control>
+        </p1:GTab>
+        <p1:GTab text="Path Settings" visible="true" enabled="true" widgetName="gtab_path">
+            <p1:GTab.control>
+                <p1:Tab widgetName="composite_6" layout="{x:Null}">
+                    <p1:GLabel text="In order to compile the GUI APPs, it is required to follow below two steps." visible="true" widgetName="glabel_17" bounds="4, 8, 481, 15"/>
+                    <p1:GLabel text="Step 1: &#13;&#10;Add the below mentioned paths under Project Settings-&gt;C/C++ Build-&gt;Settings-&gt;&#13;&#10;ARM GCC C Compiler-&gt;Directories as shown in below snapshot." visible="true" widgetName="glabel_8" bounds="4, 30, 464, 50"/>
+                    <p1:GImage visible="true" x:Style="BORDER" widgetName="gimage_8" bounds="4, 86, 440, 36" path="Uimodel/include_path.png"/>
+                    <p1:GLabel text="Step 2: &#13;&#10;Add the library and library path in Project Settings -&gt; C/C++ Build -&gt; Settings -&gt;&#13;&#10;ARM GCC C Linker -&gt; Libraries as shown in below snapshot.&#13;&#10;&#13;&#10;Below highlighted library name should match with the Seggerlibrary Settings tab. &#13;&#10;Library search path(-L) should be the same as shown below highlighted one." visible="true" widgetName="glabel_27" bounds="5, 128, 484, 99"/>
+                    <p1:GImage visible="true" x:Style="BORDER" widgetName="gimage_16" bounds="5, 239, 375, 158" path="Uimodel/GUI_lib_search_path.png"/>
+                    <p1:GLabel text="Note: Refer help documentation Overview section to copy the above mentioned paths in &#13;&#10;Step 1 and paste them into the Settings tab as described above." visible="true" widgetName="glabel_10" bounds="9, 409, 476, 35" foreground="COLOR_BLACK"/>
+                    <p1:GLabel bounds="12, 462, 99, 15" text="Library Description" widgetName="glabel_library_info" manifestObj="true"/>
+                </p1:Tab>
+            </p1:GTab.control>
+        </p1:GTab>
+    </p1:TabFolder>
+</p1:Tab>

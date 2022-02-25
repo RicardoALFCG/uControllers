@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete 4 resources" deleteContents="false" description="Delete 4 resources" element1="/NewHaven_Display/display_database.h" element2="/NewHaven_Display/display_functions.c" element3="/NewHaven_Display/display_functions.h" element4="/NewHaven_Display/display_pinout.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="4" stamp="1643750153987"/>
-</session>

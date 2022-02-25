@@ -1,8 +1,0 @@
-gnd - branco - gns
-vdd - preto - 3.3v
-oledcs - castanho - 1.7
-/res - vermelho - 5v
-d/c - laranja - 2.9
-sck - amarelo - 1.8
-MOSI - verde - 1.9
-
