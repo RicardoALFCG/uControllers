@@ -793,7 +793,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1" description="The standard receive buffer interrupt generation is enabled."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="1" URI="http://resources/0.1.30/peripheral/usic/1/channel/1">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/UART_CONFIG/v4_0_12/UART_CONFIG_0.app#//@hwResources.0"/>
     <resourcesList name="ccfg" requiredResourceUri="http://resources/0.1.30/peripheral/usic/1/c1_ccfg"/>
     <resourcesList name="kscfg" requiredResourceUri="http://resources/0.1.30/peripheral/usic/1/c1_kscfg"/>
     <resourcesList name="fdr" requiredResourceUri="http://resources/0.1.30/peripheral/usic/1/c1_fdr"/>

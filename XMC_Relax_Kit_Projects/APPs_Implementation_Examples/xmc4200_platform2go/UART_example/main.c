@@ -3,6 +3,9 @@
  *
  *  Created on: 2022 Feb 21 23:37:11
  *  Author: RGoncalves
+ *
+ *
+ *  Sample program which sent a byte every second on TX and have add bytes to a buffer on RX line
  */
 
 
@@ -10,15 +13,37 @@
 
 #include "DAVE.h"                 //Declarations from DAVE Code Generation (includes SFR declaration)
 
-/**
+uint8_t transmit_byte[1] = {0};
+uint8_t receive_buffer[100] = {0};
+uint8_t rx_count = 0;
 
- * @brief main() - Application entry point
- *
- * <b>Details of function</b><br>
- * This routine is the application entry point. It is invoked by the device startup code. It is responsible for
- * invoking the APP initialization dispatcher routine - DAVE_Init() and hosting the place-holder for user application
- * code.
- */
+
+void UART_Rx(){
+
+	// Check Transmit/receive buffer status register
+	while (((UART_0.channel->TRBSR) & 0x08) == 0) {
+
+		// Receive FIFO output register
+		receive_buffer[rx_count] = (uint8_t) (UART_0.channel->OUTR);
+
+		if(rx_count == 99){
+			rx_count = 0;
+		}else{
+			rx_count++;
+		}
+	}
+}
+
+void UART_Tx(){
+	transmit_byte[0]++;
+
+	UART_transmit(&UART_0, *transmit_byte, 1);
+
+	if(transmit_byte[0] == 254){
+		transmit_byte[0] = 0;
+	}
+}
+
 
 int main(void)
 {
