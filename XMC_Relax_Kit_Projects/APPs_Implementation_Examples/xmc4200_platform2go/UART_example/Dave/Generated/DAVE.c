@@ -84,8 +84,23 @@ __WEAK DAVE_STATUS_t DAVE_Init(void)
    } 
   if (init_status == DAVE_STATUS_SUCCESS)
   {
-	 /**  Initialization of INTERRUPT APP instance UART_TX */
-	 init_status = (DAVE_STATUS_t)INTERRUPT_Init(&UART_TX); 
+	 /**  Initialization of INTERRUPT APP instance TIMER_INT */
+	 init_status = (DAVE_STATUS_t)INTERRUPT_Init(&TIMER_INT); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance RTS */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&RTS); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PIN_INTERRUPT APP instance PIN_INTERRUPT_0 */
+	 init_status = (DAVE_STATUS_t)PIN_INTERRUPT_Init(&PIN_INTERRUPT_0); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance CTS */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&CTS); 
    }  
   return init_status;
 } /**  End of function DAVE_Init */

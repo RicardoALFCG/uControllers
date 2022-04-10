@@ -66,6 +66,12 @@
 
 #include "INTERRUPT/interrupt.h"
   
+
+#include "DIGITAL_IO/digital_io.h"
+  
+
+#include "PIN_INTERRUPT/pin_interrupt.h"
+  
 	
 
 /**********************************************************************************************************************
