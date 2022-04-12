@@ -64,7 +64,7 @@
  * DATA STRUCTURES
  **********************************************************************************************************************/
 
-const INTERRUPT_t UART_TX =
+const INTERRUPT_t TIMER_INT =
 {
 #if(UC_SERIES == XMC14)
  .irqctrl = (XMC_SCU_IRQCTRL_t)0U,
