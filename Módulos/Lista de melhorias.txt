@@ -1,0 +1,6 @@
++ Quadro na sala
++ Entregas periódicas todas as aulas para os obrigar a trabalhar
++ Projecto inicial mais dificil para ser mais diferenciador
++ Aulas de leitura de sensores
++ Componente teorica mais forte em algumas aulas, uma vez que lhes faltam bases.
++ mais exercícios de lógica. Não têm assim tanta experiência na lógica de C.
